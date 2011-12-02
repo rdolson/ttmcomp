@@ -1,0 +1,324 @@
+Version =19
+VersionRequired =19
+Checksum =-123706012
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =0
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =10680
+    DatasheetFontHeight =10
+    ItemSuffix =14
+    Left =1080
+    Top =60
+    Right =13275
+    Bottom =11940
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xdf6e0ea558e1e240
+    End
+    RecordSource ="qryQualifiersRpt"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xd0020000d0020000d0020000d002000000000000b82900002c01000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x5044463939350000000000000000000000000000000000000000000000000000 ,
+        0x010402059c00c40253ef800101000100ea0a6f08640001000f00580202000100 ,
+        0x5802030000004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000000000000000000000000000000000000000000050524956 ,
+        0xe230000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000180000000000102710271027 ,
+        0x0000102700000000000000000000c40200000000000000000000000000000000 ,
+        0x00000000000000000300000000000000000010005c4b03006843040000000000 ,
+        0x0000000000000000000000000000000000000000000000003f2cb85b05000000 ,
+        0x03000000ff00ff00010000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000
+    End
+    PrtDevNames = Begin
+        0x080012001a00010077696e73706f6f6c00695044463939350069504446393935 ,
+        0x504f525400504446393935504f525400000000000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin TextBox
+            AutoLabel = NotDefault
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            ControlSource ="EventDate"
+        End
+        Begin BreakLevel
+            ControlSource ="CatalogSortOrder"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            KeepTogether =2
+            ControlSource ="LevelName"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            KeepTogether =1
+            ControlSource ="JumpHeightinInches"
+        End
+        Begin BreakLevel
+            SortOrder = NotDefault
+            ControlSource ="JumpHeightinInches"
+        End
+        Begin BreakLevel
+            SortOrder = NotDefault
+            ControlSource ="MovedUp"
+        End
+        Begin BreakLevel
+            ControlSource ="ArmBandNumber"
+        End
+        Begin PageHeader
+            Height =0
+            Name ="PageHeaderSection"
+            GUID = Begin
+                0x94287ba245780d4092521328e60e5e68
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            RepeatSection = NotDefault
+            ForceNewPage =1
+            Height =480
+            Name ="GroupHeader0"
+            GUID = Begin
+                0x54ebffab95446347a3960020eb5d2e28
+            End
+            Begin
+                Begin TextBox
+                    TextAlign =1
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Left =60
+                    Width =4320
+                    Height =480
+                    ColumnWidth =1935
+                    FontSize =16
+                    Name ="EventDate"
+                    ControlSource ="EventDate"
+                    Format ="ddd\", \"mmm d\", \"yyyy"
+                    GUID = Begin
+                        0x40bb4dad2495694d827fcd6422c9ccc8
+                    End
+                End
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            RepeatSection = NotDefault
+            Height =360
+            BreakLevel =2
+            Name ="GroupHeader1"
+            GUID = Begin
+                0xe9f1ec0d25a61b49915f287dd68853e1
+            End
+            Begin
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Width =6720
+                    Height =315
+                    FontSize =12
+                    Name ="Text6"
+                    ControlSource ="=Trim([DivisionName] & \" \" & [ClassName] & \" \" & [LevelName])"
+                    GUID = Begin
+                        0x8da773ae4358d242bcf764158d163c03
+                    End
+                End
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            Height =375
+            BreakLevel =3
+            Name ="GroupHeader5"
+            GUID = Begin
+                0x0371b88d782a3e48b04f6da886bb5c1a
+            End
+            Begin
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Left =60
+                    Top =60
+                    FontSize =10
+                    Name ="Text5"
+                    ControlSource ="=[JumpHeightCD] & \"\"\"\""
+                    GUID = Begin
+                        0xaa295f0e7ac8394fbdc5e72e7208e321
+                    End
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =300
+            Name ="Detail"
+            GUID = Begin
+                0xeff3ae1996452a49a974e6e4c8ebaf02
+            End
+            Begin
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =2400
+                    Width =660
+                    Name ="DogTime"
+                    ControlSource ="DogTime"
+                    InputMask ="900.00;;"
+                    GUID = Begin
+                        0x84174b7f3754074996005c71e20ee796
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =240
+                    Width =720
+                    ColumnWidth =1455
+                    TabIndex =1
+                    Name ="ArmBandNumber"
+                    ControlSource ="ArmBandNumber"
+                    GUID = Begin
+                        0x856d819de937ce47b5aaef0658ff2d68
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6000
+                    Width =1920
+                    ColumnWidth =4515
+                    TabIndex =2
+                    Name ="BreedName"
+                    ControlSource ="BreedName"
+                    GUID = Begin
+                        0x9e684659ee49774dbd26bead2e89abd9
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1020
+                    Width =540
+                    TabIndex =3
+                    Name ="Text7"
+                    ControlSource ="=IIf([FinishingPlace]=0,\"\",[FinishingPlace])"
+                    GUID = Begin
+                        0xbab328e11e0ad74292f118e60059ae9e
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =3840
+                    Width =2160
+                    TabIndex =4
+                    Name ="Text8"
+                    ControlSource ="=Trim([CallName])"
+                    GUID = Begin
+                        0x4feb82d5976aa84ca133b673cf7de70c
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1620
+                    Width =300
+                    TabIndex =5
+                    Name ="Text9"
+                    ControlSource ="DogScore"
+                    GUID = Begin
+                        0x547dd5afe814a24a8745a829c738502a
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =3120
+                    Width =660
+                    TabIndex =6
+                    Name ="Text10"
+                    ControlSource ="=IIf([absent],\"ABS\",\"\")"
+                    GUID = Begin
+                        0x1f35751ee985754d9d7ed9926633ecde
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1980
+                    Width =360
+                    TabIndex =7
+                    Name ="Text13"
+                    ControlSource ="=IIf([Qualified],\"Q\",\"NQ\")"
+                    GUID = Begin
+                        0xed0ad41f6569c545b32ea38f570964b9
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =7920
+                    Width =2760
+                    TabIndex =8
+                    Name ="Owner"
+                    ControlSource ="Owner"
+                    GUID = Begin
+                        0x6cda16d77462824cb7dd1772abef94ff
+                    End
+                End
+            End
+        End
+        Begin PageFooter
+            Height =240
+            Name ="PageFooterSection"
+            GUID = Begin
+                0x0d2c0e658790fe488b76a6e3e13075b5
+            End
+            Begin
+                Begin TextBox
+                    BackStyle =0
+                    IMESentenceMode =3
+                    Left =3900
+                    Name ="Text11"
+                    ControlSource ="=\"Page \" & [Page] & \" of \" & [Pages]"
+                    GUID = Begin
+                        0xc6be5019eb9e8e4198d65808422419e0
+                    End
+                End
+            End
+        End
+    End
+End

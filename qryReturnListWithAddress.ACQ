@@ -1,0 +1,67 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="lReturnList"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerStreet"
+    Expression ="tblOwner.OwnerCity"
+    Alias ="Expr1"
+    Expression ="IIf(Len([OwnerPostalCD])=5,[OwnerPostalCD],Left([OwnerPostalCD],5) & \"-\" & Rig"
+        "ht([OwnerPostalCD],4))"
+    Expression ="tblOwner.OwnerStateProvinceCD"
+End
+Begin Joins
+    LeftTable ="lReturnList"
+    RightTable ="tblOwner"
+    Expression ="lReturnList.OwnerID = tblOwner.OwnerID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerStreet"
+        dbInteger "ColumnWidth" ="2910"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =18
+    Top =40
+    Right =1329
+    Bottom =554
+    Left =-1
+    Top =-1
+    Right =1300
+    Bottom =222
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =68
+        Top =0
+        Name ="lReturnList"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =338
+        Bottom =188
+        Top =5
+        Name ="tblOwner"
+        Name =""
+    End
+End

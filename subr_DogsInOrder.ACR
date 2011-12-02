@@ -1,0 +1,128 @@
+Version =17
+VersionRequired =17
+Checksum =122992729
+Begin Report
+    LayoutForPrint = NotDefault
+    DefaultView =0
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    DatasheetFontHeight =10
+    ItemSuffix =5
+    Left =2835
+    Right =15165
+    Bottom =10170
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x98716706df88e240
+    End
+    RecordSource ="running-order-query"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a005000000000000201c0000e001000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x5c5c626f622d70635c4850204465736b4a657420383730437869000000000000 ,
+        0x010400059c00580243ef800701000100ea0a6f08640001000f002c0102000100 ,
+        0x2c01020001004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000002000000 ,
+        0x0200000001000000010100000000000000000000000000000000000044494e55 ,
+        0x22000000340224000c5bc8ed0000000000000000000000000100000000000000 ,
+        0x00000000000000000c0000000100000000000000000000000300000000000100 ,
+        0x0000040000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000024000000981924020100000000000000 ,
+        0x0000000000000000240000009819240201000000
+    End
+    PrtDevNames = Begin
+        0x080012002e00010077696e73706f6f6c00005c5c626f622d70635c4850204465 ,
+        0x736b4a65742038373043786900004c5054313a00000000000000000000000000 ,
+        0x0000000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin TextBox
+            OldBorderStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin PageHeader
+            Height =420
+            Name ="PageHeader"
+            Begin
+                Begin TextBox
+                    Left =660
+                    Top =120
+                    ColumnWidth =855
+                    Name ="TitleAbbreviation"
+                    ControlSource ="TitleAbbreviation"
+                End
+                Begin TextBox
+                    Left =2580
+                    Top =120
+                    TabIndex =1
+                    Name ="JumpHeightCD"
+                    ControlSource ="JumpHeightCD"
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =480
+            Name ="Detail"
+            Begin
+                Begin TextBox
+                    Left =180
+                    Top =120
+                    Name ="CallName"
+                    ControlSource ="CallName"
+                End
+                Begin TextBox
+                    Left =1740
+                    Top =120
+                    ColumnWidth =1965
+                    TabIndex =1
+                    Name ="ArmBandNumber"
+                    ControlSource ="ArmBandNumber"
+                End
+                Begin CheckBox
+                    Left =3240
+                    Top =120
+                    TabIndex =2
+                    Name ="MovedUp"
+                    ControlSource ="MovedUp"
+                End
+            End
+        End
+        Begin PageFooter
+            Height =360
+            Name ="PageFooter"
+        End
+    End
+End

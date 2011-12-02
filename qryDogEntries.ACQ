@@ -1,0 +1,118 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="tlkpLevel"
+    Name ="tblTitle"
+    Name ="tlkpClass"
+    Name ="tlkpDivision"
+End
+Begin OutputColumns
+    Expression ="trelDogEntry.DogID"
+    Expression ="trelDogEntry.TitleEventDateID"
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="tlkpClass.ClassName"
+    Expression ="tlkpDivision.DivisionName"
+    Expression ="tblTitleEvent.EventDateID"
+    Alias ="LevelName"
+    Expression ="tlkpLevel.DEOAbbreviation"
+End
+Begin Joins
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =11
+    Top =150
+    Right =1283
+    Bottom =547
+    Left =-1
+    Top =-1
+    Right =1261
+    Bottom =215
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =175
+        Bottom =173
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =399
+        Top =23
+        Right =495
+        Bottom =130
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =782
+        Top =-4
+        Right =890
+        Bottom =103
+        Top =8
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =638
+        Top =6
+        Right =734
+        Bottom =113
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =503
+        Top =89
+        Right =610
+        Bottom =181
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =932
+        Top =69
+        Right =1028
+        Bottom =176
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+End

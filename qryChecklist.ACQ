@@ -1,0 +1,147 @@
+Operation =1
+Option =0
+Where ="(((tblEventDate.EventDate)=#2/26/2006#) AND ((l_tblRunningOrderEntry.RunningOrde"
+    "rID)=8))"
+Begin InputTables
+    Name ="qryGroupedRunningOrder"
+    Name ="qryExpandedTitle"
+    Name ="tblTitleEvent"
+    Name ="tblEventDate"
+    Name ="l_tblRunningOrderEntry"
+    Name ="l_tblTitleGroupEntry"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="qryExpandedTitle.ExpandedName"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD"
+    Expression ="qryGroupedRunningOrder.CountOfDogID"
+    Alias ="MajorOrder"
+    Expression ="l_tblRunningOrderEntry.Order"
+    Alias ="MinorOrder"
+    Expression ="l_tblTitleGroupEntry.Order"
+    Alias ="Expr1"
+    Expression ="[DivisionAbbreviation] & \" \" & [ClassAbbreviation] & \" \" & [LevelName]"
+    Expression ="l_tblRunningOrderEntry.RunningOrderID"
+    Expression ="tblTitleEvent.TitleEventDateID"
+End
+Begin Joins
+    LeftTable ="qryGroupedRunningOrder"
+    RightTable ="tblTitleEvent"
+    Expression ="qryGroupedRunningOrder.TitleEventDateID = tblTitleEvent.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitleEvent.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="qryGroupedRunningOrder"
+    RightTable ="l_tblRunningOrderEntry"
+    Expression ="qryGroupedRunningOrder.RunningOrderEntryID = l_tblRunningOrderEntry.RunningOrder"
+        "EntryID"
+    Flag =1
+    LeftTable ="qryGroupedRunningOrder"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="qryGroupedRunningOrder.TitleGroupEntryID = l_tblTitleGroupEntry.TitleGroupEntryI"
+        "D"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="l_tblRunningOrderEntry.Order"
+    Flag =0
+    Expression ="l_tblTitleGroupEntry.Order"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="qryExpandedTitle.ExpandedName"
+        dbInteger "ColumnWidth" ="4110"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Expr1"
+        dbInteger "ColumnWidth" ="2415"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="l_tblRunningOrderEntry.RunningOrderID"
+        dbInteger "ColumnWidth" ="675"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =19
+    Top =81
+    Right =1234
+    Bottom =645
+    Left =-1
+    Top =-1
+    Right =1204
+    Bottom =325
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =41
+        Top =51
+        Right =205
+        Bottom =189
+        Top =0
+        Name ="qryGroupedRunningOrder"
+        Name =""
+    End
+    Begin
+        Left =772
+        Top =2
+        Right =950
+        Bottom =170
+        Top =0
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =429
+        Top =110
+        Right =594
+        Bottom =278
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =672
+        Top =187
+        Right =821
+        Bottom =295
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =257
+        Top =4
+        Right =395
+        Bottom =127
+        Top =0
+        Name ="l_tblRunningOrderEntry"
+        Name =""
+    End
+    Begin
+        Left =283
+        Top =177
+        Right =399
+        Bottom =285
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+End

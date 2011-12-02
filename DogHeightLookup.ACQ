@@ -1,0 +1,191 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tlkpDivision"
+    Name ="tlkpLevel"
+    Name ="tblTitle"
+    Name ="tblTitleEvent"
+    Name ="tblEvent"
+    Name ="tblDog"
+    Name ="tblArmBandNumber"
+    Name ="tblEventDate"
+    Name ="trelDogEvent"
+    Name ="trelDogEntry"
+End
+Begin OutputColumns
+    Expression ="tblDog.CallName"
+    Expression ="tblDog.RegisteredName"
+    Expression ="tlkpLevel.LevelName"
+    Expression ="trelDogEntry.TitleEventDateID"
+    Expression ="tblTitleEvent.EventDateID"
+    Expression ="tblArmBandNumber.ArmBandNumber"
+    Expression ="tblEventDate.EventDate"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="tblDog.DogID"
+    Expression ="trelDogEvent.EventID"
+    Expression ="tlkpDivision.DivisionName"
+    Expression ="tblDog.HandlerID"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="tblArmBandNumber"
+    Expression ="tblDog.DogID = tblArmBandNumber.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblArmBandNumber"
+    Expression ="tblEvent.EventID = tblArmBandNumber.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="trelDogEvent"
+    Expression ="tblEventDate.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblArmBandNumber"
+    Expression ="trelDogEvent.EventID = tblArmBandNumber.EventID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "RecordsetType" ="1"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =-4
+    Top =112
+    Right =1086
+    Bottom =612
+    Left =-1
+    Top =-1
+    Right =1079
+    Bottom =357
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =919
+        Top =150
+        Right =1015
+        Bottom =257
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+    Begin
+        Left =906
+        Top =37
+        Right =1002
+        Bottom =144
+        Top =0
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =785
+        Top =170
+        Right =881
+        Bottom =322
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =395
+        Top =62
+        Right =539
+        Bottom =229
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =422
+        Top =215
+        Right =518
+        Bottom =322
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =192
+        Bottom =263
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =326
+        Top =-4
+        Right =422
+        Bottom =103
+        Top =2
+        Name ="tblArmBandNumber"
+        Name =""
+    End
+    Begin
+        Left =585
+        Top =158
+        Right =755
+        Bottom =295
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =209
+        Top =131
+        Right =320
+        Bottom =298
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =629
+        Top =6
+        Right =786
+        Bottom =143
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+End

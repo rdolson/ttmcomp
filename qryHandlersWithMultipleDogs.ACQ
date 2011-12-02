@@ -1,0 +1,178 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=Yes) AND ((trelDogEvent.WaitListed)=No))"
+Having ="(((l_tblTitleGroupEntry.TitleGroupID)<10))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="trelDogEvent"
+    Name ="l_tblTitleGroupDef"
+    Name ="l_tblTitleGroupEntry"
+    Name ="tblDog"
+    Name ="tblHandler"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDateID"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Alias ="CountOfDogID"
+    Expression ="Count(trelDogEntry.DogID)"
+    Expression ="tblHandler.HandlerID"
+    Expression ="l_tblTitleGroupEntry.TitleGroupID"
+End
+Begin Joins
+    LeftTable ="trelDogEvent"
+    RightTable ="trelDogEntry"
+    Expression ="trelDogEvent.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="l_tblTitleGroupDef"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="l_tblTitleGroupDef.TitleGroupID = l_tblTitleGroupEntry.TitleGroupID"
+    Flag =1
+    LeftTable ="l_tblTitleGroupEntry"
+    RightTable ="tblTitleEvent"
+    Expression ="l_tblTitleGroupEntry.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+Begin Groups
+    Expression ="tblEventDate.EventDateID"
+    GroupLevel =0
+    Expression ="trelDogEntry.JumpHeightCD"
+    GroupLevel =0
+    Expression ="tblHandler.HandlerID"
+    GroupLevel =0
+    Expression ="l_tblTitleGroupEntry.TitleGroupID"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =40
+    Top =62
+    Right =1313
+    Bottom =625
+    Left =-1
+    Top =-1
+    Right =1266
+    Bottom =297
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =174
+        Top =4
+        Right =270
+        Bottom =111
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =505
+        Top =3
+        Right =616
+        Bottom =110
+        Top =1
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =350
+        Top =8
+        Right =446
+        Bottom =115
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =654
+        Top =6
+        Right =750
+        Bottom =113
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =788
+        Top =6
+        Right =884
+        Bottom =83
+        Top =0
+        Name ="l_tblTitleGroupDef"
+        Name =""
+    End
+    Begin
+        Left =922
+        Top =6
+        Right =1018
+        Bottom =113
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+    Begin
+        Left =1070
+        Top =7
+        Right =1166
+        Bottom =114
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =981
+        Top =154
+        Right =1146
+        Bottom =261
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+End

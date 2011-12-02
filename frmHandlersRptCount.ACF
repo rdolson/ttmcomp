@@ -1,0 +1,73 @@
+Version =19
+VersionRequired =19
+Checksum =-122868170
+Begin Form
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =124
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =3180
+    DatasheetFontHeight =10
+    ItemSuffix =1
+    Left =270
+    Top =210
+    Right =3675
+    Bottom =555
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xe3e6f232e35fe340
+    End
+    RecordSource ="qryHandlersRptCount"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =420
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0x91ff7079ee23db44b1abbcb9ccd2ae1d
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =215
+                    IMESentenceMode =3
+                    Left =1740
+                    Top =180
+                    Name ="CountOfHandlerID"
+                    ControlSource ="CountOfHandlerID"
+                    GUID = Begin
+                        0x0001c0c626373e4992f8d0b219d261f1
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =300
+                            Top =180
+                            Width =1470
+                            Height =240
+                            Name ="Label0"
+                            Caption ="CountOfHandlerID:"
+                            GUID = Begin
+                                0x631a7902889fb34885c5ce0dfdf4723b
+                            End
+                        End
+                    End
+                End
+            End
+        End
+    End
+End

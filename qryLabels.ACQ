@@ -1,0 +1,315 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="tblDog"
+    Name ="tblTitle"
+    Name ="qryQualifiers"
+    Name ="tlkpClass"
+    Name ="tlkpDivision"
+    Name ="tlkpLevel"
+    Name ="tlkpJumpHeight"
+    Name ="tblOwner"
+    Name ="trelCourseDefaults"
+    Name ="tblJudge"
+    Name ="tbllJudgeAssignment"
+    Name ="tblEventDate"
+    Name ="tblEvent"
+    Name ="tblHandler"
+    Name ="ltblDupPlacements"
+End
+Begin OutputColumns
+    Alias ="FirstPlacePoints"
+    Expression ="IIf([SecUnderTime]>0,2*[SecUnderTime],0)"
+    Alias ="SecondPlacePoints"
+    Expression ="IIf([SecUnderTime]>0,Int(1.5*[SecUnderTime]),0)"
+    Alias ="MachPts"
+    Expression ="IIf([tblTitle.TitleID]=10 Or [tblTitle.TitleID]=15,\"Mach Pts: \" & [RawMachPts]"
+        ",\"\")"
+    Alias ="RawMachPts"
+    Expression ="IIf([FinishingPlace]=1,[FirstPlacePoints],IIf([FinishingPlace]=2,[SecondPlacePoi"
+        "nts],[QualPoints]))"
+    Alias ="QualPoints"
+    Expression ="IIf([SecUnderTime]>0,[SecUnderTime],0)"
+    Expression ="qryQualifiers.JumpHeightCD"
+    Alias ="Classname"
+    Expression ="[ClassAbbreviation] & \"-\" & [LeveLAbbreviation] & \"-\" & [DivisionAbbreviatio"
+        "n]"
+    Expression ="qryQualifiers.DogScore"
+    Alias ="TimeMin"
+    Expression ="IIf(Left$([DogTime],1)=\"0\",Mid$([DogTime],2,2),Left$([DogTime],3)) & \".\" & R"
+        "ight$([DogTime],2)"
+    Alias ="Expr1"
+    Expression ="IIf([FinishingPlace]=0 Or ([FinishingPlace])>4,\"Qual\",\"Finish \" & [Finishing"
+        "Place])"
+    Expression ="tblDog.CallName"
+    Expression ="qryQualifiers.ArmBandNumber"
+    Expression ="tblTitle.CatalogSortOrder"
+    Expression ="tlkpJumpHeight.JumpHeightinInches"
+    Expression ="tblDog.RegisteredName"
+    Expression ="qryQualifiers.Qualified"
+    Expression ="tblTitle.TitleID"
+    Expression ="qryQualifiers.EventDate"
+    Alias ="Owner"
+    Expression ="[OwnerFirstName] & \" \" & [OwnerLastName]"
+    Expression ="trelCourseDefaults.StandardCourseTime"
+    Expression ="trelCourseDefaults.CourseDistance"
+    Expression ="tblJudge.JudgeLastName"
+    Expression ="tblEventDate.EventDateInitials"
+    Expression ="tblTitle.ClassID"
+    Expression ="tblTitle.LevelID"
+    Expression ="tblTitle.DivisionID"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="tblTitle.CatalogSortOrder"
+    Expression ="qryQualifiers.EventDateID"
+End
+Begin Joins
+    LeftTable ="tblTitle"
+    RightTable ="qryQualifiers"
+    Expression ="tblTitle.TitleID = qryQualifiers.TitleID"
+    Flag =1
+    LeftTable ="qryQualifiers"
+    RightTable ="tblDog"
+    Expression ="qryQualifiers.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="qryQualifiers"
+    RightTable ="tlkpJumpHeight"
+    Expression ="qryQualifiers.JumpHeightCD = tlkpJumpHeight.JumpHeightCD"
+    Flag =1
+    LeftTable ="qryQualifiers"
+    RightTable ="trelCourseDefaults"
+    Expression ="qryQualifiers.TitleEventDateID = trelCourseDefaults.TitleEventDateID"
+    Flag =1
+    LeftTable ="qryQualifiers"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="qryQualifiers.TitleEventDateID = tbllJudgeAssignment.TitleEventDateID"
+    Flag =1
+    LeftTable ="qryQualifiers"
+    RightTable ="tblEventDate"
+    Expression ="qryQualifiers.EventDateID = tblEventDate.EventDateID"
+    Flag =1
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="qryQualifiers"
+    RightTable ="ltblDupPlacements"
+    Expression ="qryQualifiers.PlaceQual = ltblDupPlacements.name"
+    Flag =2
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblJudge"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="tblJudge.JudgeID = tbllJudgeAssignment.JudgeID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+    LeftTable ="tlkpJumpHeight"
+    RightTable ="trelCourseDefaults"
+    Expression ="tlkpJumpHeight.JumpHeightCD = trelCourseDefaults.JumpHeightCD"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="qryQualifiers.DogScore"
+    Flag =1
+    Expression ="IIf(Left$([DogTime],1)=\"0\",Mid$([DogTime],2,2),Left$([DogTime],3)) & \".\" & R"
+        "ight$([DogTime],2)"
+    Flag =0
+    Expression ="tblTitle.CatalogSortOrder"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="qryQualifiers.DogScore"
+        dbInteger "ColumnWidth" ="855"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryQualifiers.ArmBandNumber"
+        dbInteger "ColumnWidth" ="1455"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelCourseDefaults.StandardCourseTime"
+        dbInteger "ColumnWidth" ="2865"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Expr1"
+        dbInteger "ColumnWidth" ="1440"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =38
+    Top =-3
+    Right =1149
+    Bottom =608
+    Left =-1
+    Top =-1
+    Right =1102
+    Bottom =437
+    Left =1080
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =-1066
+        Top =12
+        Right =-970
+        Bottom =229
+        Top =2
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =-436
+        Top =105
+        Right =-266
+        Bottom =322
+        Top =3
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =-872
+        Top =26
+        Right =-740
+        Bottom =333
+        Top =4
+        Name ="qryQualifiers"
+        Name =""
+    End
+    Begin
+        Left =-157
+        Top =109
+        Right =-61
+        Bottom =206
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =-82
+        Top =275
+        Right =14
+        Bottom =372
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+    Begin
+        Left =8
+        Top =167
+        Right =104
+        Bottom =264
+        Top =0
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =-691
+        Top =219
+        Right =-559
+        Bottom =331
+        Top =0
+        Name ="tlkpJumpHeight"
+        Name =""
+    End
+    Begin
+        Left =-929
+        Top =273
+        Right =-833
+        Bottom =370
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =-512
+        Top =225
+        Right =-345
+        Bottom =382
+        Top =0
+        Name ="trelCourseDefaults"
+        Name =""
+    End
+    Begin
+        Left =-31
+        Top =4
+        Right =65
+        Bottom =101
+        Top =0
+        Name ="tblJudge"
+        Name =""
+    End
+    Begin
+        Left =-330
+        Top =10
+        Right =-182
+        Bottom =122
+        Top =0
+        Name ="tbllJudgeAssignment"
+        Name =""
+    End
+    Begin
+        Left =-683
+        Top =4
+        Right =-587
+        Bottom =191
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =-540
+        Top =6
+        Right =-444
+        Bottom =103
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =-921
+        Top =137
+        Right =-825
+        Bottom =219
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =-683
+        Top =348
+        Right =-587
+        Bottom =415
+        Top =0
+        Name ="ltblDupPlacements"
+        Name =""
+    End
+End

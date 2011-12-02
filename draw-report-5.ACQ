@@ -1,0 +1,33 @@
+dbMemo "SQL" ="SELECT trelDogEvent.EnvelopeNumber, tblDog.CallName, tblOwner.OwnerLastName, tbl"
+    "Owner.OwnerFirstName, CInt([trelDogEvent].[EnvelopeNumber]) AS EnvNum, trelOwner"
+    "Event.Worker, [draw-results-sd].order AS DrawOrder\015\012FROM (tblOwner INNER J"
+    "OIN (tblEvent INNER JOIN ((tblDog INNER JOIN trelOwnerEvent ON tblDog.OwnerID = "
+    "trelOwnerEvent.OwnerID) INNER JOIN trelDogEvent ON (trelOwnerEvent.EventID = tre"
+    "lDogEvent.EventID) AND (tblDog.DogID = trelDogEvent.DogID)) ON tblEvent.EventID "
+    "= trelDogEvent.EventID) ON tblOwner.OwnerID = trelOwnerEvent.OwnerID) INNER JOIN"
+    " [draw-results-sd] ON cint( trelDogEvent.EnvelopeNumber)  = [draw-results-sd].en"
+    "velope\015\012WHERE (((tblEvent.LockedIn)=True));\015\012"
+dbMemo "Connect" =""
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="2160"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelDogEvent.EnvelopeNumber"
+        dbInteger "ColumnWidth" ="960"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblDog.CallName"
+        dbInteger "ColumnWidth" ="840"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End

@@ -1,0 +1,79 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblBACC"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Expression ="l_tblBACC.Member"
+    Alias ="Name"
+    Expression ="[OwnerFirstName] & \" \" & [OwnerLastName]"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.OwnerStreet"
+    Expression ="tblOwner.OwnerCity"
+    Expression ="tblOwner.OwnerPostalCD"
+    Expression ="tblOwner.OwnerStateProvinceCD"
+    Expression ="tblOwner.OwnerCountryID"
+    Expression ="tblOwner.EmailAddress"
+    Expression ="tblOwner.PhoneNumber"
+    Alias ="ZIP"
+    Expression ="FixZipCode([OwnerPostalCD])"
+End
+Begin Joins
+    LeftTable ="l_tblBACC"
+    RightTable ="tblOwner"
+    Expression ="l_tblBACC.OwnerID = tblOwner.OwnerID"
+    Flag =3
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+    Expression ="tblOwner.OwnerFirstName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="ZIP"
+        dbInteger "ColumnWidth" ="3180"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =34
+    Top =56
+    Right =1097
+    Bottom =847
+    Left =-1
+    Top =-1
+    Right =1056
+    Bottom =270
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =84
+        Top =0
+        Name ="l_tblBACC"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =395
+        Bottom =249
+        Top =1
+        Name ="tblOwner"
+        Name =""
+    End
+End

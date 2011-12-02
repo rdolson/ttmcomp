@@ -1,0 +1,189 @@
+Operation =1
+Option =2
+Where ="(((trelDogRegistration.JumpCardCD)=\"N\") AND ((GetDogClasses([EventDateID],[tre"
+    "lDogEvent.DogID]))<>\"\"))"
+Begin InputTables
+    Name ="trelDogEvent"
+    Name ="trelDogRegistration"
+    Name ="tblDog"
+    Name ="tblArmBandNumber"
+    Name ="tblOwner"
+    Name ="tblHandler"
+    Name ="qryCurrentTrialDates"
+    Name ="tlkpRegistrationType"
+    Name ="trelDogEntry"
+End
+Begin OutputColumns
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblDog.CallName"
+    Expression ="trelDogRegistration.JumpCardCD"
+    Expression ="tblArmBandNumber.ArmBandNumber"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Alias ="Expr1"
+    Expression ="GetDogClasses([EventDateID],[trelDogEvent.DogID])"
+    Expression ="tlkpRegistrationType.RegistrationName"
+    Expression ="trelDogRegistration.RegistrationNumber"
+    Expression ="tblDog.HeightatWithers"
+    Expression ="trelDogEntry.JumpHeightCD"
+End
+Begin Joins
+    LeftTable ="trelDogEvent"
+    RightTable ="trelDogRegistration"
+    Expression ="trelDogEvent.DogID = trelDogRegistration.DogID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="tblHandler"
+    Expression ="tblDog.HandlerID = tblHandler.HandlerID"
+    Flag =1
+    LeftTable ="qryCurrentTrialDates"
+    RightTable ="trelDogEvent"
+    Expression ="qryCurrentTrialDates.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tlkpRegistrationType"
+    RightTable ="trelDogRegistration"
+    Expression ="tlkpRegistrationType.RegistrationTypeID = trelDogRegistration.RegistrationTypeID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblArmBandNumber"
+    Expression ="trelDogEvent.DogID = tblArmBandNumber.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblArmBandNumber"
+    Expression ="trelDogEvent.EventID = tblArmBandNumber.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+    Expression ="tblOwner.OwnerFirstName"
+    Flag =0
+    Expression ="tblDog.CallName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="Expr1"
+        dbInteger "ColumnWidth" ="2970"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelDogRegistration.JumpCardCD"
+        dbInteger "ColumnWidth" ="705"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =45
+    Top =34
+    Right =999
+    Bottom =684
+    Left =-1
+    Top =-1
+    Right =943
+    Bottom =404
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =175
+        Top =0
+        Right =328
+        Bottom =183
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =398
+        Top =166
+        Right =589
+        Bottom =364
+        Top =0
+        Name ="trelDogRegistration"
+        Name =""
+    End
+    Begin
+        Left =585
+        Top =3
+        Right =729
+        Bottom =201
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =410
+        Top =4
+        Right =544
+        Bottom =142
+        Top =0
+        Name ="tblArmBandNumber"
+        Name =""
+    End
+    Begin
+        Left =161
+        Top =210
+        Right =257
+        Bottom =318
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =228
+        Right =134
+        Bottom =336
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =114
+        Top =0
+        Name ="qryCurrentTrialDates"
+        Name =""
+    End
+    Begin
+        Left =680
+        Top =232
+        Right =776
+        Bottom =340
+        Top =0
+        Name ="tlkpRegistrationType"
+        Name =""
+    End
+    Begin
+        Left =767
+        Top =6
+        Right =863
+        Bottom =283
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+End

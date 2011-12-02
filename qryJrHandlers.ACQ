@@ -1,0 +1,137 @@
+Operation =1
+Option =2
+Where ="(((tblEventDate.EventDate)=#2/23/2008#) AND ((tblEvent.LockedIn)=True) AND ((tbl"
+    "Handler.JuniorHandlerNumber) Is Not Null))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblHandler"
+    Name ="tblTitleEvent"
+    Name ="tblEventDate"
+    Name ="trelDogEntry"
+    Name ="tblDog"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="tblDog.CallName"
+    Expression ="tblDog.RegisteredName"
+    Expression ="tblHandler.JrHandlerDateofBirth"
+    Alias ="Q"
+    Expression ="IIf([Absent],\"ABS\",IIf([Qualified],\"Q\",\"NQ\"))"
+    Expression ="trelDogEntry.DogScore"
+    Expression ="trelDogEntry.DogTime"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="tblHandler"
+    Expression ="tblDog.HandlerID = tblHandler.HandlerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="Q"
+        dbInteger "ColumnWidth" ="585"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblDog.RegisteredName"
+        dbInteger "ColumnWidth" ="2820"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.DogScore"
+        dbInteger "ColumnWidth" ="600"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =-22
+    Top =62
+    Right =1137
+    Bottom =617
+    Left =-1
+    Top =-1
+    Right =1148
+    Bottom =300
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =811
+        Top =23
+        Right =907
+        Bottom =206
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =325
+        Bottom =144
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =400
+        Top =121
+        Right =496
+        Bottom =229
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =639
+        Top =140
+        Right =735
+        Bottom =248
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =515
+        Top =-1
+        Right =665
+        Bottom =152
+        Top =4
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =26
+        Top =122
+        Right =122
+        Bottom =230
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+End

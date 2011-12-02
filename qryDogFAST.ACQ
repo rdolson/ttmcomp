@@ -1,0 +1,77 @@
+Operation =1
+Option =0
+Where ="(((qryDogEntries.ClassName)=\"Fifteen And Send Time\") AND ((tblEvent.LockedIn)="
+    "True))"
+Begin InputTables
+    Name ="qryDogEntries"
+    Name ="tblEvent"
+    Name ="tblEventDate"
+End
+Begin OutputColumns
+    Expression ="qryDogEntries.DogID"
+    Expression ="qryDogEntries.TitleEventDateID"
+    Expression ="qryDogEntries.TitleID"
+    Expression ="qryDogEntries.LevelName"
+    Expression ="qryDogEntries.ClassName"
+    Expression ="qryDogEntries.DivisionName"
+    Expression ="qryDogEntries.EventDateID"
+End
+Begin Joins
+    LeftTable ="qryDogEntries"
+    RightTable ="tblEventDate"
+    Expression ="qryDogEntries.EventDateID = tblEventDate.EventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =73
+    Top =137
+    Right =1322
+    Bottom =443
+    Left =-1
+    Top =-1
+    Right =1238
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =140
+        Bottom =113
+        Top =3
+        Name ="qryDogEntries"
+        Name =""
+    End
+    Begin
+        Left =178
+        Top =6
+        Right =274
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =312
+        Top =6
+        Right =408
+        Bottom =113
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+End

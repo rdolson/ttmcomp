@@ -1,0 +1,75 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="qryLabelsUnionBlanks"
+End
+Begin OutputColumns
+    Expression ="qryLabelsUnionBlanks.BlankNumber"
+    Expression ="qryLabelsUnionBlanks.FirstPlacePoints"
+    Expression ="qryLabelsUnionBlanks.SecondPlacePoints"
+    Expression ="qryLabelsUnionBlanks.MachPts"
+    Expression ="qryLabelsUnionBlanks.RawMachPts"
+    Expression ="qryLabelsUnionBlanks.QualPoints"
+    Expression ="qryLabelsUnionBlanks.JumpHeightCD"
+    Expression ="qryLabelsUnionBlanks.Classname"
+    Expression ="qryLabelsUnionBlanks.DogScore"
+    Expression ="qryLabelsUnionBlanks.TimeMin"
+    Expression ="qryLabelsUnionBlanks.Expr1"
+    Expression ="qryLabelsUnionBlanks.CallName"
+    Expression ="qryLabelsUnionBlanks.ArmBandNumber"
+    Expression ="qryLabelsUnionBlanks.Expr1012"
+    Expression ="qryLabelsUnionBlanks.JumpHeightinInches"
+    Expression ="qryLabelsUnionBlanks.RegisteredName"
+    Expression ="qryLabelsUnionBlanks.Qualified"
+    Expression ="qryLabelsUnionBlanks.TitleID"
+    Expression ="qryLabelsUnionBlanks.EventDate"
+    Expression ="qryLabelsUnionBlanks.Owner"
+    Expression ="qryLabelsUnionBlanks.StandardCourseTime"
+    Expression ="qryLabelsUnionBlanks.CourseDistance"
+    Expression ="qryLabelsUnionBlanks.JudgeLastName"
+    Expression ="qryLabelsUnionBlanks.EventDateInitials"
+    Expression ="qryLabelsUnionBlanks.ClassID"
+    Expression ="qryLabelsUnionBlanks.LevelID"
+    Expression ="qryLabelsUnionBlanks.DivisionID"
+    Expression ="qryLabelsUnionBlanks.OwnerLastName"
+    Expression ="qryLabelsUnionBlanks.OwnerFirstName"
+    Expression ="qryLabelsUnionBlanks.HandlerLastName"
+    Expression ="qryLabelsUnionBlanks.HandlerFirstName"
+    Expression ="qryLabelsUnionBlanks.CatalogSortOrder"
+    Expression ="qryLabelsUnionBlanks.EventDateID"
+End
+Begin OrderBy
+    Expression ="qryLabelsUnionBlanks.BlankNumber"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =210
+    Top =246
+    Right =1286
+    Bottom =552
+    Left =-1
+    Top =-1
+    Right =1069
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =114
+        Top =29
+        Name ="qryLabelsUnionBlanks"
+        Name =""
+    End
+End

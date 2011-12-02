@@ -1,0 +1,263 @@
+Operation =1
+Option =0
+Where ="(((tblEventDate.EventDate)=#3/7/2010#) AND ((tblEvent.LockedIn)=Yes))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="trelDogEvent"
+    Name ="draw-results-sd"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="tblJudge"
+    Name ="tbllJudgeAssignment"
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="qryExpandedTitle"
+    Name ="trelOwnerEvent"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDateID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="[draw-results-sd].order"
+    Expression ="[draw-results-sd].envelope"
+    Expression ="trelDogEvent.DogID"
+    Expression ="tblDog.RegisteredName"
+    Expression ="trelOwnerEvent.Worker"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblJudge.JudgeID"
+    Expression ="tblJudge.JudgeLastName"
+    Expression ="tblJudge.JudgeFirstName"
+    Expression ="qryExpandedTitle.ExpandedName"
+    Expression ="qryExpandedTitle.ClassAbbreviation"
+    Expression ="qryExpandedTitle.LevelAbbreviation"
+    Expression ="qryExpandedTitle.DivisionAbbreviation"
+    Alias ="CName"
+    Expression ="[ClassAbbreviation] & \" \" & [LevelAbbreviation] & \" \" & [DivisionAbbreviatio"
+        "n]"
+End
+Begin Joins
+    LeftTable ="trelDogEvent"
+    RightTable ="draw-results-sd"
+    Expression ="trelDogEvent.EnvelopeNumber = [draw-results-sd].envelope"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitleEvent.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="tblTitleEvent.TitleEventDateID = tbllJudgeAssignment.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblJudge"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="tblJudge.JudgeID = tbllJudgeAssignment.JudgeID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="[draw-results-sd].order"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="trelDogEvent.DogID"
+        dbInteger "ColumnWidth" ="1065"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblDog.RegisteredName"
+        dbInteger "ColumnWidth" ="2805"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="[draw-results-sd].order"
+        dbInteger "ColumnWidth" ="705"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="[draw-results-sd].envelope"
+        dbInteger "ColumnWidth" ="885"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblEventDate.EventDateID"
+        dbInteger "ColumnWidth" ="600"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblJudge.JudgeID"
+        dbInteger "ColumnWidth" ="1035"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryExpandedTitle.ClassAbbreviation"
+        dbInteger "ColumnWidth" ="885"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =6
+    Top =12
+    Right =1286
+    Bottom =534
+    Left =-1
+    Top =-1
+    Right =1273
+    Bottom =354
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =185
+        Top =9
+        Right =305
+        Bottom =161
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =366
+        Top =7
+        Right =480
+        Bottom =159
+        Top =5
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =545
+        Top =38
+        Right =667
+        Bottom =115
+        Top =0
+        Name ="draw-results-sd"
+        Name =""
+    End
+    Begin
+        Left =674
+        Top =6
+        Right =825
+        Bottom =173
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =863
+        Top =6
+        Right =959
+        Bottom =113
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =565
+        Top =150
+        Right =661
+        Bottom =257
+        Top =0
+        Name ="tblJudge"
+        Name =""
+    End
+    Begin
+        Left =739
+        Top =171
+        Right =835
+        Bottom =293
+        Top =0
+        Name ="tbllJudgeAssignment"
+        Name =""
+    End
+    Begin
+        Left =898
+        Top =132
+        Right =1044
+        Bottom =254
+        Top =5
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =430
+        Top =169
+        Right =526
+        Bottom =276
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =114
+        Right =209
+        Bottom =266
+        Top =0
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =270
+        Top =202
+        Right =366
+        Bottom =309
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+End

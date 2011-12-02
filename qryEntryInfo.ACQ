@@ -1,0 +1,88 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="trelDogEvent"
+    Name ="trelOwnerEvent"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.EventID"
+    Expression ="trelDogEvent.EntryReceivedDate"
+    Expression ="trelDogEvent.RecordAddDateTime"
+    Expression ="trelOwnerEvent.OwnerID"
+    Expression ="trelDogEvent.DogID"
+    Expression ="trelOwnerEvent.Worker"
+    Expression ="trelOwnerEvent.Catalog"
+    Expression ="trelDogEvent.EnvelopeNumber"
+End
+Begin Joins
+    LeftTable ="trelDogEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="trelDogEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="trelDogEvent.RecordAddDateTime"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+dbText "Description" ="Summarizes per-entry informaton, keyed on dog/event. Meant to join with the ltbl"
+    "_Envelope table to determine draw info.\015\012"
+Begin
+    Begin
+        dbText "Name" ="trelDogEvent.RecordAddDateTime"
+        dbInteger "ColumnWidth" ="2295"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =34
+    Top =89
+    Right =1131
+    Bottom =717
+    Left =-1
+    Top =-1
+    Right =1090
+    Bottom =283
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =186
+        Bottom =262
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =301
+        Top =3
+        Right =468
+        Bottom =140
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =629
+        Top =12
+        Right =788
+        Bottom =194
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+End

@@ -1,0 +1,934 @@
+Version =19
+VersionRequired =19
+Checksum =124393448
+Begin Form
+    RecordSelectors = NotDefault
+    NavigationButtons = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    TabularFamily =55
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =10320
+    DatasheetFontHeight =10
+    ItemSuffix =33
+    Left =555
+    Top =420
+    Right =11145
+    Bottom =6945
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x8bf43fefdbb9e240
+    End
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a005000000000000201c0000e010000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x010400069c00a0040fdf800701000100ea0a6f08640001000100ffff02000100 ,
+        0x5802030000004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000ffffffff0000000000000000000000000000000044494e55 ,
+        0x22006801a403fc002680ac6d0000000000000000000000000000000000000000 ,
+        0x00000000000000000f0000000100000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000001000000000000000000000068010000534d544a ,
+        0x0000000010005801420072006f007400680065007200200048004c002d003500 ,
+        0x31003700300044004e000000496e70757442696e004155544f00524553444c4c ,
+        0x00556e69726573444c4c004d6564696154797065005354414e44415244004272 ,
+        0x5f546f6e657273617665004f46460042725f487263004f7074696f6e31004272 ,
+        0x5f44656e73697479004f7074696f6e31005265736f6c7574696f6e004f707469 ,
+        0x6f6e31004f7269656e746174696f6e00504f525452414954004475706c657800 ,
+        0x4e4f4e4500506170657253697a65004c45545445520048616c66746f6e650048 ,
+        0x545f50415453495a455f4155544f0042725f52655072696e74004c6173744a6f ,
+        0x620042725f4a6f624e616d65004f66660042725f456e644a6f624e616d65004f ,
+        0x66660042725f536c65657000315f39395f350000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0xfc0000004c485542000000010000000000000100000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000006f6c736f6e00000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000056494f4c4554000000000000 ,
+        0x00000000ffff0001ffff000000000000000000000000000000000000
+    End
+    PrtDevNames = Begin
+        0x08001a002c000100000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000055534230303400
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            FontName ="Tahoma"
+        End
+        Begin ListBox
+            SpecialEffect =2
+            FontName ="Tahoma"
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            FontName ="Tahoma"
+        End
+        Begin ToggleButton
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =6540
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0xfe6e781cf1b3d449afdb1e17573b3e2c
+            End
+            Begin
+                Begin TextBox
+                    Locked = NotDefault
+                    TabStop = NotDefault
+                    SpecialEffect =0
+                    OverlapFlags =85
+                    BackStyle =0
+                    Left =1320
+                    Top =240
+                    Width =5400
+                    Height =420
+                    FontSize =16
+                    TabIndex =1
+                    Name ="Text1"
+                    ControlSource ="=CurrentTrialName()"
+                    GUID = Begin
+                        0x59867eb63b03b04ba143f6fc539d3fe0
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3960
+                    Top =1380
+                    Width =3120
+                    Height =405
+                    TabIndex =2
+                    Name ="armband_with_card"
+                    Caption ="Armbands (dogs with jump cards)"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xd723128f5607e14cb27a970bd8034984
+                    End
+                End
+                Begin ComboBox
+                    OverlapFlags =85
+                    ColumnCount =2
+                    ListWidth =1440
+                    Left =660
+                    Top =1020
+                    Width =2460
+                    Height =300
+                    TabIndex =3
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"8\";\"8\""
+                    GUID = Begin
+                        0x1f8b9bd7c010dc49be19d894bccffb7a
+                    End
+                    Name ="EventDate"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT [qryCurrentTrialDates].[EventDateID], [qryCurrentTrialDates].[EventDate] "
+                        "FROM [qryCurrentTrialDates]"
+                    ColumnWidths ="0;1440"
+                    DefaultValue ="Date()"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3960
+                    Top =1905
+                    Width =3120
+                    Height =405
+                    TabIndex =4
+                    Name ="armband_without_card"
+                    Caption ="Armbands (dogs without jump cards)"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x925ba693e1e91c4ab6ea40387233f568
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3960
+                    Top =3000
+                    Width =1920
+                    Height =405
+                    TabIndex =5
+                    Name ="go_running_order"
+                    Caption ="Edit/print running order"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x29ded043dce9cb42802bf3f057de0821
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3960
+                    Top =2460
+                    Width =1500
+                    Height =405
+                    TabIndex =6
+                    Name ="Movups"
+                    Caption ="Moveup summary"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x15e62d9e44e50748ae4b38ec7db069f3
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3960
+                    Top =3660
+                    TabIndex =7
+                    Name ="Command9"
+                    Caption ="Relink"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x9c47dd74dfb04b4aa554699ae07e0fc7
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =600
+                    Top =1620
+                    Width =1620
+                    Height =405
+                    TabIndex =8
+                    Name ="Command11"
+                    Caption ="Conf Letter Counts"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x5b827df04ebb974ea6cfe7821acb0373
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =600
+                    Top =2220
+                    Width =1620
+                    Height =405
+                    TabIndex =9
+                    Name ="Command12"
+                    Caption ="VMO Report"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x048662c6a9e86046a10470824e9263c6
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =600
+                    Top =2820
+                    Width =1185
+                    Height =405
+                    TabIndex =10
+                    Name ="cmdPrintRibbons"
+                    Caption ="Print Ribbons"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x403cff7aec3a7c40b483260151d3d2ba
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =600
+                    Top =3360
+                    Width =870
+                    Height =405
+                    TabIndex =11
+                    Name ="cmdChecklist"
+                    Caption ="Checklist"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x335c769b0b40a6478a04ef3566df7a1b
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =600
+                    Top =3900
+                    Width =2040
+                    Height =405
+                    TabIndex =12
+                    Name ="Command15"
+                    Caption ="Data for trial chair report"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x35641ac5b454044fa64e2a3f714cb2ba
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3960
+                    Top =4200
+                    Width =1230
+                    Height =405
+                    TabIndex =13
+                    Name ="refunds"
+                    Caption ="Enter refunds"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x5626f6e96f94fd4f81e442db1b0ccc9c
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5940
+                    Top =3000
+                    Width =1020
+                    Height =420
+                    TabIndex =14
+                    Name ="Command17"
+                    Caption ="Trial R/O"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xe3c0ccccadb2184eb322ebc81d416c1d
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =5940
+                    Top =3540
+                    Width =1020
+                    Height =420
+                    TabIndex =15
+                    Name ="Command18"
+                    Caption ="Daily R/O"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xd88ba33ccbb7f34fa3b5314a5808bb8d
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =6960
+                    Top =3000
+                    Width =1020
+                    Height =420
+                    TabIndex =16
+                    Name ="Command19"
+                    Caption ="Trial Conf"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x9a165f7c7164a24486ddd97e04d8b20a
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =6960
+                    Top =3540
+                    Width =1020
+                    Height =420
+                    TabIndex =17
+                    Name ="Command20"
+                    Caption ="Trial R/O"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xca548d6d70986e4c9e34c5ba922d7757
+                    End
+                End
+                Begin ListBox
+                    OverlapFlags =85
+                    MultiSelect =1
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    Left =180
+                    Top =4620
+                    TabIndex =18
+                    Name ="trial_date"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT [qryCurrentTrialDates].[EventDateID], [qryCurrentTrialDates].[EventDate] "
+                        "FROM [qryCurrentTrialDates]"
+                    ColumnWidths ="0;1440"
+                    GUID = Begin
+                        0x8c65ea8c61379644b8ab1809d5160641
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =4800
+                    Top =4980
+                    TabIndex =19
+                    Name ="gate_for_selected_ro"
+                    Caption ="Running Order"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x36d82766c3fdce4793f2fcebaf576887
+                    End
+                End
+                Begin ListBox
+                    OverlapFlags =85
+                    MultiSelect =1
+                    IMESentenceMode =3
+                    ColumnCount =3
+                    Left =1800
+                    Top =4620
+                    Width =2880
+                    Name ="ro"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT [l_tblRunningOrderDef].[RunningOrderID], [l_tblRunningOrderDef].[Name], ["
+                        "l_tblRunningOrderDef].[Description] FROM [l_tblRunningOrderDef]"
+                    ColumnWidths ="0;1440;1440"
+                    GUID = Begin
+                        0xaf474589f5eced4f8eb646b55670ed44
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =4800
+                    Top =5460
+                    Width =1275
+                    Height =405
+                    TabIndex =20
+                    Name ="count_handler_but"
+                    Caption ="Handler Count"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x00be0f341e2431438892283612b2fb1d
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =3960
+                    Top =900
+                    Width =2406
+                    Height =456
+                    TabIndex =21
+                    Name ="openCourseTimes"
+                    Caption ="Course Times"
+                    OnClick ="[Event Procedure]"
+                    ObjectPalette = Begin
+                        0x0003000100000000bf00000000bf0000bfbf00000000bf00bf00bf0000bfbf00 ,
+                        0xc0c0c000c0dcc000a4c8f0000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x00000000000000000000000000000000000000000000000000000000fffbf000 ,
+                        0xa0a0a40080808000ff00000000ff0000ffff00000000ff00ff00ff0000ffff00 ,
+                        0xffffff0000000000
+                    End
+                    ControlTipText ="Preview Report"
+                    GUID = Begin
+                        0xddca39ac38be52498942528a28fa8656
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =7200
+                    Top =1380
+                    Width =3120
+                    Height =405
+                    TabIndex =22
+                    Name ="armband_sm_with_card"
+                    Caption ="Armbands (dogs with jump cards)"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x3a1ee09d2e5e8e47841c4a94418fe6e5
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =7200
+                    Top =1860
+                    Width =3120
+                    Height =405
+                    TabIndex =23
+                    Name ="armband_sm_without_card"
+                    Caption ="Armbands (dogs without jump cards)"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x5d22518debe41c42b24aae81594bca45
+                    End
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+
+Private Sub armband_sm_with_card_Click()
+On Error GoTo Err_armband_sm_with_card_Click
+
+    Dim stDocName As String
+
+    id = Me!EventDate
+    stDocName = "Labels qryArmbands1"
+    DoCmd.OpenReport stDocName, acPreview, , "(Held = False or Held Is Null) and OK and EventDateID = " & id
+
+Exit_armband_sm_with_card_Click:
+    Exit Sub
+
+Err_armband_sm_with_card_Click:
+    MsgBox Err.Description
+    Resume Exit_armband_sm_with_card_Click
+End Sub
+
+Private Sub armband_sm_without_card_Click()
+On Error GoTo Err_armband_sm_without_card_Click
+
+    Dim stDocName As String
+
+    id = Me!EventDate
+    stDocName = "Labels qryArmbands1"
+    DoCmd.OpenReport stDocName, acPreview, , "(Held = True or not OK   ) and EventDateID = " & id
+
+Exit_armband_sm_without_card_Click:
+    Exit Sub
+
+Err_armband_sm_without_card_Click:
+    MsgBox Err.Description
+    Resume Exit_armband_sm_without_card_Click
+End Sub
+
+Private Sub armband_with_card_Click()
+On Error GoTo Err_armband_with_card_Click
+
+    Dim stDocName As String
+
+    id = Me!EventDate
+    stDocName = "Labels qryArmbands"
+    DoCmd.OpenReport stDocName, acPreview, , "(Held = False or Held Is Null) and OK and EventDateID = " & id
+
+Exit_armband_with_card_Click:
+    Exit Sub
+
+Err_armband_with_card_Click:
+    MsgBox Err.Description
+    Resume Exit_armband_with_card_Click
+    
+End Sub
+
+Private Sub armband_without_card_Click()
+On Error GoTo Err_armband_without_card_Click
+
+    Dim stDocName As String
+
+    id = Me!EventDate
+    stDocName = "Labels qryArmbands"
+    DoCmd.OpenReport stDocName, acPreview, , "(Held = True or not OK   ) and EventDateID = " & id
+
+Exit_armband_without_card_Click:
+    Exit Sub
+
+Err_armband_without_card_Click:
+    MsgBox Err.Description
+    Resume Exit_armband_without_card_Click
+    
+End Sub
+
+Private Sub Command17_Click()
+
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Dim cond As String
+cond = "false "
+Set rs = db.OpenRecordset("SELECT EventDateID, RunningOrderID " & _
+    "FROM qryCurrentEventROEntries")
+    
+Do While Not rs.EOF
+    cond = cond & " OR( EventDateID = " & rs!EventDateID & " AND RunningOrderID = " & rs!RunningOrderID & ") "
+    rs.MoveNext
+Loop
+        
+Debug.Print cond
+Dim stDocName As String
+Dim where As String
+
+stDocName = "rptRunningOrderSmall"
+     
+DoCmd.OpenReport stDocName, acPreview, , cond
+End Sub
+
+Private Sub Command18_Click()
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Dim cond As String
+cond = "false "
+Set rs = db.OpenRecordset("SELECT RunningOrderID " & _
+    "FROM qryCurrentEventROEntries " & _
+    "WHERE EventDateID = " & Me!EventDate)
+    
+Do While Not rs.EOF
+    cond = cond & " OR( EventDateID = " & Me!EventDate & " AND RunningOrderID = " & rs!RunningOrderID & ") "
+    rs.MoveNext
+Loop
+        
+Debug.Print cond
+Dim stDocName As String
+Dim where As String
+
+stDocName = "rptRunningOrderSmall"
+     
+DoCmd.OpenReport stDocName, acPreview, , cond
+End Sub
+
+Private Sub Command19_Click()
+
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Dim cond As String
+cond = "false "
+Set rs = db.OpenRecordset("SELECT EventDateID, RunningOrderID " & _
+    "FROM qryCurrentEventROEntries")
+    
+Do While Not rs.EOF
+    cond = cond & " OR( EventDateID = " & rs!EventDateID & " AND RunningOrderID = " & rs!RunningOrderID & ") "
+    rs.MoveNext
+Loop
+        
+Debug.Print cond
+Dim stDocName As String
+Dim where As String
+
+stDocName = "rptRunningOrderConfirmation"
+     
+DoCmd.OpenReport stDocName, acPreview, , cond
+End Sub
+
+
+
+Private Sub Command20_Click()
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Dim cond As String
+cond = "false "
+Set rs = db.OpenRecordset("SELECT EventDateID, RunningOrderID " & _
+    "FROM qryCurrentEventROEntries WHERE DayNum = 1")
+    
+Do While Not rs.EOF
+    cond = cond & " OR( RunningOrderID = " & rs!RunningOrderID & ") "
+    rs.MoveNext
+Loop
+        
+Debug.Print cond
+Dim stDocName As String
+Dim where As String
+
+stDocName = "rptRunningOrderAllDays"
+     
+DoCmd.OpenReport stDocName, acPreview, , cond
+End Sub
+
+Private Sub Command9_Click()
+Call ChooseAndRelink
+Call DoCmd.Close(acForm, "MainForm")
+
+
+Call DoCmd.OpenForm("MainForm")
+
+
+
+End Sub
+Private Sub saveStuffInTable(db As DAO.Database)
+db.Execute ("delete from ltblSelectedDate")
+
+With Me.trial_date
+    For Each varItem In .ItemsSelected
+        If Not IsNull(varItem) Then
+            'Build up the filter from the bound column (hidden).
+            db.Execute ("INSERT INTO ltblSelectedDate VALUES ('" & .ItemData(varItem) & "')")
+            
+        End If
+    Next
+End With
+
+db.Execute ("delete from ltblSelectedRO")
+
+With Me.ro
+    For Each varItem In .ItemsSelected
+        If Not IsNull(varItem) Then
+            db.Execute ("INSERT INTO ltblSelectedRO VALUES ('" & .ItemData(varItem) & "')")
+        End If
+    Next
+End With
+End Sub
+
+Private Sub gate_for_selected_ro_Click()
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Dim cond As String
+
+cond = "(RunningOrderID = " & Me!ro & ")"
+
+Call saveStuffInTable(db)
+
+
+Dim rocond As String
+rocond = "false"
+With Me.ro
+    For Each varItem In .ItemsSelected
+        If Not IsNull(varItem) Then
+            'Build up the filter from the bound column (hidden).
+            rocond = rocond & " OR RunningOrderID = " & .ItemData(varItem)
+        End If
+    Next
+End With
+cond = rocond
+Debug.Print cond
+Dim stDocName As String
+Dim where As String
+
+stDocName = "rptRunningOrderAllDays"
+     
+DoCmd.OpenReport stDocName, acPreview, , cond
+End Sub
+
+Private Sub go_running_order_Click()
+On Error GoTo Err_go_running_order_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "formRingDateSetup"
+    
+    stLinkCriteria = "[EventDateID]=" & Me![EventDate]
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_go_running_order_Click:
+    Exit Sub
+
+Err_go_running_order_Click:
+    MsgBox Err.Description
+    Resume Exit_go_running_order_Click
+    
+End Sub
+Private Sub Movups_Click()
+On Error GoTo Err_Movups_Click
+
+    Dim stDocName As String
+
+    stDocName = "rptMoveups"
+    stLinkCriteria = "[EventDateID]=" & Me![EventDate]
+    DoCmd.OpenReport stDocName, acPreview, , stLinkCriteria
+
+Exit_Movups_Click:
+    Exit Sub
+
+Err_Movups_Click:
+    MsgBox Err.Description
+    Resume Exit_Movups_Click
+    
+End Sub
+Private Sub Command11_Click()
+On Error GoTo Err_Command11_Click
+
+    Dim stDocName As String
+
+    stDocName = "rptConfirmationLetterCounts"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_Command11_Click:
+    Exit Sub
+
+Err_Command11_Click:
+    MsgBox Err.Description
+    Resume Exit_Command11_Click
+    
+End Sub
+Private Sub Command12_Click()
+On Error GoTo Err_Command12_Click
+
+    Dim stDocName As String
+
+    stDocName = "rptNoHeightCard"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_Command12_Click:
+    Exit Sub
+
+Err_Command12_Click:
+    MsgBox Err.Description
+    Resume Exit_Command12_Click
+    
+End Sub
+Private Sub cmdPrintRibbons_Click()
+On Error GoTo Err_cmdPrintRibbons_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+    
+    ' Forms("formPrintRibbons").Controls!EventDateID = Me![EventDate]
+    
+
+    stDocName = "formPrintRibbons"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+    ' Forms("formPrintRibbons").Controls!EventDateID = Me![EventDate]
+
+Exit_cmdPrintRibbons_Click:
+    Exit Sub
+
+Err_cmdPrintRibbons_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdPrintRibbons_Click
+    
+End Sub
+Private Sub cmdChecklist_Click()
+On Error GoTo Err_cmdChecklist_Click
+
+    Dim stDocName As String
+
+    stDocName = "rptChecklist"
+    stLinkCriteria = "[EventDateID]=" & Me![EventDate]
+    DoCmd.OpenReport stDocName, acPreview, , stLinkCriteria
+    
+
+Exit_cmdChecklist_Click:
+    Exit Sub
+
+Err_cmdChecklist_Click:
+    MsgBox Err.Description
+    Resume Exit_cmdChecklist_Click
+    
+End Sub
+Private Sub Command15_Click()
+On Error GoTo Err_Command15_Click
+
+    Dim stDocName As String
+
+    stDocName = "qryDataForTrialChair"
+    DoCmd.OpenQuery stDocName, acNormal, acEdit
+
+Exit_Command15_Click:
+    Exit Sub
+
+Err_Command15_Click:
+    MsgBox Err.Description
+    Resume Exit_Command15_Click
+    
+End Sub
+Private Sub refunds_Click()
+On Error GoTo Err_refunds_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "enterRefudns"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_refunds_Click:
+    Exit Sub
+
+Err_refunds_Click:
+    MsgBox Err.Description
+    Resume Exit_refunds_Click
+    
+End Sub
+Private Sub count_handler_but_Click()
+On Error GoTo Err_count_handler_but_Click
+
+    Dim db As DAO.Database
+    Set db = CurrentDb
+
+    Call saveStuffInTable(db)
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "frmHandlersRptCount"
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_count_handler_but_Click:
+    Exit Sub
+
+Err_count_handler_but_Click:
+    MsgBox Err.Description
+    Resume Exit_count_handler_but_Click
+    
+End Sub
+Private Sub openCourseTimes_Click()
+On Error GoTo Err_openCourseTimes_Click
+
+    Dim stDocName As String
+
+    stDocName = "rptCourseTImes"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_openCourseTimes_Click:
+    Exit Sub
+
+Err_openCourseTimes_Click:
+    MsgBox Err.Description
+    Resume Exit_openCourseTimes_Click
+    
+End Sub

@@ -1,0 +1,104 @@
+Operation =1
+Option =0
+Where ="(((tlkpDivision.DivisionName)=\"Regular\") AND ((tblTitle.OrganizationCD)=\"AKC\""
+    ")) OR (((tlkpDivision.DivisionName)=\"Preferred\"))"
+Begin InputTables
+    Name ="tblTitle"
+    Name ="tlkpClass"
+    Name ="tlkpLevel"
+    Name ="tlkpDivision"
+End
+Begin OutputColumns
+    Expression ="tblTitle.TitleID"
+    Expression ="tlkpClass.ClassName"
+    Expression ="tlkpDivision.DivisionName"
+    Expression ="tlkpLevel.LevelName"
+    Alias ="ExpandedName"
+    Expression ="[ClassName] & \" \" & [DivisionName] & \" \" & [LevelName]"
+    Expression ="tlkpClass.ClassAbbreviation"
+    Expression ="tlkpLevel.LevelAbbreviation"
+    Expression ="tlkpDivision.DivisionAbbreviation"
+    Alias ="ExpandedAbbr"
+    Expression ="[LevelAbbreviation] & \" \" & [ClassAbbreviation] & \" \" & [DivisionAbbreviatio"
+        "n]"
+End
+Begin Joins
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tlkpClass.ClassName"
+    Flag =0
+    Expression ="tlkpDivision.DivisionName"
+    Flag =0
+    Expression ="tlkpLevel.LevelName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =56
+    Top =325
+    Right =1181
+    Bottom =637
+    Left =-1
+    Top =-1
+    Right =1114
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =165
+        Bottom =113
+        Top =4
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =113
+        Top =2
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =402
+        Bottom =113
+        Top =4
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =440
+        Top =6
+        Right =536
+        Bottom =113
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+End

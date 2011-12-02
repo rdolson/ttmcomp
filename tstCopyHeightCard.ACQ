@@ -1,0 +1,88 @@
+Operation =3
+Name ="ltblDogEventJumpCard"
+Option =0
+Where ="(((tblEvent.EventID)=84))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblDog"
+    Name ="trelDogEvent"
+    Name ="trelDogRegistration"
+End
+Begin OutputColumns
+    Name ="EventID"
+    Expression ="tblEvent.EventID"
+    Name ="DogID"
+    Expression ="trelDogEvent.DogID"
+    Name ="JumpCardCD"
+    Expression ="trelDogRegistration.JumpCardCD"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogRegistration"
+    Expression ="tblDog.DogID = trelDogRegistration.DogID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbBoolean "UseTransaction" ="-1"
+dbByte "Orientation" ="0"
+Begin
+End
+Begin
+    State =0
+    Left =39
+    Top =264
+    Right =1253
+    Bottom =800
+    Left =-1
+    Top =-1
+    Right =1207
+    Bottom =253
+    Left =0
+    Top =0
+    ColumnsShown =651
+    Begin
+        Left =38
+        Top =6
+        Right =185
+        Bottom =189
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =485
+        Top =6
+        Right =625
+        Bottom =228
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =244
+        Top =11
+        Right =426
+        Bottom =228
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =661
+        Top =6
+        Right =885
+        Bottom =227
+        Top =0
+        Name ="trelDogRegistration"
+        Name =""
+    End
+End

@@ -1,0 +1,90 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblEntryCount"
+    Name ="trelDogEntry"
+    Name ="tblDog"
+    Name ="l_tblSelectedClasses"
+End
+Begin OutputColumns
+    Expression ="l_tblEntryCount.JumpHeightCD"
+    Expression ="l_tblEntryCount.EntryCount"
+    Expression ="tblDog.CallName"
+    Expression ="trelDogEntry.DogScore"
+    Expression ="trelDogEntry.DogTime"
+    Expression ="trelDogEntry.FinishingPlace"
+    Expression ="trelDogEntry.Qualified"
+    Expression ="trelDogEntry.Absent"
+End
+Begin Joins
+    LeftTable ="l_tblEntryCount"
+    RightTable ="trelDogEntry"
+    Expression ="l_tblEntryCount.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="l_tblEntryCount"
+    RightTable ="l_tblSelectedClasses"
+    Expression ="l_tblEntryCount.EntryHeightID = l_tblSelectedClasses.EntryHeightID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =12
+    Top =44
+    Right =898
+    Bottom =730
+    Left =-1
+    Top =-1
+    Right =1266
+    Bottom =310
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =114
+        Top =0
+        Name ="l_tblEntryCount"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =490
+        Bottom =282
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =528
+        Top =6
+        Right =719
+        Bottom =264
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =84
+        Top =0
+        Name ="l_tblSelectedClasses"
+        Name =""
+    End
+End

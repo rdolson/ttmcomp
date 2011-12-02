@@ -1,0 +1,100 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="qryEntryInfo"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Expression ="qryEntryInfo.RecordAddDateTime"
+    Expression ="tblDog.CallName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerCity"
+    Expression ="tblOwner.OwnerStateProvinceCD"
+    Expression ="qryEntryInfo.OwnerID"
+    Expression ="qryEntryInfo.DogID"
+    Expression ="qryEntryInfo.EventID"
+    Expression ="tblOwner.EmailAddress"
+    Expression ="tblOwner.OwnerPostalCD"
+    Expression ="tblOwner.OwnerStreet"
+    Expression ="qryEntryInfo.EnvelopeNumber"
+End
+Begin Joins
+    LeftTable ="qryEntryInfo"
+    RightTable ="tblOwner"
+    Expression ="qryEntryInfo.OwnerID = tblOwner.OwnerID"
+    Flag =1
+    LeftTable ="qryEntryInfo"
+    RightTable ="tblDog"
+    Expression ="qryEntryInfo.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="qryEntryInfo"
+    Expression ="tblDog.OwnerID = qryEntryInfo.OwnerID"
+    Flag =1
+    LeftTable ="qryEntryInfo"
+    RightTable ="tblEvent"
+    Expression ="qryEntryInfo.EventID = tblEvent.EventID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =18
+    Top =40
+    Right =1141
+    Bottom =436
+    Left =-1
+    Top =-1
+    Right =1116
+    Bottom =211
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =175
+        Top =8
+        Right =332
+        Bottom =160
+        Top =1
+        Name ="qryEntryInfo"
+        Name =""
+    End
+    Begin
+        Left =391
+        Top =-2
+        Right =543
+        Bottom =165
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =585
+        Top =13
+        Right =785
+        Bottom =180
+        Top =2
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+End

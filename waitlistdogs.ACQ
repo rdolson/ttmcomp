@@ -1,0 +1,90 @@
+Operation =1
+Option =2
+Where ="(((tblEvent.LockedIn)=True) AND ((trelDogEvent.WaitListed)=True))"
+Begin InputTables
+    Name ="tblDog"
+    Name ="tblEvent"
+    Name ="tblOwner"
+    Name ="trelDogEvent"
+End
+Begin OutputColumns
+    Expression ="tblOwner.EmailAddress"
+End
+Begin Joins
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbMemo "OrderBy" ="EmailAddress"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.EmailAddress"
+        dbInteger "ColumnWidth" ="6015"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =40
+    Top =62
+    Right =1254
+    Bottom =663
+    Left =-1
+    Top =-1
+    Right =1203
+    Bottom =280
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =483
+        Top =24
+        Right =695
+        Bottom =245
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =40
+        Top =-1
+        Right =136
+        Bottom =106
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =762
+        Top =14
+        Right =939
+        Bottom =254
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =260
+        Top =1
+        Right =456
+        Bottom =237
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+End

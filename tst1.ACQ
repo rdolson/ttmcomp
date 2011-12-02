@@ -1,0 +1,145 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblSelectedClasses"
+    Name ="l_tblEntryCount"
+    Name ="tlkpClass"
+    Name ="tlkpDivision"
+    Name ="tblTitle"
+    Name ="tblTitleEvent"
+    Name ="tlkpLevel"
+    Name ="qryCurrentTrialDates"
+End
+Begin OutputColumns
+    Expression ="l_tblSelectedClasses.Selected"
+    Expression ="l_tblEntryCount.TitleEventDateID"
+    Expression ="l_tblEntryCount.JumpHeightCD"
+    Expression ="l_tblEntryCount.EntryCount"
+    Expression ="tlkpClass.ClassName"
+    Expression ="tlkpDivision.DivisionName"
+    Expression ="tlkpLevel.LevelName"
+End
+Begin Joins
+    LeftTable ="l_tblEntryCount"
+    RightTable ="l_tblSelectedClasses"
+    Expression ="l_tblEntryCount.EntryHeightID = l_tblSelectedClasses.EntryHeightID"
+    Flag =2
+    LeftTable ="l_tblEntryCount"
+    RightTable ="tblTitleEvent"
+    Expression ="l_tblEntryCount.TitleEventDateID = tblTitleEvent.TitleEventDateID"
+    Flag =1
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+    LeftTable ="qryCurrentTrialDates"
+    RightTable ="tblTitleEvent"
+    Expression ="qryCurrentTrialDates.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =23
+    Top =22
+    Right =1300
+    Bottom =669
+    Left =-1
+    Top =-1
+    Right =1266
+    Bottom =410
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =84
+        Top =0
+        Name ="l_tblSelectedClasses"
+        Name =""
+    End
+    Begin
+        Left =214
+        Top =-1
+        Right =388
+        Bottom =107
+        Top =0
+        Name ="l_tblEntryCount"
+        Name =""
+    End
+    Begin
+        Left =716
+        Top =9
+        Right =812
+        Bottom =117
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =754
+        Top =226
+        Right =850
+        Bottom =334
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+    Begin
+        Left =293
+        Top =130
+        Right =544
+        Bottom =388
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =546
+        Top =1
+        Right =680
+        Bottom =124
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =772
+        Top =118
+        Right =868
+        Bottom =226
+        Top =0
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =131
+        Top =136
+        Right =252
+        Bottom =310
+        Top =0
+        Name ="qryCurrentTrialDates"
+        Name =""
+    End
+End

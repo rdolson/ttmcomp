@@ -1,0 +1,156 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="tblDog"
+    Name ="tblHandler"
+    Name ="trelDogEvent"
+    Name ="qryDogEventDates"
+    Name ="tblArmBandNumber"
+    Name ="ltblArmbandWithheld"
+    Name ="qryDogNeedsHeightCard"
+End
+Begin OutputColumns
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="tblDog.CallName"
+    Expression ="tblArmBandNumber.ArmBandNumber"
+    Expression ="qryDogEventDates.EventDateID"
+    Expression ="qryDogEventDates.EventDate"
+    Expression ="ltblArmbandWithheld.Held"
+    Expression ="trelDogEvent.JumpCardCD"
+    Alias ="OK"
+    Expression ="Not [NeedsCard]"
+    Alias ="FullName"
+    Expression ="[HandlerLastName] & \", \" & [HandlerFirstName]"
+End
+Begin Joins
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="qryDogEventDates"
+    RightTable ="trelDogEvent"
+    Expression ="qryDogEventDates.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="qryDogEventDates"
+    RightTable ="trelDogEvent"
+    Expression ="qryDogEventDates.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="tblArmBandNumber"
+    Expression ="tblDog.DogID = tblArmBandNumber.DogID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="ltblArmbandWithheld"
+    Expression ="tblDog.OwnerID = ltblArmbandWithheld.OwnerID"
+    Flag =2
+    LeftTable ="tblDog"
+    RightTable ="qryDogNeedsHeightCard"
+    Expression ="tblDog.DogID = qryDogNeedsHeightCard.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="qryDogNeedsHeightCard"
+    Expression ="trelDogEvent.EventID = qryDogNeedsHeightCard.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblArmBandNumber"
+    Expression ="trelDogEvent.EventID = tblArmBandNumber.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblHandler.HandlerLastName"
+    Flag =0
+    Expression ="tblHandler.HandlerFirstName"
+    Flag =0
+    Expression ="tblDog.CallName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =32
+    Top =51
+    Right =1138
+    Bottom =667
+    Left =-1
+    Top =-1
+    Right =1093
+    Bottom =442
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =155
+        Bottom =253
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =220
+        Top =290
+        Right =316
+        Bottom =387
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =512
+        Top =19
+        Right =668
+        Bottom =191
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =236
+        Top =144
+        Right =407
+        Bottom =241
+        Top =0
+        Name ="qryDogEventDates"
+        Name =""
+    End
+    Begin
+        Left =871
+        Top =252
+        Right =997
+        Bottom =379
+        Top =0
+        Name ="tblArmBandNumber"
+        Name =""
+    End
+    Begin
+        Left =477
+        Top =253
+        Right =660
+        Bottom =335
+        Top =0
+        Name ="ltblArmbandWithheld"
+        Name =""
+    End
+    Begin
+        Left =865
+        Top =42
+        Right =996
+        Bottom =199
+        Top =0
+        Name ="qryDogNeedsHeightCard"
+        Name =""
+    End
+End

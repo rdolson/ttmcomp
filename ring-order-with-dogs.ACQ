@@ -1,0 +1,315 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="tblTitle"
+    Name ="tlkpClass"
+    Name ="tlkpLevel"
+    Name ="tlkpDivision"
+    Name ="l_tblRunningOrderEntry"
+    Name ="l_tblTitleGroupEntry"
+    Name ="l_tblTitleGroupDef"
+    Name ="l_tblEventRingDef"
+    Name ="running-order-query-with-abs"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="tblTitle.TitleAbbreviation"
+    Expression ="tlkpDivision.DivisionName"
+    Expression ="tlkpClass.ClassName"
+    Expression ="tlkpLevel.LevelName"
+    Expression ="tblTitleEvent.TitleEventDateID"
+    Expression ="[running-order-query-with-abs].CallName"
+    Expression ="[running-order-query-with-abs].MovedUp"
+    Expression ="[running-order-query-with-abs].ArmBandNumber"
+    Expression ="[running-order-query-with-abs].JumpHeightinInches"
+    Expression ="[running-order-query-with-abs].HandlerFirstName"
+    Expression ="[running-order-query-with-abs].HandlerLastName"
+    Expression ="[running-order-query-with-abs].BreedName"
+    Expression ="[running-order-query-with-abs].Reason"
+    Expression ="tblEventDate.EventDateID"
+    Expression ="l_tblRunningOrderEntry.RunningOrderID"
+    Expression ="l_tblRunningOrderEntry.Order"
+    Alias ="GroupOrder"
+    Expression ="l_tblTitleGroupEntry.Order"
+    Alias ="GroupName"
+    Expression ="l_tblTitleGroupDef.Name"
+    Expression ="l_tblRunningOrderEntry.TitleGroupID"
+    Expression ="[running-order-query-with-abs].DogID"
+    Expression ="l_tblEventRingDef.RingNumber"
+    Expression ="[running-order-query-with-abs].HandlerID"
+    Expression ="tblEventDate.EventDateID"
+End
+Begin Joins
+    LeftTable ="tblTitle"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="tblTitle.TitleID = l_tblTitleGroupEntry.TitleID"
+    Flag =1
+    LeftTable ="l_tblTitleGroupEntry"
+    RightTable ="l_tblRunningOrderEntry"
+    Expression ="l_tblTitleGroupEntry.TitleGroupID = l_tblRunningOrderEntry.TitleGroupID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="l_tblTitleGroupDef"
+    Expression ="l_tblRunningOrderEntry.TitleGroupID = l_tblTitleGroupDef.TitleGroupID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="l_tblEventRingDef"
+    Expression ="tblEventDate.EventDateID = l_tblEventRingDef.EventDateID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="l_tblEventRingDef"
+    Expression ="l_tblRunningOrderEntry.RunningOrderID = l_tblEventRingDef.RunningOrderID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="running-order-query-with-abs"
+    Expression ="tblTitleEvent.TitleEventDateID = [running-order-query-with-abs].TitleEventDateID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="running-order-query-with-abs"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD = [running-order-query-with-abs].JumpHeightC"
+        "D"
+    Flag =1
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="[running-order-query-with-abs].MovedUp"
+    Flag =1
+    Expression ="[running-order-query-with-abs].ArmBandNumber"
+    Flag =0
+    Expression ="l_tblRunningOrderEntry.Order"
+    Flag =0
+    Expression ="l_tblTitleGroupEntry.Order"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblTitle.TitleAbbreviation"
+        dbInteger "ColumnWidth" ="1065"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="3"
+    End
+    Begin
+        dbText "Name" ="tlkpClass.ClassName"
+        dbInteger "ColumnWidth" ="2370"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="5"
+    End
+    Begin
+        dbText "Name" ="tblTitleEvent.TitleEventDateID"
+        dbInteger "ColumnWidth" ="795"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="9"
+    End
+    Begin
+        dbText "Name" ="tblEventDate.EventDate"
+        dbInteger "ColumnOrder" ="1"
+    End
+    Begin
+        dbText "Name" ="l_tblRunningOrderEntry.Order"
+        dbInteger "ColumnOrder" ="7"
+    End
+    Begin
+        dbText "Name" ="GroupOrder"
+        dbInteger "ColumnOrder" ="8"
+    End
+    Begin
+        dbText "Name" ="tblTitleEvent.TitleID"
+        dbInteger "ColumnWidth" ="900"
+        dbInteger "ColumnOrder" ="2"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tlkpDivision.DivisionName"
+        dbInteger "ColumnOrder" ="4"
+    End
+    Begin
+        dbText "Name" ="tlkpLevel.LevelName"
+        dbInteger "ColumnWidth" ="1035"
+        dbInteger "ColumnOrder" ="6"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblEventDate.EventDateID"
+        dbInteger "ColumnOrder" ="17"
+    End
+    Begin
+        dbText "Name" ="l_tblRunningOrderEntry.RunningOrderID"
+        dbInteger "ColumnOrder" ="18"
+    End
+    Begin
+        dbText "Name" ="[running-order-query-with-abs].CallName"
+        dbInteger "ColumnOrder" ="10"
+    End
+    Begin
+        dbText "Name" ="[running-order-query-with-abs].MovedUp"
+        dbInteger "ColumnWidth" ="1065"
+        dbInteger "ColumnOrder" ="11"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="[running-order-query-with-abs].ArmBandNumber"
+        dbInteger "ColumnWidth" ="840"
+        dbInteger "ColumnOrder" ="12"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="[running-order-query-with-abs].JumpHeightinInches"
+        dbInteger "ColumnOrder" ="13"
+    End
+    Begin
+        dbText "Name" ="[running-order-query-with-abs].HandlerFirstName"
+        dbInteger "ColumnOrder" ="14"
+    End
+    Begin
+        dbText "Name" ="[running-order-query-with-abs].HandlerLastName"
+        dbInteger "ColumnOrder" ="15"
+    End
+    Begin
+        dbText "Name" ="[running-order-query-with-abs].BreedName"
+        dbInteger "ColumnOrder" ="16"
+    End
+End
+Begin
+    State =0
+    Left =62
+    Top =84
+    Right =1313
+    Bottom =629
+    Left =-1
+    Top =-1
+    Right =1244
+    Bottom =384
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =180
+        Bottom =188
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =303
+        Top =22
+        Right =399
+        Bottom =189
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =726
+        Top =-2
+        Right =897
+        Bottom =165
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =952
+        Top =-1
+        Right =1048
+        Bottom =106
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =1060
+        Top =61
+        Right =1156
+        Bottom =168
+        Top =0
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =937
+        Top =111
+        Right =1033
+        Bottom =218
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+    Begin
+        Left =152
+        Top =245
+        Right =318
+        Bottom =352
+        Top =1
+        Name ="l_tblRunningOrderEntry"
+        Name =""
+    End
+    Begin
+        Left =346
+        Top =191
+        Right =472
+        Bottom =283
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+    Begin
+        Left =11
+        Top =200
+        Right =107
+        Bottom =277
+        Top =0
+        Name ="l_tblTitleGroupDef"
+        Name =""
+    End
+    Begin
+        Left =512
+        Top =7
+        Right =608
+        Bottom =99
+        Top =0
+        Name ="l_tblEventRingDef"
+        Name =""
+    End
+    Begin
+        Left =661
+        Top =71
+        Right =876
+        Bottom =328
+        Top =2
+        Name ="running-order-query-with-abs"
+        Name =""
+    End
+End

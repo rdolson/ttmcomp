@@ -1,0 +1,153 @@
+Version =19
+VersionRequired =19
+Checksum =-122913182
+Begin Form
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    CloseButton = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =2
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =3120
+    DatasheetFontHeight =10
+    ItemSuffix =14
+    Left =5100
+    Top =6570
+    Right =9675
+    Bottom =8025
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x7e5cf4db7948e340
+    End
+    RecordSource ="SELECT [trelDogRegistration].[DogID], [trelDogRegistration].[OrganizationCD], [t"
+        "relDogRegistration].[JumpCardCD] FROM [trelDogRegistration]"
+    Caption ="trelDogRegistration subform"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            BackColor =-2147483633
+            ForeColor =-2147483630
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            SpecialEffect =3
+        End
+        Begin BoundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =0
+            BackStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ListBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin Subform
+            SpecialEffect =2
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+        End
+        Begin ToggleButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin Tab
+            BackStyle =0
+        End
+        Begin FormHeader
+            Height =0
+            BackColor =-2147483633
+            Name ="FormHeader"
+            GUID = Begin
+                0xec09de77d1d0a442a8df5a7a10f0fe4b
+            End
+        End
+        Begin Section
+            Height =1980
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0x08bf5f41bd47a7438eaa6cae446a3d8c
+            End
+            Begin
+                Begin ComboBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    ListWidth =1440
+                    Width =3060
+                    Height =1980
+                    ColumnWidth =3225
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"100\""
+                    GUID = Begin
+                        0xb490369ea0594547b0f6e52b1cb77d23
+                    End
+                    Name ="Combo10"
+                    ControlSource ="JumpCardCD"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT [tlkpJumpCard].[JumpCardCD], [tlkpJumpCard].[Description] FROM [tlkpJumpC"
+                        "ard]"
+                    ColumnWidths ="0;1440"
+                    BaseInfo ="\"SELECT [tlkpJumpCard].[JumpCardCD], [tlkpJumpCard].[Description] FROM [tlkpJum"
+                        "pCard]\";\"tlkpJumpCard\";\"\";\"JumpCardCD\";\"Description\";\"JumpCardCD\""
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            BackColor =-2147483633
+            Name ="FormFooter"
+            GUID = Begin
+                0x49959ab1ca5dac4e92f7acd5b4cab675
+            End
+        End
+    End
+End

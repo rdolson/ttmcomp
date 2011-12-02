@@ -1,0 +1,160 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True) AND ((trelDogEntry.RecordAddDateTime)>#2/17/2010#))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+    Name ="qryExpandedTitle"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="tblTitle"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="qryExpandedTitle.ExpandedAbbr"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="tblDog.RegisteredName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitleEvent.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="tblTitle.CatalogSortOrder"
+    Flag =0
+    Expression ="trelDogEntry.JumpHeightCD"
+    Flag =0
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="trelDogEntry.RecordAddDateTime"
+        dbInteger "ColumnWidth" ="2400"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =41
+    Top =42
+    Right =997
+    Bottom =354
+    Left =-1
+    Top =-1
+    Right =945
+    Bottom =144
+    Left =0
+    Top =43
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =-37
+        Right =134
+        Bottom =70
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =-37
+        Right =268
+        Bottom =70
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =397
+        Top =-37
+        Right =493
+        Bottom =70
+        Top =4
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =549
+        Top =-37
+        Right =708
+        Bottom =70
+        Top =11
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =708
+        Top =-37
+        Right =836
+        Bottom =80
+        Top =5
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =874
+        Top =-37
+        Right =970
+        Bottom =70
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =1008
+        Top =-37
+        Right =1104
+        Bottom =70
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =292
+        Top =10
+        Right =388
+        Bottom =117
+        Top =8
+        Name ="tblTitle"
+        Name =""
+    End
+End

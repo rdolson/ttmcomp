@@ -1,0 +1,122 @@
+Operation =1
+Option =0
+Where ="(((trelDogRegistration.OrganizationCD)=\"AKC\"))"
+Begin InputTables
+    Name ="ltblDogEntrySummary"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="trelDogRegistration"
+    Name ="tlkpJumpCard"
+End
+Begin OutputColumns
+    Expression ="ltblDogEntrySummary.EventID"
+    Expression ="ltblDogEntrySummary.DogID"
+    Expression ="ltblDogEntrySummary.Envelope"
+    Expression ="ltblDogEntrySummary.JumpHeight"
+    Expression ="ltblDogEntrySummary.D1STD"
+    Expression ="ltblDogEntrySummary.D1JWW"
+    Expression ="ltblDogEntrySummary.D1FAST"
+    Expression ="ltblDogEntrySummary.D2STD"
+    Expression ="ltblDogEntrySummary.D2JWW"
+    Expression ="ltblDogEntrySummary.D2FAST"
+    Expression ="ltblDogEntrySummary.D3STD"
+    Expression ="ltblDogEntrySummary.D3JWW"
+    Expression ="ltblDogEntrySummary.D3FAST"
+    Expression ="ltblDogEntrySummary.CheckNumber"
+    Expression ="ltblDogEntrySummary.CheckAmount"
+    Expression ="ltblDogEntrySummary.DogFee"
+    Expression ="ltblDogEntrySummary.TotalFee"
+    Expression ="ltblDogEntrySummary.TotalCheck"
+    Expression ="tblDog.CallName"
+    Expression ="tblDog.RegisteredName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tlkpJumpCard.Description"
+    Expression ="trelDogRegistration.JumpCardCD"
+    Expression ="trelDogRegistration.OrganizationCD"
+End
+Begin Joins
+    LeftTable ="ltblDogEntrySummary"
+    RightTable ="tblDog"
+    Expression ="ltblDogEntrySummary.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogRegistration"
+    Expression ="tblDog.DogID = trelDogRegistration.DogID"
+    Flag =1
+    LeftTable ="tlkpJumpCard"
+    RightTable ="trelDogRegistration"
+    Expression ="tlkpJumpCard.JumpCardCD = trelDogRegistration.JumpCardCD"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =106
+    Top =128
+    Right =1335
+    Bottom =433
+    Left =-1
+    Top =-1
+    Right =1218
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =14
+        Name ="ltblDogEntrySummary"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =113
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =402
+        Bottom =113
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =440
+        Top =6
+        Right =659
+        Bottom =113
+        Top =1
+        Name ="trelDogRegistration"
+        Name =""
+    End
+    Begin
+        Left =697
+        Top =6
+        Right =793
+        Bottom =83
+        Top =0
+        Name ="tlkpJumpCard"
+        Name =""
+    End
+End

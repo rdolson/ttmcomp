@@ -1,0 +1,62 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblEnvelope"
+    Name ="qryExpandedEntryInfo"
+End
+Begin OutputColumns
+    Expression ="qryExpandedEntryInfo.DogID"
+    Expression ="qryExpandedEntryInfo.EventID"
+    Expression ="qryExpandedEntryInfo.OwnerLastName"
+    Expression ="l_tblEnvelope.EnvelopeNumber"
+End
+Begin Joins
+    LeftTable ="l_tblEnvelope"
+    RightTable ="qryExpandedEntryInfo"
+    Expression ="l_tblEnvelope.DogID = qryExpandedEntryInfo.DogID"
+    Flag =3
+    LeftTable ="l_tblEnvelope"
+    RightTable ="qryExpandedEntryInfo"
+    Expression ="l_tblEnvelope.EventID = qryExpandedEntryInfo.EventID"
+    Flag =3
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =48
+    Top =178
+    Right =1171
+    Bottom =666
+    Left =-1
+    Top =-1
+    Right =1116
+    Bottom =219
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =99
+        Top =0
+        Name ="l_tblEnvelope"
+        Name =""
+    End
+    Begin
+        Left =285
+        Top =11
+        Right =479
+        Bottom =179
+        Top =1
+        Name ="qryExpandedEntryInfo"
+        Name =""
+    End
+End

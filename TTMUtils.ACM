@@ -1,0 +1,154 @@
+Option Compare Database
+
+Public Const errNoCurrentTrial As Long = vbObjectError + 1000
+
+
+Public Sub GetCurrentTrial(EventID As Integer, EventName As String)
+
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Set rs = db.OpenRecordset("SELECT tblEvent.EventID, tblEvent.EventName " & _
+    "FROM tblEvent " & _
+    "WHERE tblEvent.LockedIn")
+    
+
+With rs
+    .MoveFirst
+    
+    If .EOF Then Err.Raise errNoCurrentTrial
+    
+    EventID = !EventID
+    EventName = !EventName
+    
+End With
+
+
+End Sub
+
+
+
+Public Function GetDogClasses(EventDateID As Integer, DogID As Integer) As String
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Set rs = db.OpenRecordset("SELECT JumpHeightCD, LevelName, DivisionName, ClassAbbreviation " & _
+    "FROM qryLookupDogClasses " & _
+    "WHERE EventDateID = " & EventDateID & " and DogID = " & DogID)
+    
+Dim Ret As String
+
+Ret = ""
+
+With rs
+    
+    While Not rs.EOF
+    
+        If Ret <> "" Then Ret = Ret & ", "
+        Ret = Ret & rs!ClassAbbreviation & " " & rs!LevelName & " " & rs!DivisionName
+    
+        .MoveNext
+    Wend
+        
+    
+End With
+
+GetDogClasses = Ret
+
+
+End Function
+
+Public Function HasMultipleDogs(EventDateID As Integer, HandlerID As Integer, JumpHeightCD As String, TitleID As Integer) As Boolean
+Dim db As DAO.Database
+Dim rs As DAO.Recordset
+
+Set db = CurrentDb
+
+Dim qry As String
+
+qry = "SELECT CountOfDogID " & _
+                        "FROM (qryHandlersWithMultipleDogsGrouped q INNER JOIN l_tblTitleGroupEntry l ON  " & _
+                        "q.TitleGroupID = l.TitleGroupID) " & _
+                        "WHERE q.EventDateID = " & EventDateID & _
+                        "  AND q.JumpHeightCD = '" & JumpHeightCD & "'" & _
+                        "  AND q.HandlerID = " & HandlerID & _
+                        "  AND l.TItleID = " & TitleID
+'Debug.Print qry
+Set rs = db.OpenRecordset(qry)
+
+With rs
+    
+    While Not rs.EOF
+    
+        HasMultipleDogs = rs!CountOfDogID > 1
+        
+    
+        .MoveNext
+    Wend
+        
+    
+End With
+
+
+
+
+End Function
+Public Function CurrentTrialID()
+Dim id As Integer
+Dim Name As String
+Call GetCurrentTrial(id, Name)
+currentrialid = id
+
+End Function
+
+Public Function CurrentTrialName()
+Dim id As Integer
+Dim Name As String
+Call GetCurrentTrial(id, Name)
+CurrentTrialName = Name
+
+
+End Function
+
+Public Sub ChooseAndRelink()
+
+Dim fd As Office.FileDialog
+Dim path As String
+
+Set fd = Application.FileDialog(msoFileDialogFilePicker)
+
+fd.AllowMultiSelect = False
+
+If fd.Show = -1 Then
+
+    path = fd.SelectedItems.Item(1)
+    Debug.Print "selected " & path
+    Call RelinkTables(path)
+End If
+
+End Sub
+Public Sub RelinkTables(path As String)
+
+Dim db As Database
+Set db = CurrentDb
+
+Dim constr As String
+
+constr = ";DATABASE=" & path
+
+For Each tdf In db.TableDefs
+            
+
+    If tdf.Connect <> "" Then
+       Debug.Print "relink  " & tdf.Name & " " & tdf.Connect
+       tdf.Connect = constr
+       tdf.RefreshLink
+       
+    End If
+Next tdf
+
+End Sub

@@ -1,0 +1,247 @@
+Version =19
+VersionRequired =19
+Checksum =-122868184
+Begin Form
+    FilterOn = NotDefault
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =11535
+    DatasheetFontHeight =10
+    ItemSuffix =8
+    Left =555
+    Top =4635
+    Right =12375
+    Bottom =8355
+    DatasheetGridlinesColor =12632256
+    Filter ="[EventDateID]=85"
+    RecSrcDt = Begin
+        0xe36a15d30989e240
+    End
+    RecordSource ="l_tblEventRingDef"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+        End
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="MS Sans Serif"
+        End
+        Begin TextBox
+            SpecialEffect =2
+            OldBorderStyle =0
+        End
+        Begin ComboBox
+            SpecialEffect =2
+        End
+        Begin Section
+            Height =465
+            BackColor =-2147483633
+            Name ="Detail"
+            Begin
+                Begin ComboBox
+                    OverlapFlags =85
+                    ColumnCount =3
+                    ListWidth =3855
+                    Left =180
+                    Top =60
+                    Width =3660
+                    ColumnInfo ="\"\";\"\";\"\";\"ddd\"\", \"\"mmm d\"\", \"\"yyyy\";\"\";\"\";\"8\";\"8\""
+                    Name ="Combo0"
+                    ControlSource ="EventDateID"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT DISTINCTROW [tblEventDate].[EventDateID], [tblEventDate].[EventDate], [tb"
+                        "lEventDate].[EventDateName] FROM [tblEventDate];"
+                    ColumnWidths ="0;1440;2415"
+                    BaseInfo ="\"SELECT DISTINCTROW [tblEventDate].[EventDateID], [tblEventDate].[EventDate], ["
+                        "tblEventDate].[EventDateName] FROM [tblEventDate];\";\"tblEventDate\";\"\";\"Eve"
+                        "ntDateID\";\"EventDate\";\"PrimaryKey\""
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    Left =3960
+                    Top =60
+                    Width =840
+                    TabIndex =1
+                    Name ="RingNumber"
+                    ControlSource ="RingNumber"
+                    StatusBarText ="This is the ring we're defining"
+                End
+                Begin ComboBox
+                    OverlapFlags =85
+                    ColumnCount =3
+                    ListWidth =5865
+                    Left =4920
+                    Top =60
+                    Width =2160
+                    TabIndex =2
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"\";\"\";\"10\";\"100\""
+                    Name ="Combo3"
+                    ControlSource ="RunningOrderID"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT DISTINCTROW [l_tblRunningOrderDef].[RunningOrderID], [l_tblRunningOrderDe"
+                        "f].[Name], [l_tblRunningOrderDef].[Description] FROM [l_tblRunningOrderDef];"
+                    ColumnWidths ="0;1440;4425"
+                    BaseInfo ="\"SELECT DISTINCTROW [l_tblRunningOrderDef].[RunningOrderID], [l_tblRunningOrder"
+                        "Def].[Name], [l_tblRunningOrderDef].[Description] FROM [l_tblRunningOrderDef];\""
+                        ";\"l_tblRunningOrderDef\";\"\";\"RunningOrderID\";\"Name\";\"PrimaryKey\""
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =7200
+                    Top =60
+                    Width =1605
+                    Height =405
+                    TabIndex =3
+                    Name ="report_button"
+                    Caption ="Preview gate sheet"
+                    OnClick ="[Event Procedure]"
+                    ObjectPalette = Begin
+                        0x0003000100000000bf00000000bf0000bfbf00000000bf00bf00bf0000bfbf00 ,
+                        0xc0c0c000c0dcc000a4c8f0000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x00000000000000000000000000000000000000000000000000000000fffbf000 ,
+                        0xa0a0a40080808000ff00000000ff0000ffff00000000ff00ff00ff0000ffff00 ,
+                        0xffffff0000000000
+                    End
+                    ControlTipText ="Preview Report"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =10620
+                    Top =60
+                    Width =915
+                    Height =405
+                    TabIndex =4
+                    Name ="edit_button"
+                    Caption ="Edit order"
+                    OnClick ="[Event Procedure]"
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =8880
+                    Top =60
+                    Width =1605
+                    Height =405
+                    TabIndex =5
+                    Name ="ro_button"
+                    Caption ="Running order rpt"
+                    OnClick ="[Event Procedure]"
+                    ControlTipText ="Preview Report"
+                    GUID = Begin
+                        0x1831db6f5f06d14e98fd198372c21875
+                    End
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+
+Private Sub Command7_Click()
+
+End Sub
+
+Private Sub report_button_Click()
+On Error GoTo Err_report_button_Click
+
+    Dim stDocName As String
+    Dim where As String
+
+    stDocName = "rptGate"
+    Rem stDocName = "rptRunningOrderLarge"
+     
+    where = "EventDateID = " & Me!EventDateID & " and RunningOrderID = " & Me!RunningOrderID
+    
+    Debug.Print where
+    DoCmd.OpenReport stDocName, acPreview, , where
+    
+
+Exit_report_button_Click:
+    Exit Sub
+
+Err_report_button_Click:
+    MsgBox Err.Description
+    Resume Exit_report_button_Click
+    
+End Sub
+Private Sub edit_button_Click()
+On Error GoTo Err_edit_button_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "formRunningOrderSetup"
+    
+    stLinkCriteria = "[RunningOrderID]=" & Me![Combo3]
+    DoCmd.OpenForm stDocName, , , stLinkCriteria
+
+Exit_edit_button_Click:
+    Exit Sub
+
+Err_edit_button_Click:
+    MsgBox Err.Description
+    Resume Exit_edit_button_Click
+    
+End Sub
+
+Private Sub ro_button_Click()
+On Error GoTo Err_ro_button_Click
+
+    Dim stDocName As String
+    Dim where As String
+
+    stDocName = "rptRunningOrderSmall"
+     
+    where = "EventDateID = " & Me!EventDateID & " and RunningOrderID = " & Me!RunningOrderID
+    
+    Debug.Print where
+    DoCmd.OpenReport stDocName, acPreview, , where
+    
+
+Exit_ro_button_Click:
+    Exit Sub
+
+Err_ro_button_Click:
+    MsgBox Err.Description
+    Resume Exit_ro_button_Click
+ 
+End Sub

@@ -1,0 +1,179 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="trelOwnerEvent"
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="tblEvent"
+    Name ="draw_sd_2008_0229"
+End
+Begin OutputColumns
+    Expression ="draw_sd_2008_0229.Date"
+    Expression ="draw_sd_2008_0229.DrawOrder"
+    Expression ="trelDogEvent.EnvelopeNumber"
+    Expression ="tblDog.CallName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="draw_sd_2008_0229.Sue"
+    Expression ="draw_sd_2008_0229.Bonnie"
+    Expression ="draw_sd_2008_0229.SueSum"
+    Expression ="draw_sd_2008_0229.BonnieSum"
+    Alias ="EnvNum"
+    Expression ="CInt([trelDogEvent].[EnvelopeNumber])"
+    Expression ="trelOwnerEvent.Worker"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblDog.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="trelOwnerEvent"
+    RightTable ="trelDogEvent"
+    Expression ="trelOwnerEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="draw_sd_2008_0229"
+    Expression ="trelDogEvent.EnvelopeNumber = draw_sd_2008_0229.Envelope"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="draw_sd_2008_0229.Date"
+    Flag =0
+    Expression ="draw_sd_2008_0229.DrawOrder"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="2160"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="draw_sd_2008_0229.Date"
+        dbInteger "ColumnWidth" ="1095"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="draw_sd_2008_0229.DrawOrder"
+        dbInteger "ColumnWidth" ="870"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelDogEvent.EnvelopeNumber"
+        dbInteger "ColumnWidth" ="960"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblDog.CallName"
+        dbInteger "ColumnWidth" ="840"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="draw_sd_2008_0229.Sue"
+        dbInteger "ColumnWidth" ="855"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="draw_sd_2008_0229.Bonnie"
+        dbInteger "ColumnWidth" ="705"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="draw_sd_2008_0229.SueSum"
+        dbInteger "ColumnWidth" ="720"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="draw_sd_2008_0229.BonnieSum"
+        dbInteger "ColumnWidth" ="510"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =23
+    Top =82
+    Right =1040
+    Bottom =713
+    Left =-1
+    Top =-1
+    Right =1205
+    Bottom =277
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =443
+        Top =26
+        Right =664
+        Bottom =163
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =207
+        Top =2
+        Right =401
+        Bottom =199
+        Top =1
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =889
+        Top =12
+        Right =1072
+        Bottom =239
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =762
+        Top =124
+        Right =858
+        Bottom =231
+        Top =3
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =114
+        Right =134
+        Bottom =221
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =42
+        Top =0
+        Right =138
+        Bottom =107
+        Top =3
+        Name ="draw_sd_2008_0229"
+        Name =""
+    End
+End

@@ -1,0 +1,181 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="trelWaitList"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="qryExpandedTitle"
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+End
+Begin OutputColumns
+    Expression ="tblDog.RegisteredName"
+    Alias ="name"
+    Expression ="[OwnerLastName] & \", \" & [OwnerFirstName]"
+    Alias ="day"
+    Expression ="Left(WeekdayName(Weekday([EventDate])),3)"
+    Expression ="qryExpandedTitle.ExpandedAbbr"
+    Expression ="trelWaitList.JumpHeightCD"
+End
+Begin Joins
+    LeftTable ="tblTitleEvent"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitleEvent.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelWaitList"
+    Expression ="tblDog.DogID = trelWaitList.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelWaitList"
+    Expression ="tblTitleEvent.TitleEventDateID = trelWaitList.TitleEventDateID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblDog.RegisteredName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+dbInteger "FrozenColumns" ="1"
+Begin
+    Begin
+        dbText "Name" ="qryExpandedTitle.ExpandedName"
+        dbInteger "ColumnWidth" ="3840"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblDog.RegisteredName"
+        dbInteger "ColumnWidth" ="3000"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerLastName"
+        dbInteger "ColumnWidth" ="1875"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="2955"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelWaitList.JumpHeightCD"
+        dbInteger "ColumnWidth" ="435"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="dog"
+        dbBoolean "ColumnHidden" ="-1"
+    End
+    Begin
+        dbText "Name" ="day"
+        dbInteger "ColumnWidth" ="630"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="name"
+        dbInteger "ColumnWidth" ="2220"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryExpandedTitle.ExpandedAbbr"
+        dbInteger "ColumnWidth" ="2205"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =84
+    Top =4
+    Right =1338
+    Bottom =704
+    Left =-1
+    Top =-1
+    Right =1243
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =556
+        Top =5
+        Right =652
+        Bottom =112
+        Top =0
+        Name ="trelWaitList"
+        Name =""
+    End
+    Begin
+        Left =680
+        Top =4
+        Right =776
+        Bottom =111
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =969
+        Top =4
+        Right =1065
+        Bottom =111
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =1180
+        Top =15
+        Right =1276
+        Bottom =122
+        Top =5
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =47
+        Top =1
+        Right =143
+        Bottom =108
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =234
+        Top =4
+        Right =373
+        Bottom =115
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =399
+        Top =4
+        Right =495
+        Bottom =111
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+End

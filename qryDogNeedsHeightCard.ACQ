@@ -1,0 +1,127 @@
+Operation =1
+Option =2
+Begin InputTables
+    Name ="trelDogEvent"
+    Name ="ltblEventHasVMO"
+    Name ="ltblValidJumpCardCD"
+    Name ="trelDogEntry"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.DogID"
+    Expression ="trelDogEvent.EventID"
+    Expression ="ltblEventHasVMO.HasVMO"
+    Expression ="trelDogEvent.JumpCardCD"
+    Expression ="ltblValidJumpCardCD.OK"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Alias ="NeedsCard"
+    Expression ="(Not [OK]) And ([HasVMO] Or Not ([JumpHeightCD]=\"24\" Or [JumpHeightCD]=\"26\")"
+        ")"
+End
+Begin Joins
+    LeftTable ="trelDogEvent"
+    RightTable ="ltblEventHasVMO"
+    Expression ="trelDogEvent.EventID = ltblEventHasVMO.EventID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="ltblValidJumpCardCD"
+    Expression ="trelDogEvent.EventID = ltblValidJumpCardCD.EventID"
+    Flag =2
+    LeftTable ="trelDogEvent"
+    RightTable ="ltblValidJumpCardCD"
+    Expression ="trelDogEvent.JumpCardCD = ltblValidJumpCardCD.JumpCardCD"
+    Flag =2
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblEventDate"
+    Expression ="trelDogEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="trelDogEntry"
+    Expression ="trelDogEvent.DogID = trelDogEntry.DogID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =62
+    Top =84
+    Right =1274
+    Bottom =547
+    Left =-1
+    Top =-1
+    Right =1201
+    Bottom =208
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =156
+        Bottom =187
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =191
+        Top =6
+        Right =287
+        Bottom =83
+        Top =0
+        Name ="ltblEventHasVMO"
+        Name =""
+    End
+    Begin
+        Left =356
+        Top =4
+        Right =452
+        Bottom =96
+        Top =0
+        Name ="ltblValidJumpCardCD"
+        Name =""
+    End
+    Begin
+        Left =536
+        Top =21
+        Right =798
+        Bottom =187
+        Top =1
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =1055
+        Top =31
+        Right =1151
+        Bottom =138
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =932
+        Top =8
+        Right =1028
+        Bottom =115
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+End

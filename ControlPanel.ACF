@@ -1,0 +1,112 @@
+Version =19
+VersionRequired =19
+Checksum =122868164
+Begin Form
+    RecordSelectors = NotDefault
+    NavigationButtons = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =124
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    DatasheetFontHeight =10
+    ItemSuffix =3
+    Left =600
+    Top =9240
+    Right =7800
+    Bottom =11685
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x110ebc1d7fe4e240
+    End
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =2880
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0xb6df66c128d61b44ac15bd7679985694
+            End
+            Begin
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =360
+                    Top =120
+                    Width =2040
+                    Height =405
+                    Name ="env"
+                    Caption ="Update evelope numbers"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0x111769e70101664199f38b6160190652
+                    End
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =420
+                    Top =780
+                    Width =1665
+                    Height =405
+                    TabIndex =1
+                    Name ="runtot"
+                    Caption ="Show running totals"
+                    OnClick ="[Event Procedure]"
+                    GUID = Begin
+                        0xc719219535db9049bbc6d0908243dca2
+                    End
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+
+Private Sub env_Click()
+On Error GoTo Err_env_Click
+
+    Dim stDocName As String
+    Dim stLinkCriteria As String
+
+    stDocName = "formEnvelopeNmberUpdate"
+    DoCmd.OpenForm stDocName, acFormDS, , stLinkCriteria
+
+Exit_env_Click:
+    Exit Sub
+
+Err_env_Click:
+    MsgBox Err.Description
+    Resume Exit_env_Click
+    
+End Sub
+Private Sub runtot_Click()
+On Error GoTo Err_runtot_Click
+
+    Dim stDocName As String
+
+    stDocName = "runningTotals"
+    DoCmd.OpenReport stDocName, acPreview
+
+Exit_runtot_Click:
+    Exit Sub
+
+Err_runtot_Click:
+    MsgBox Err.Description
+    Resume Exit_runtot_Click
+    
+End Sub

@@ -1,0 +1,134 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True) AND ((tblEvent.ApplicationTypeCD)=\"Agility\"))"
+Begin InputTables
+    Name ="l_tblRunningOrderDef"
+    Name ="l_tblRunningOrderEntry"
+    Name ="l_tblTitleGroupEntry"
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="l_tblEventRingDef"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblEventDate.EventDateID"
+    Expression ="l_tblEventRingDef.RingNumber"
+    Alias ="GroupOrder"
+    Expression ="l_tblRunningOrderEntry.Order"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD"
+    Expression ="l_tblTitleGroupEntry.TitleID"
+    Alias ="TitleOrder"
+    Expression ="l_tblRunningOrderEntry.Order"
+    Alias ="TitleGroupOrder"
+    Expression ="l_tblTitleGroupEntry.Order"
+End
+Begin Joins
+    LeftTable ="l_tblRunningOrderDef"
+    RightTable ="l_tblRunningOrderEntry"
+    Expression ="l_tblRunningOrderDef.RunningOrderID = l_tblRunningOrderEntry.RunningOrderID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="l_tblRunningOrderEntry.TitleGroupID = l_tblTitleGroupEntry.TitleGroupID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="l_tblEventRingDef"
+    Expression ="tblEventDate.EventDateID = l_tblEventRingDef.EventDateID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderDef"
+    RightTable ="l_tblEventRingDef"
+    Expression ="l_tblRunningOrderDef.RunningOrderID = l_tblEventRingDef.RunningOrderID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="l_tblEventRingDef.RingNumber"
+    Flag =0
+    Expression ="l_tblRunningOrderEntry.Order"
+    Flag =0
+    Expression ="l_tblRunningOrderEntry.Order"
+    Flag =0
+    Expression ="l_tblTitleGroupEntry.Order"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =31
+    Top =2
+    Right =1266
+    Bottom =656
+    Left =-1
+    Top =-1
+    Right =1224
+    Bottom =389
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =271
+        Top =236
+        Right =367
+        Bottom =328
+        Top =0
+        Name ="l_tblRunningOrderDef"
+        Name =""
+    End
+    Begin
+        Left =445
+        Top =148
+        Right =624
+        Bottom =270
+        Top =0
+        Name ="l_tblRunningOrderEntry"
+        Name =""
+    End
+    Begin
+        Left =681
+        Top =152
+        Right =845
+        Bottom =259
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+    Begin
+        Left =37
+        Top =226
+        Right =133
+        Bottom =333
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =232
+        Top =109
+        Right =328
+        Bottom =216
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =464
+        Top =8
+        Right =560
+        Bottom =100
+        Top =0
+        Name ="l_tblEventRingDef"
+        Name =""
+    End
+End

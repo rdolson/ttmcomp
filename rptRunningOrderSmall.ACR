@@ -1,0 +1,279 @@
+Version =19
+VersionRequired =19
+Checksum =123706006
+Begin Report
+    LayoutForPrint = NotDefault
+    FilterOn = NotDefault
+    DefaultView =0
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =5700
+    DatasheetFontHeight =10
+    ItemSuffix =33
+    Left =1260
+    Right =7230
+    Bottom =7740
+    DatasheetGridlinesColor =12632256
+    Filter ="(false  OR( EventDateID = 34 AND RunningOrderID = 75)  OR( EventDateID = 35 AND "
+        "RunningOrderID = 76) )"
+    RecSrcDt = Begin
+        0xc6fb36ea0989e240
+    End
+    RecordSource ="ring-order-with-dogs"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xb0010000b0010000b0010000b001000000000000441600002c01000001000000 ,
+        0x020000006801000000000000a20700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x5044463939350000000000000000000000000000000000000000000000000000 ,
+        0x010402059c00d80253ef800101000100ea0a6f08640001000f002c0102000100 ,
+        0x2c01030000004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000000000000000000000000000000000000000000050524956 ,
+        0xe230000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000180000000000102710271027 ,
+        0x0000102700000000000000000000c40200000000000000000000000000000000 ,
+        0x00000000000000000300000000000000140010005c4b03006843040000000000 ,
+        0x0000000000000000000000000000000000000000000000003f2cb85b05000000 ,
+        0x02000000ff00ff00010000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x140000005446534d010000000000000000000000
+    End
+    PrtDevNames = Begin
+        0x080012001a00000077696e73706f6f6c004c5044463939350020504446393935 ,
+        0x504f52540031302e392e31322e3238002e31322e3200
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin TextBox
+            AutoLabel = NotDefault
+            OldBorderStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            ControlSource ="EventDate"
+        End
+        Begin BreakLevel
+            ControlSource ="RingNumber"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            KeepTogether =2
+            ControlSource ="Order"
+        End
+        Begin BreakLevel
+            KeepTogether =1
+            ControlSource ="GroupOrder"
+        End
+        Begin BreakLevel
+            SortOrder = NotDefault
+            ControlSource ="ClassName"
+        End
+        Begin BreakLevel
+            SortOrder = NotDefault
+            ControlSource ="MovedUp"
+        End
+        Begin BreakLevel
+            ControlSource ="ArmBandNumber"
+        End
+        Begin PageHeader
+            Visible = NotDefault
+            Height =0
+            Name ="PageHeaderSection"
+            GUID = Begin
+                0x3d7583746a16db4486ce7518a5a3722c
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            ForceNewPage =1
+            Height =0
+            Name ="GroupHeader1"
+            GUID = Begin
+                0xfa387a9194df5543a218798dce98e6da
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            RepeatSection = NotDefault
+            Height =345
+            BreakLevel =2
+            OnPrint ="[Event Procedure]"
+            Name ="GroupHeader0"
+            GUID = Begin
+                0x7e50374f3e242c44bb59e392dce817c4
+            End
+            Begin
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Top =60
+                    Width =4020
+                    Height =285
+                    FontSize =10
+                    FontWeight =700
+                    Name ="txtHeader"
+                    ControlSource ="=[EventDate] & \" \" & [GroupName] & \" \" & [JumpHeightinInches] & \"\"\" (\" &"
+                        " Count([DogID]) & \" dogs)\""
+                    GUID = Begin
+                        0x1cce327633c29b438f287b0f9573ffde
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Top =60
+                    Width =4020
+                    Height =285
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =1
+                    Name ="txtContinued"
+                    ControlSource ="=[EventDate] & \" \" & [GroupName] & \" \" & [JumpHeightinInches] & \"\"\" (cont"
+                        ")\""
+                    GUID = Begin
+                        0x6aa75d05853ec148b21d5b85e963ecb6
+                    End
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            CanGrow = NotDefault
+            Height =300
+            Name ="Detail"
+            Begin
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Left =1140
+                    Width =4560
+                    Height =225
+                    Name ="Text21"
+                    ControlSource ="=[CallName] & \", \" & [BreedName] & \", \" & [HandlerFirstName] & \" \" & [Hand"
+                        "lerLastName]"
+                    ConditionalFormat = Begin
+                        0x01000000f6000000010000000100000000000000000000004a00000001000000 ,
+                        0x00000000ffffff00000000000000000000000000000000000000000000000000 ,
+                        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+                        0x4800610073004d0075006c007400690070006c00650044006f00670073002800 ,
+                        0x5b004500760065006e0074004400610074006500490044005d002c005b004800 ,
+                        0x61006e0064006c0065007200490044005d002c005b004a0075006d0070004800 ,
+                        0x6500690067006800740049006e0049006e0063006800650073005d002c005b00 ,
+                        0x5400690074006c006500490044005d00290000000000
+                    End
+                    GUID = Begin
+                        0xc7fe95079de2004a9acd65aef9f72ba1
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Width =780
+                    FontWeight =700
+                    TabIndex =1
+                    Name ="Text23"
+                    ControlSource ="=[ArmBandNumber] & \" \" & IIf(Right([LevelName],2)=\" B\",\"B\",IIf(Right([Leve"
+                        "lName],2)=\" A\",\"A\",\"\")) & IIf([DivisionName]=\"Preferred\",\"P\",\"\")"
+                    GUID = Begin
+                        0x3740f6e595f7dd408cccbb4abb0e444c
+                    End
+                End
+                Begin TextBox
+                    RunningSum =1
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Left =840
+                    Top =60
+                    Width =180
+                    Height =180
+                    FontSize =5
+                    TabIndex =2
+                    Name ="txtRunningSum"
+                    ControlSource ="=1"
+                    GUID = Begin
+                        0xfb7c921590d9324997da0017ccef791f
+                    End
+                End
+            End
+        End
+        Begin PageFooter
+            Height =240
+            Name ="PageFooterSection"
+            GUID = Begin
+                0xb8c95f093f094d48a70d0d5526e53709
+            End
+            Begin
+                Begin TextBox
+                    BackStyle =0
+                    IMESentenceMode =3
+                    Name ="Text26"
+                    ControlSource ="=\"Page \" & [Page] & \" of \" & [Pages]"
+                    GUID = Begin
+                        0x7524223d2b5d1f48a5e3661c7a4aa4c3
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1440
+                    Width =4260
+                    TabIndex =1
+                    Name ="Text32"
+                    ControlSource ="=DLookUp(\"EventName\",\"tblEvent\",\"lockedIn = TRUE\")"
+                    GUID = Begin
+                        0x7c168fc8702c324b932e20df22d033e9
+                    End
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+Dim lastGroup As Integer
+
+Private Sub GroupHeader0_Print(Cancel As Integer, PrintCount As Integer)
+If Me![txtRunningSum].Value = 1 Then
+Me![txtContinued].Visible = False
+Me![txtHeader].Visible = True
+Else
+Me![txtContinued].Visible = True
+Me![txtHeader].Visible = False
+End If
+End Sub
