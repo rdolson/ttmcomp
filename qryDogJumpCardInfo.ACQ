@@ -1,0 +1,73 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.JumpCardCD"
+    Expression ="trelDogEvent.DogID"
+    Expression ="tblDog.RegisteredName"
+    Expression ="tblEvent.EventID"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =76
+    Top =344
+    Right =1672
+    Bottom =656
+    Left =-1
+    Top =-1
+    Right =1585
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =7
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =180
+        Top =31
+        Right =276
+        Bottom =138
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =402
+        Bottom =113
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+End

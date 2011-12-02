@@ -1,0 +1,126 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="trelOwnerEvent"
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="qry-draw-result"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Expression ="[qry-draw-result].env"
+    Expression ="tblDog.CallName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="[qry-draw-result].std"
+    Expression ="[qry-draw-result].jww"
+    Expression ="[qry-draw-result].date"
+    Expression ="[qry-draw-result].order"
+    Expression ="[qry-draw-result].tot_std"
+    Expression ="[qry-draw-result].tot_jww"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblDog.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="trelOwnerEvent"
+    RightTable ="trelDogEvent"
+    Expression ="trelOwnerEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="qry-draw-result"
+    RightTable ="trelDogEvent"
+    Expression ="[qry-draw-result].env = trelDogEvent.EnvelopeNumber"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="[qry-draw-result].date"
+    Flag =0
+    Expression ="[qry-draw-result].order"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="[qry-draw-result].std"
+        dbInteger "ColumnWidth" ="990"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="2760"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =4
+    Top =73
+    Right =1220
+    Bottom =704
+    Left =-1
+    Top =-1
+    Right =1205
+    Bottom =274
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =443
+        Top =26
+        Right =664
+        Bottom =164
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =737
+        Top =6
+        Right =931
+        Bottom =204
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =192
+        Top =6
+        Right =375
+        Bottom =234
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =114
+        Top =3
+        Name ="qry-draw-result"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =126
+        Right =134
+        Bottom =234
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+End

@@ -1,0 +1,101 @@
+Operation =1
+Option =0
+Where ="(((tblEventDate.EventDate)=#2/29/2008#))"
+Begin InputTables
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="tlkpClass"
+    Name ="tblTitle"
+    Name ="tblEventDate"
+End
+Begin OutputColumns
+    Expression ="tblTitleEvent.EventDateID"
+    Expression ="trelDogEntry.DogID"
+    Expression ="tlkpClass.ClassAbbreviation"
+    Expression ="tblEventDate.EventDate"
+End
+Begin Joins
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =160
+    Top =194
+    Right =1022
+    Bottom =738
+    Left =-1
+    Top =-1
+    Right =855
+    Bottom =329
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =225
+        Bottom =278
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =263
+        Top =6
+        Right =428
+        Bottom =173
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =601
+        Top =10
+        Right =735
+        Bottom =162
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =468
+        Top =1
+        Right =564
+        Bottom =93
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =466
+        Top =114
+        Right =562
+        Bottom =221
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+End

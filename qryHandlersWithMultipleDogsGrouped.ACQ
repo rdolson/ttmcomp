@@ -1,0 +1,62 @@
+Operation =1
+Option =0
+Where ="(((qryHandlersWithMultipleDogs.CountOfDogID)>1))"
+Begin InputTables
+    Name ="qryHandlersWithMultipleDogs"
+    Name ="tblHandler"
+End
+Begin OutputColumns
+    Expression ="qryHandlersWithMultipleDogs.EventDateID"
+    Expression ="qryHandlersWithMultipleDogs.TitleGroupID"
+    Expression ="qryHandlersWithMultipleDogs.JumpHeightCD"
+    Expression ="qryHandlersWithMultipleDogs.CountOfDogID"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="tblHandler.HandlerID"
+End
+Begin Joins
+    LeftTable ="qryHandlersWithMultipleDogs"
+    RightTable ="tblHandler"
+    Expression ="qryHandlersWithMultipleDogs.HandlerID = tblHandler.HandlerID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =31
+    Top =110
+    Right =1282
+    Bottom =691
+    Left =-1
+    Top =-1
+    Right =1240
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =172
+        Bottom =123
+        Top =2
+        Name ="qryHandlersWithMultipleDogs"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =402
+        Bottom =113
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+End

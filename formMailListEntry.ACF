@@ -1,0 +1,329 @@
+Version =19
+VersionRequired =19
+Checksum =122868164
+Begin Form
+    FilterOn = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =10260
+    DatasheetFontHeight =10
+    ItemSuffix =15
+    Left =1155
+    Right =11700
+    Bottom =2835
+    DatasheetGridlinesColor =12632256
+    Filter ="((qryBACC.Member=-1))"
+    RecSrcDt = Begin
+        0x9a6141052ae7e240
+    End
+    RecordSource ="qryBACC"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            FontName ="Tahoma"
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =2850
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0x5a4f7353742f454ba5558a1325e1fa73
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3120
+                    Top =60
+                    Width =3840
+                    ColumnWidth =1485
+                    Name ="OwnerFirstName"
+                    ControlSource ="OwnerFirstName"
+                    GUID = Begin
+                        0x1e4d41b390d2ec45b7d5dbea3cc638c1
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1500
+                            Top =60
+                            Width =1335
+                            Height =240
+                            Name ="Label3"
+                            Caption ="OwnerFirstName:"
+                            GUID = Begin
+                                0xed1e4cb69402c447951541aba0f83e34
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3120
+                    Top =360
+                    Width =3840
+                    TabIndex =2
+                    Name ="OwnerLastName"
+                    ControlSource ="OwnerLastName"
+                    GUID = Begin
+                        0x11103ec13040e44191453e4029e532f4
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1500
+                            Top =360
+                            Width =1320
+                            Height =240
+                            Name ="Label4"
+                            Caption ="OwnerLastName:"
+                            GUID = Begin
+                                0xc8e5ad95c792ed4780bd4dcf0fa18e1b
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3120
+                    Top =660
+                    Width =3840
+                    TabIndex =3
+                    Name ="OwnerStreet"
+                    ControlSource ="OwnerStreet"
+                    GUID = Begin
+                        0xfde92a874b9cea499941914036d09e61
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1500
+                            Top =660
+                            Width =1065
+                            Height =240
+                            Name ="Label5"
+                            Caption ="OwnerStreet:"
+                            GUID = Begin
+                                0xad2f755a6b020b41a2ed6cbadab45fe3
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3120
+                    Top =960
+                    Width =3840
+                    TabIndex =4
+                    Name ="OwnerCity"
+                    ControlSource ="OwnerCity"
+                    GUID = Begin
+                        0x350f9b2df46b2f4daac78e84ab0b3c6d
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1500
+                            Top =960
+                            Width =900
+                            Height =240
+                            Name ="Label6"
+                            Caption ="OwnerCity:"
+                            GUID = Begin
+                                0xa8463b27f537ba4e88dbfb1416bddb7f
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3120
+                    Top =1620
+                    Width =3840
+                    TabIndex =6
+                    Name ="OwnerPostalCD"
+                    ControlSource ="OwnerPostalCD"
+                    GUID = Begin
+                        0x6a6394005737254c99b9a3d0c240f55a
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1500
+                            Top =1620
+                            Width =1260
+                            Height =240
+                            Name ="Label7"
+                            Caption ="OwnerPostalCD:"
+                            GUID = Begin
+                                0x5f3afc7d6f896b44aac60ed7e257c0c3
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3120
+                    Top =2220
+                    Width =3840
+                    TabIndex =8
+                    Name ="EmailAddress"
+                    ControlSource ="EmailAddress"
+                    GUID = Begin
+                        0x73c53aaab274524c8c4b8305f820dbb7
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1500
+                            Top =2220
+                            Width =1080
+                            Height =240
+                            Name ="Label9"
+                            Caption ="EmailAddress:"
+                            GUID = Begin
+                                0x55ca99bad3bc99418ed996513c85f736
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3120
+                    Top =1920
+                    Width =3840
+                    TabIndex =7
+                    Name ="PhoneNumber"
+                    ControlSource ="PhoneNumber"
+                    InputMask ="!\\(999\") \"000\\-0000;0;_"
+                    GUID = Begin
+                        0x695de44f82ff544a98f57f00c0e4ab21
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =1500
+                            Top =1920
+                            Width =1140
+                            Height =240
+                            Name ="Label10"
+                            Caption ="PhoneNumber:"
+                            GUID = Begin
+                                0x4dffc720d412bb44abc522538a3e6f69
+                            End
+                        End
+                    End
+                End
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    OverlapFlags =215
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    ListRows =15
+                    ListWidth =1440
+                    Left =3120
+                    Top =1320
+                    Width =3840
+                    TabIndex =5
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"50\""
+                    GUID = Begin
+                        0x3445d0285f1fea4b84edc51016991393
+                    End
+                    Name ="OwnerStateProvinceCD"
+                    ControlSource ="OwnerStateProvinceCD"
+                    RowSourceType ="Table/Query"
+                    RowSource ="tlkpStateProvince"
+                    ColumnWidths ="0"
+                    BaseInfo ="\"tlkpStateProvince\";\"tlkpStateProvince\";\"\";\"StateProvinceCD\";\"StateProv"
+                        "inceName\";\"PrimaryKey\""
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =1500
+                            Top =1320
+                            Width =1830
+                            Height =240
+                            Name ="Label11"
+                            Caption ="OwnerStateProvinceCD:"
+                            GUID = Begin
+                                0xdfe90c8107613a4880a73b26f8a47bab
+                            End
+                        End
+                    End
+                End
+                Begin CheckBox
+                    OverlapFlags =85
+                    Left =3120
+                    Top =2610
+                    TabIndex =9
+                    Name ="Member"
+                    ControlSource ="Member"
+                    GUID = Begin
+                        0x660f942e19c4f64886d5074e50b00404
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =247
+                            Left =3350
+                            Top =2580
+                            Width =645
+                            Height =240
+                            Name ="Label12"
+                            Caption ="Member"
+                            GUID = Begin
+                                0x795a421a4dc55947bd8d96d2dbece4ff
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    Locked = NotDefault
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =7200
+                    Top =180
+                    Width =2880
+                    Height =1980
+                    TabIndex =1
+                    Name ="Text13"
+                    ControlSource ="=[OwnerFirstName] & \" \" & [OwnerLastName] & Chr(13) & Chr(10) & [OwnerStreet] "
+                        "& Chr(13) & Chr(10) & [OwnerCity] & \", \" & [OwnerStateProvinceCD] & \" \" & [O"
+                        "wnerPostalCD] & Chr(13) & Chr(10) & [PhoneNumber] & Chr(13) & Chr(10) & [EmailAd"
+                        "dress]"
+                    GUID = Begin
+                        0xd819fdcc9fae9942b7b4ebd05b0f5af2
+                    End
+                End
+            End
+        End
+    End
+End

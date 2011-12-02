@@ -1,0 +1,58 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="tmpP2"
+    Name ="trelDogEvent"
+End
+Begin OutputColumns
+    Expression ="tmpP2.DogID"
+    Expression ="tmpP2.JWW"
+    Expression ="tmpP2.STD"
+    Expression ="trelDogEvent.EntryReceivedDate"
+End
+Begin Joins
+    LeftTable ="tmpP2"
+    RightTable ="trelDogEvent"
+    Expression ="tmpP2.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =41
+    Top =63
+    Right =1076
+    Bottom =369
+    Left =-1
+    Top =-1
+    Right =1024
+    Bottom =192
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =99
+        Top =0
+        Name ="tmpP2"
+        Name =""
+    End
+    Begin
+        Left =348
+        Top =6
+        Right =488
+        Bottom =167
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+End

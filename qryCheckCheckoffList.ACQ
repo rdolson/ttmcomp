@@ -1,0 +1,117 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tblOwner"
+    Name ="trelDogEvent"
+    Name ="trelOwnerEvent"
+    Name ="tblDog"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.EnvelopeNumber"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblDog.RegisteredName"
+    Expression ="trelDogEvent.FeePaid"
+    Expression ="trelDogEvent.CheckNumber"
+    Alias ="CheckAmount"
+    Expression ="\"\""
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+    Expression ="tblOwner.OwnerFirstName"
+    Flag =0
+    Expression ="tblDog.RegisteredName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =21
+    Top =48
+    Right =1068
+    Bottom =615
+    Left =-1
+    Top =-1
+    Right =1036
+    Bottom =244
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =196
+        Bottom =173
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =518
+        Top =-10
+        Right =689
+        Bottom =187
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =725
+        Top =47
+        Right =875
+        Bottom =184
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =294
+        Top =5
+        Right =441
+        Bottom =187
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =905
+        Top =6
+        Right =1017
+        Bottom =128
+        Top =2
+        Name ="tblEvent"
+        Name =""
+    End
+End

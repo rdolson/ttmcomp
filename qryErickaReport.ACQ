@@ -1,0 +1,164 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True) AND ((trelDogEntry.Qualified)=True))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="tblTitle"
+    Name ="qryExpandedTitle"
+    Name ="trelDogEntry"
+    Name ="tblDog"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="qryExpandedTitle.ClassName"
+    Expression ="qryExpandedTitle.DivisionAbbreviation"
+    Expression ="qryExpandedTitle.LevelName"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="trelDogEntry.FinishingPlace"
+    Expression ="trelDogEntry.DogScore"
+    Alias ="Time"
+    Expression ="[DogTime]/100"
+    Expression ="tblDog.RegisteredName"
+    Expression ="tblDog.CallName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitle.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="tblTitle.CatalogSortOrder"
+    Flag =0
+    Expression ="trelDogEntry.JumpHeightCD"
+    Flag =0
+    Expression ="trelDogEntry.DogScore"
+    Flag =1
+    Expression ="trelDogEntry.DogTime"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =58
+    Top =66
+    Right =1184
+    Bottom =519
+    Left =-1
+    Top =-1
+    Right =1113
+    Bottom =199
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =118
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =118
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =402
+        Bottom =118
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =443
+        Top =27
+        Right =539
+        Bottom =139
+        Top =11
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =574
+        Top =6
+        Right =670
+        Bottom =118
+        Top =1
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =695
+        Top =1
+        Right =791
+        Bottom =113
+        Top =8
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =842
+        Top =6
+        Right =938
+        Bottom =118
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =976
+        Top =6
+        Right =1072
+        Bottom =118
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+End

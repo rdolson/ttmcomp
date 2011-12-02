@@ -1,0 +1,72 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="trelDogEntry"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventID"
+    Expression ="tblEventDate.EventDateID"
+    Expression ="trelDogEntry.TitleEventDateID"
+    Expression ="trelDogEntry.DogID"
+End
+Begin Joins
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =41
+    Top =63
+    Right =996
+    Bottom =471
+    Left =-1
+    Top =-1
+    Right =948
+    Bottom =240
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =691
+        Top =14
+        Right =893
+        Bottom =196
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =305
+        Top =3
+        Right =463
+        Bottom =140
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =495
+        Top =9
+        Right =639
+        Bottom =146
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+End

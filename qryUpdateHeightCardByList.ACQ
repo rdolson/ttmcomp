@@ -1,0 +1,80 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Alias ="Expr1"
+    Expression ="IIf(IsNull([EnvelopeNumber]),0,CInt([EnvelopeNumber]))"
+    Expression ="tblDog.CallName"
+    Expression ="tblDog.DogID"
+    Expression ="trelDogEvent.EnvelopeNumber"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="IIf(IsNull([EnvelopeNumber]),0,CInt([EnvelopeNumber]))"
+    Flag =0
+    Expression ="tblDog.CallName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =40
+    Top =62
+    Right =1219
+    Bottom =553
+    Left =-1
+    Top =-1
+    Right =1172
+    Bottom =254
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =153
+        Top =14
+        Right =297
+        Bottom =226
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =374
+        Top =6
+        Right =539
+        Bottom =203
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =3
+        Top =49
+        Right =99
+        Bottom =156
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+End

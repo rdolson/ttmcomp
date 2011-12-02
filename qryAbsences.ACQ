@@ -1,0 +1,116 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="ltblKnownAbsences"
+    Name ="qryFullDogEntries"
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblDog"
+End
+Begin OutputColumns
+    Expression ="tblDog.RegisteredName"
+    Expression ="tblDog.CallName"
+    Expression ="tblEventDate.EventDate"
+    Expression ="qryFullDogEntries.JumpHeightCD"
+    Expression ="qryFullDogEntries.DivisionName"
+    Expression ="qryFullDogEntries.LevelName"
+    Expression ="qryFullDogEntries.ClassName"
+End
+Begin Joins
+    LeftTable ="qryFullDogEntries"
+    RightTable ="tblEventDate"
+    Expression ="qryFullDogEntries.EventDateID = tblEventDate.EventDateID"
+    Flag =1
+    LeftTable ="ltblKnownAbsences"
+    RightTable ="qryFullDogEntries"
+    Expression ="ltblKnownAbsences.DogID = qryFullDogEntries.DogID"
+    Flag =1
+    LeftTable ="ltblKnownAbsences"
+    RightTable ="tblDog"
+    Expression ="ltblKnownAbsences.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="ltblKnownAbsences"
+    Expression ="tblEvent.EventID = ltblKnownAbsences.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblDog.RegisteredName"
+    Flag =0
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="qryFullDogEntries.CatalogSortOrder"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =64
+    Top =54
+    Right =1356
+    Bottom =459
+    Left =-1
+    Top =-1
+    Right =1281
+    Bottom =237
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =162
+        Bottom =125
+        Top =0
+        Name ="ltblKnownAbsences"
+        Name =""
+    End
+    Begin
+        Left =784
+        Top =8
+        Right =961
+        Bottom =205
+        Top =0
+        Name ="qryFullDogEntries"
+        Name =""
+    End
+    Begin
+        Left =192
+        Top =83
+        Right =288
+        Bottom =190
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =370
+        Top =96
+        Right =466
+        Bottom =203
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =575
+        Top =78
+        Right =671
+        Bottom =185
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+End

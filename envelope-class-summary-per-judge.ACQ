@@ -1,0 +1,135 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="tblEvent"
+    Name ="qryLookupClassesPerJudge_Crosstab"
+End
+Begin OutputColumns
+    Alias ="Envelope"
+    Expression ="CInt(IIf(IsNull([EnvelopeNumber]),\"0\",[EnvelopeNumber]))"
+    Alias ="SumOfSue"
+    Expression ="Sum(qryLookupClassesPerJudge_Crosstab.Sue)"
+    Alias ="SumOfBonnie"
+    Expression ="Sum(qryLookupClassesPerJudge_Crosstab.Bonnie)"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="qryLookupClassesPerJudge_Crosstab"
+    Expression ="tblDog.DogID = qryLookupClassesPerJudge_Crosstab.DogID"
+    Flag =1
+    LeftTable ="qryLookupClassesPerJudge_Crosstab"
+    RightTable ="trelDogEvent"
+    Expression ="qryLookupClassesPerJudge_Crosstab.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="CInt(IIf(IsNull([EnvelopeNumber]),\"0\",[EnvelopeNumber]))"
+    Flag =0
+End
+Begin Groups
+    Expression ="CInt(IIf(IsNull([EnvelopeNumber]),\"0\",[EnvelopeNumber]))"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="Envelope"
+        dbInteger "ColumnOrder" ="1"
+    End
+    Begin
+        dbText "Name" ="SumOfJWW"
+        dbInteger "ColumnOrder" ="3"
+    End
+    Begin
+        dbText "Name" ="SumOfSTD"
+        dbInteger "ColumnOrder" ="2"
+    End
+    Begin
+        dbText "Name" ="SumOfSue"
+        dbInteger "ColumnOrder" ="2"
+    End
+    Begin
+        dbText "Name" ="SumOfBonnie"
+        dbInteger "ColumnOrder" ="3"
+    End
+End
+Begin
+    State =0
+    Left =57
+    Top =39
+    Right =963
+    Bottom =788
+    Left =-1
+    Top =-1
+    Right =895
+    Bottom =494
+    Left =134
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =173
+        Top =242
+        Right =434
+        Bottom =413
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =499
+        Top =41
+        Right =625
+        Bottom =223
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =719
+        Top =39
+        Right =946
+        Bottom =161
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =627
+        Top =291
+        Right =858
+        Bottom =364
+        Top =1
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =-67
+        Top =106
+        Right =173
+        Bottom =198
+        Top =0
+        Name ="qryLookupClassesPerJudge_Crosstab"
+        Name =""
+    End
+End

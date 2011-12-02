@@ -1,0 +1,310 @@
+Version =19
+VersionRequired =19
+Checksum =-122868189
+Begin Form
+    AutoCenter = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =2
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =4050
+    DatasheetFontHeight =10
+    ItemSuffix =14
+    Left =1215
+    Top =630
+    Right =17370
+    Bottom =8820
+    DatasheetGridlinesColor =12632256
+    OrderBy ="qryEnvelopeNumberUpdate.EnvelopeNumber DESC"
+    RecSrcDt = Begin
+        0x7b908b97d8e2e240
+    End
+    RecordSource ="qryEnvelopeNumberUpdate"
+    Caption ="qryEnvelopeNumberUpdate"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            BackColor =-2147483633
+            ForeColor =-2147483630
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            SpecialEffect =3
+        End
+        Begin BoundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =0
+            BackStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ListBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin Subform
+            SpecialEffect =2
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+        End
+        Begin ToggleButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin Tab
+            BackStyle =0
+        End
+        Begin FormHeader
+            Height =0
+            BackColor =-2147483633
+            Name ="FormHeader"
+            GUID = Begin
+                0x8eb9b96eb8aaec40afc438d2e0b93422
+            End
+        End
+        Begin Section
+            Height =3120
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0x2dd57e3823099d4ba0727ffc8fff2a04
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =120
+                    Width =900
+                    Height =255
+                    ColumnWidth =930
+                    ColumnOrder =0
+                    Name ="EnvelopeNumber"
+                    ControlSource ="EnvelopeNumber"
+                    GUID = Begin
+                        0xd44c57205b509f4b85985f731261eedc
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =120
+                            Width =1560
+                            Height =255
+                            Name ="EnvelopeNumber_Label"
+                            Caption ="EnvelopeNumber"
+                            GUID = Begin
+                                0x1599279e9c8bbc48a47535c3f9ab0c51
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =1560
+                    Width =1035
+                    Height =255
+                    ColumnWidth =2640
+                    ColumnOrder =2
+                    TabIndex =1
+                    Name ="RecordAddDateTime"
+                    ControlSource ="RecordAddDateTime"
+                    GUID = Begin
+                        0xe4eb837d61c5a64fb898c2cbd697c261
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =1560
+                            Width =1560
+                            Height =255
+                            Name ="RecordAddDateTime_Label"
+                            Caption ="RecordAddDateTime"
+                            GUID = Begin
+                                0xdd83ebe1f6eb744cbadaf02efc5a20af
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =1920
+                    Width =2310
+                    Height =255
+                    ColumnWidth =2310
+                    ColumnOrder =3
+                    TabIndex =2
+                    Name ="CallName"
+                    ControlSource ="CallName"
+                    GUID = Begin
+                        0xf88e4c41f207e44c8651bc0b50c6924b
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =1920
+                            Width =1560
+                            Height =255
+                            Name ="CallName_Label"
+                            Caption ="CallName"
+                            GUID = Begin
+                                0x29a4146ee0dc7147b47c671823f6106b
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =900
+                    Width =2310
+                    Height =255
+                    ColumnWidth =2310
+                    ColumnOrder =4
+                    TabIndex =3
+                    Name ="OwnerFirstName"
+                    ControlSource ="OwnerFirstName"
+                    GUID = Begin
+                        0xfa9609471fad634d9bebf98679362bbb
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =900
+                            Width =1560
+                            Height =255
+                            Name ="OwnerFirstName_Label"
+                            Caption ="OwnerFirstName"
+                            GUID = Begin
+                                0x67870024e3b8174698934e42ef6a9380
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    Locked = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =480
+                    Width =2310
+                    Height =255
+                    ColumnWidth =2310
+                    ColumnOrder =1
+                    TabIndex =4
+                    Name ="OwnerLastName"
+                    ControlSource ="OwnerLastName"
+                    GUID = Begin
+                        0x6377d6d43bba2949b9be89a72e8d4372
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =480
+                            Width =1560
+                            Height =255
+                            Name ="OwnerLastName_Label"
+                            Caption ="OwnerLastName"
+                            GUID = Begin
+                                0x72730cecbc208b46b6c90be4ec385526
+                            End
+                        End
+                    End
+                End
+                Begin CheckBox
+                    Locked = NotDefault
+                    TabStop = NotDefault
+                    OverlapFlags =85
+                    Left =1740
+                    Top =2400
+                    TabIndex =5
+                    Name ="Check10"
+                    ControlSource ="=DLookUp(\"[Worker]\",\"trelOwnerEvent\",\"[EventID] = 78 and [OwnerID] =  [Form"
+                        "s]![formEnvelopeNmberUpdate]![OwnerID]\")"
+                    GUID = Begin
+                        0xf7da765095468f4dad3b2e10ba25cf80
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =247
+                            Left =1970
+                            Top =2370
+                            Width =720
+                            Height =240
+                            Name ="Label11"
+                            Caption ="Worker"
+                            GUID = Begin
+                                0xf39afaac2dded348b19b903522bafa82
+                            End
+                        End
+                    End
+                End
+            End
+        End
+        Begin FormFooter
+            Height =1200
+            BackColor =-2147483633
+            Name ="FormFooter"
+            GUID = Begin
+                0xc936afbd6dea994b99ad38e30001bb48
+            End
+        End
+    End
+End

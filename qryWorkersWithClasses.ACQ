@@ -1,0 +1,106 @@
+Operation =1
+Option =2
+Where ="(((trelOwnerEvent.Worker)=True))"
+Begin InputTables
+    Name ="qryExpandedEntryInfo"
+    Name ="trelOwnerEvent"
+    Name ="tblEventDate"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="qryExpandedEntryInfo.OwnerFirstName"
+    Expression ="qryExpandedEntryInfo.OwnerLastName"
+    Expression ="qryExpandedEntryInfo.OwnerStreet"
+    Expression ="qryExpandedEntryInfo.OwnerCity"
+    Expression ="qryExpandedEntryInfo.OwnerStateProvinceCD"
+    Expression ="qryExpandedEntryInfo.OwnerPostalCD"
+    Expression ="qryExpandedEntryInfo.EmailAddress"
+    Alias ="Classes"
+    Expression ="Concatenate(\"SELECT DISTINCT qryOwnerHasClasses.ClassAndHeight FROM qryOwnerHas"
+        "Classes WHERE (((qryOwnerHasClasses.EventDate)= #\" & [EventDate] & \"#) AND ((q"
+        "ryOwnerHasClasses.OwnerID)=\" & [qryExpandedEntryInfo!OwnerID] & \"))\",\", \")"
+End
+Begin Joins
+    LeftTable ="qryExpandedEntryInfo"
+    RightTable ="trelOwnerEvent"
+    Expression ="qryExpandedEntryInfo.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="qryExpandedEntryInfo"
+    RightTable ="trelOwnerEvent"
+    Expression ="qryExpandedEntryInfo.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="qryExpandedEntryInfo"
+    RightTable ="tblEventDate"
+    Expression ="qryExpandedEntryInfo.EventID = tblEventDate.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="qryExpandedEntryInfo.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="qryExpandedEntryInfo.OwnerFirstName"
+        dbInteger "ColumnWidth" ="2715"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryExpandedEntryInfo.EmailAddress"
+        dbInteger "ColumnWidth" ="3630"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Classes"
+        dbInteger "ColumnWidth" ="3585"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =1
+    Top =153
+    Right =1346
+    Bottom =705
+    Left =-1
+    Top =-1
+    Right =1334
+    Bottom =226
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =66
+        Top =1
+        Right =270
+        Bottom =183
+        Top =4
+        Name ="qryExpandedEntryInfo"
+        Name =""
+    End
+    Begin
+        Left =447
+        Top =2
+        Right =628
+        Bottom =187
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =338
+        Top =74
+        Right =434
+        Bottom =181
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+End

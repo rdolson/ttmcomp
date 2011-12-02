@@ -1,0 +1,166 @@
+Operation =1
+Option =0
+Where ="(((tblRunningOrder.RingNumber)=1))"
+Begin InputTables
+    Name ="tblRunningOrder"
+    Name ="trelROClass"
+    Name ="trelRODivision"
+    Name ="trelROExperience"
+    Name ="trelROJumpHeight"
+    Name ="trelROLevelGroup"
+End
+Begin OutputColumns
+    Expression ="tblRunningOrder.RunningOrderID"
+    Expression ="tblRunningOrder.EventDateID"
+    Expression ="tblRunningOrder.RingNumber"
+    Expression ="trelROClass.ClassAbbreviation"
+    Expression ="trelROClass.ClassOrder"
+    Expression ="trelROLevelGroup.LevelGroupCD"
+    Expression ="trelROLevelGroup.LevelOrder"
+    Expression ="trelROJumpHeight.JumpHeightCD"
+    Expression ="trelROJumpHeight.JumpHeightOrder"
+    Expression ="trelRODivision.DivisionAbbreviation"
+    Expression ="trelRODivision.DivisionOrder"
+    Expression ="trelROExperience.ExperienceCD"
+    Expression ="trelROExperience.ExperienceOrder"
+End
+Begin Joins
+    LeftTable ="tblRunningOrder"
+    RightTable ="trelROClass"
+    Expression ="tblRunningOrder.RunningOrderID = trelROClass.RunningOrderID"
+    Flag =1
+    LeftTable ="tblRunningOrder"
+    RightTable ="trelRODivision"
+    Expression ="tblRunningOrder.RunningOrderID = trelRODivision.RunningOrderID"
+    Flag =1
+    LeftTable ="tblRunningOrder"
+    RightTable ="trelROExperience"
+    Expression ="tblRunningOrder.RunningOrderID = trelROExperience.RunningOrderID"
+    Flag =1
+    LeftTable ="tblRunningOrder"
+    RightTable ="trelROJumpHeight"
+    Expression ="tblRunningOrder.RunningOrderID = trelROJumpHeight.RunningOrderID"
+    Flag =1
+    LeftTable ="tblRunningOrder"
+    RightTable ="trelROLevelGroup"
+    Expression ="tblRunningOrder.RunningOrderID = trelROLevelGroup.RunningOrderID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="trelROClass.ClassOrder"
+    Flag =0
+    Expression ="trelROLevelGroup.LevelOrder"
+    Flag =0
+    Expression ="trelROJumpHeight.JumpHeightOrder"
+    Flag =0
+    Expression ="trelRODivision.DivisionOrder"
+    Flag =0
+    Expression ="trelROExperience.ExperienceOrder"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="trelROClass.ClassOrder"
+        dbInteger "ColumnWidth" ="915"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelRODivision.DivisionOrder"
+        dbInteger "ColumnWidth" ="570"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelROExperience.ExperienceOrder"
+        dbInteger "ColumnWidth" ="660"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelROJumpHeight.JumpHeightCD"
+        dbInteger "ColumnWidth" ="975"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelROJumpHeight.JumpHeightOrder"
+        dbInteger "ColumnWidth" ="750"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelROLevelGroup.LevelOrder"
+        dbInteger "ColumnWidth" ="570"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =75
+    Top =90
+    Right =1342
+    Bottom =782
+    Left =-1
+    Top =-1
+    Right =1260
+    Bottom =393
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =168
+        Bottom =197
+        Top =0
+        Name ="tblRunningOrder"
+        Name =""
+    End
+    Begin
+        Left =236
+        Top =213
+        Right =377
+        Bottom =357
+        Top =0
+        Name ="trelROClass"
+        Name =""
+    End
+    Begin
+        Left =380
+        Top =135
+        Right =538
+        Bottom =254
+        Top =0
+        Name ="trelRODivision"
+        Name =""
+    End
+    Begin
+        Left =646
+        Top =158
+        Right =800
+        Bottom =266
+        Top =0
+        Name ="trelROExperience"
+        Name =""
+    End
+    Begin
+        Left =897
+        Top =121
+        Right =1036
+        Bottom =229
+        Top =0
+        Name ="trelROJumpHeight"
+        Name =""
+    End
+    Begin
+        Left =947
+        Top =10
+        Right =1087
+        Bottom =118
+        Top =0
+        Name ="trelROLevelGroup"
+        Name =""
+    End
+End

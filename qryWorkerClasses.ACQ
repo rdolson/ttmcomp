@@ -1,0 +1,170 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True) AND ((trelOwnerEvent.Worker)=True))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+    Name ="tblOwner"
+    Name ="tblDog"
+    Name ="trelOwnerEvent"
+    Name ="tblHandler"
+    Name ="l_tblTitleGroupEntry"
+End
+Begin OutputColumns
+    Expression ="tblEvent.EventID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="tblTitleEvent.TitleEventDateID"
+    Expression ="tblDog.CallName"
+    Expression ="tblOwner.OwnerID"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblDog.HandlerID"
+    Expression ="trelOwnerEvent.Worker"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="l_tblTitleGroupEntry.TitleGroupID"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="l_tblTitleGroupEntry"
+    RightTable ="tblTitleEvent"
+    Expression ="l_tblTitleGroupEntry.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =58
+    Top =115
+    Right =930
+    Bottom =562
+    Left =-1
+    Top =-1
+    Right =859
+    Bottom =294
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =118
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =118
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =402
+        Bottom =118
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =440
+        Top =6
+        Right =536
+        Bottom =118
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =746
+        Top =15
+        Right =842
+        Bottom =127
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =571
+        Top =4
+        Right =667
+        Bottom =116
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =667
+        Top =83
+        Right =763
+        Bottom =195
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =287
+        Top =161
+        Right =383
+        Bottom =273
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =126
+        Right =134
+        Bottom =238
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+End

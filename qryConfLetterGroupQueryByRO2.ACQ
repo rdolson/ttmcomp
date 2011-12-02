@@ -1,0 +1,194 @@
+Operation =1
+Option =0
+Having ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="l_tblEventRingDef"
+    Name ="l_tblRunningOrderDef"
+    Name ="l_tblRunningOrderEntry"
+    Name ="l_tblTitleGroupDef"
+    Name ="l_tblTitleGroupEntry"
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="l_tblTitleGroupDef.Name"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD"
+    Alias ="CountOfDogID"
+    Expression ="Count(trelDogEntry.DogID)"
+    Expression ="l_tblRunningOrderEntry.Order"
+End
+Begin Joins
+    LeftTable ="l_tblEventRingDef"
+    RightTable ="l_tblRunningOrderDef"
+    Expression ="l_tblEventRingDef.RunningOrderID = l_tblRunningOrderDef.RunningOrderID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderDef"
+    RightTable ="l_tblRunningOrderEntry"
+    Expression ="l_tblRunningOrderDef.RunningOrderID = l_tblRunningOrderEntry.RunningOrderID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="l_tblTitleGroupDef"
+    Expression ="l_tblRunningOrderEntry.TitleGroupID = l_tblTitleGroupDef.TitleGroupID"
+    Flag =1
+    LeftTable ="l_tblTitleGroupDef"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="l_tblTitleGroupDef.TitleGroupID = l_tblTitleGroupEntry.TitleGroupID"
+    Flag =1
+    LeftTable ="l_tblEventRingDef"
+    RightTable ="tblEventDate"
+    Expression ="l_tblEventRingDef.EventDateID = tblEventDate.EventDateID"
+    Flag =1
+    LeftTable ="l_tblTitleGroupEntry"
+    RightTable ="tblTitleEvent"
+    Expression ="l_tblTitleGroupEntry.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="trelDogEntry"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD = trelDogEntry.JumpHeightCD"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="l_tblEventRingDef.RingNumber"
+    Flag =0
+    Expression ="l_tblRunningOrderEntry.Order"
+    Flag =0
+End
+Begin Groups
+    Expression ="tblEventDate.EventDate"
+    GroupLevel =0
+    Expression ="l_tblTitleGroupDef.Name"
+    GroupLevel =0
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD"
+    GroupLevel =0
+    Expression ="tblEvent.LockedIn"
+    GroupLevel =0
+    Expression ="l_tblEventRingDef.RingNumber"
+    GroupLevel =0
+    Expression ="l_tblRunningOrderEntry.Order"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="CountOfDogID"
+        dbInteger "ColumnWidth" ="1260"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =62
+    Top =214
+    Right =1232
+    Bottom =661
+    Left =-1
+    Top =-1
+    Right =1157
+    Bottom =273
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =103
+        Top =0
+        Name ="l_tblEventRingDef"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =103
+        Top =0
+        Name ="l_tblRunningOrderDef"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =422
+        Bottom =133
+        Top =0
+        Name ="l_tblRunningOrderEntry"
+        Name =""
+    End
+    Begin
+        Left =465
+        Top =4
+        Right =561
+        Bottom =86
+        Top =0
+        Name ="l_tblTitleGroupDef"
+        Name =""
+    End
+    Begin
+        Left =622
+        Top =14
+        Right =763
+        Bottom =126
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+    Begin
+        Left =34
+        Top =110
+        Right =130
+        Bottom =222
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =170
+        Top =130
+        Right =266
+        Bottom =242
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =807
+        Top =115
+        Right =921
+        Bottom =227
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =973
+        Top =26
+        Right =1083
+        Bottom =168
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+End

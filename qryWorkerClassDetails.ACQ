@@ -1,0 +1,146 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="ltblDogEntrySummary"
+    Name ="trelOwnerEvent"
+    Name ="tblDog"
+    Name ="tblEvent"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Alias ="Name"
+    Expression ="[OwnerLastName] & \", \" & [OwnerFirstName]"
+    Expression ="tblDog.CallName"
+    Alias ="Ht"
+    Expression ="ltblDogEntrySummary.JumpHeight"
+    Expression ="ltblDogEntrySummary.D1STD"
+    Expression ="ltblDogEntrySummary.D1JWW"
+    Expression ="ltblDogEntrySummary.D1FAST"
+    Expression ="ltblDogEntrySummary.D2STD"
+    Expression ="ltblDogEntrySummary.D2JWW"
+    Expression ="ltblDogEntrySummary.D2FAST"
+    Expression ="ltblDogEntrySummary.D3STD"
+    Expression ="ltblDogEntrySummary.D3JWW"
+    Expression ="ltblDogEntrySummary.D3FAST"
+    Expression ="trelOwnerEvent.Worker"
+End
+Begin Joins
+    LeftTable ="ltblDogEntrySummary"
+    RightTable ="tblDog"
+    Expression ="ltblDogEntrySummary.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblDog.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="ltblDogEntrySummary"
+    RightTable ="tblEvent"
+    Expression ="ltblDogEntrySummary.EventID = tblEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="ltblDogEntrySummary.D3STD"
+        dbBoolean "ColumnHidden" ="-1"
+    End
+    Begin
+        dbText "Name" ="ltblDogEntrySummary.D3JWW"
+        dbBoolean "ColumnHidden" ="-1"
+    End
+    Begin
+        dbText "Name" ="ltblDogEntrySummary.D3FAST"
+        dbBoolean "ColumnHidden" ="-1"
+    End
+    Begin
+        dbText "Name" ="Ht"
+        dbInteger "ColumnWidth" ="405"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Name"
+        dbInteger "ColumnWidth" ="2235"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =2
+    Top =88
+    Right =1246
+    Bottom =769
+    Left =-1
+    Top =-1
+    Right =1233
+    Bottom =209
+    Left =0
+    Top =14
+    ColumnsShown =539
+    Begin
+        Left =227
+        Top =0
+        Right =378
+        Bottom =168
+        Top =0
+        Name ="ltblDogEntrySummary"
+        Name =""
+    End
+    Begin
+        Left =608
+        Top =6
+        Right =752
+        Bottom =144
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =455
+        Top =37
+        Right =551
+        Bottom =130
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =31
+        Top =9
+        Right =127
+        Bottom =102
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =865
+        Top =52
+        Right =961
+        Bottom =145
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+End

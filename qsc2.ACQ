@@ -1,0 +1,91 @@
+Operation =1
+Option =0
+Having ="(((tblTitle.OrganizationCD)=\"AKC\") AND ((tblTitle.ApplicationTypeCD)=\"Agility"
+    "\"))"
+Begin InputTables
+    Name ="tblTitle"
+    Name ="tblTitleEvent"
+End
+Begin OutputColumns
+    Expression ="tblTitle.TitleID"
+    Expression ="tblTitle.ClassID"
+    Expression ="tblTitle.LevelID"
+    Expression ="tblTitle.DivisionID"
+    Expression ="tblTitle.TitleAbbreviation"
+    Expression ="tblTitleEvent.TitleEventDateID"
+End
+Begin Joins
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblTitle.CatalogSortOrder"
+    Flag =0
+End
+Begin Groups
+    Expression ="tblTitle.TitleID"
+    GroupLevel =0
+    Expression ="tblTitle.ClassID"
+    GroupLevel =0
+    Expression ="tblTitle.LevelID"
+    GroupLevel =0
+    Expression ="tblTitle.DivisionID"
+    GroupLevel =0
+    Expression ="tblTitle.TitleAbbreviation"
+    GroupLevel =0
+    Expression ="tblTitleEvent.TitleEventDateID"
+    GroupLevel =0
+    Expression ="tblTitle.OrganizationCD"
+    GroupLevel =0
+    Expression ="tblTitle.ApplicationTypeCD"
+    GroupLevel =0
+    Expression ="tblTitle.CatalogSortOrder"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblTitleEvent.TitleEventDateID"
+        dbInteger "ColumnWidth" ="1725"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =27
+    Top =14
+    Right =1250
+    Bottom =648
+    Left =-1
+    Top =-1
+    Right =1216
+    Bottom =399
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =38
+        Top =6
+        Right =218
+        Bottom =189
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =322
+        Top =13
+        Right =494
+        Bottom =181
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+End

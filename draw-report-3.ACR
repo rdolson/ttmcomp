@@ -1,0 +1,548 @@
+Version =19
+VersionRequired =19
+Checksum =58816578
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =0
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =9600
+    DatasheetFontHeight =10
+    ItemSuffix =29
+    Left =1335
+    Right =9885
+    Bottom =11070
+    DatasheetGridlinesColor =12632256
+    Filter ="worker = true"
+    RecSrcDt = Begin
+        0xa28472a89544e340
+    End
+    RecordSource ="draw-report-3"
+    Caption ="draw-report-3"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xd0020000f0000000d0020000f000000000000000802500002c01000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x6c61736572000000000000000000000000000000000000000000000000000000 ,
+        0x010403029c00100a1f53010001000100ea0a6f08640001000700580201000100 ,
+        0x5802010000004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000000000000000000000e4060000 ,
+        0x5052495600200000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000001800000000001027 ,
+        0x10271027000010270000000000000000e08a0d00ff0000000000020001000000 ,
+        0x0200000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000050001000100000000000000 ,
+        0x0001000001000000249a0200c600110009840000000000000000000000000000 ,
+        0x0000000000010000000064000100bb0288040000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000006000000f5ffffff00000000 ,
+        0x000000000000000000000000000000010000000041007200690061006c000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000000000000ffffff0000020000 ,
+        0x0000000100000000000000000100000001000000000000000000ffff00000000 ,
+        0x0000000000000000000000000000000000000000000000000000000007000700 ,
+        0x000000002000000001000000010000000001ffff000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000004f004e004c00590000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000000000000000000000ffffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffefffffffefffffffeffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffefffffffefffffffeffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffffffffffeffffff16070100 ,
+        0x010000000000000005000000000000000000000007000000010000000000454e ,
+        0x474c495348000000000000000000420052005300500032003000340041002e00 ,
+        0x4500580045000000000000000000420052004c0048004c003000340041002e00 ,
+        0x44004c004c000000000000000000420052004200480034003000340041002e00 ,
+        0x44004c004c00000000000000000042004f00350031003700300044004e002e00 ,
+        0x49004e00490000000000000000000000020000000700000000000000ec180000 ,
+        0x160d00000000000029090000bb1700000000000082050000a403000000000000 ,
+        0xd007000092090000000000005a14000034080000000000008e120000ec130000 ,
+        0x00000000370c0000da0c000000000000d4300000d4300000d430000049020000 ,
+        0x7800000000000000000000000000000010270000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000052005300500032003000340041002e0045005800450000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000070008040002000001000000000000000100ffff000000000e010000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000000000000c600880000006400 ,
+        0x0000000001410000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000006000000f5ffffff00000000000000000000000000000000 ,
+        0x000000010000000041007200690061006c000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000ffffff0001000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000ffffffff64000000000000000800008044006500 ,
+        0x61006e006e00650020004f006c0073006f006e00000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000002010000 ,
+        0x0000000000000000000000000100000042524c484c3034412e444c4c00000000 ,
+        0x0000000000000000454f5343
+    End
+    PrtDevNames = Begin
+        0x080012001900010077696e73706f6f6c004c6c61736572004649505f3139322e ,
+        0x3136382e302e3238005f3139322e3136382e302e323800000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            FontItalic = NotDefault
+            BackStyle =0
+            TextAlign =1
+            TextFontFamily =18
+            FontSize =11
+            FontWeight =700
+            ForeColor =8388608
+            FontName ="Times New Roman"
+        End
+        Begin Rectangle
+            BackStyle =0
+            BorderWidth =1
+            BorderColor =8388608
+        End
+        Begin Line
+            BorderColor =8388608
+        End
+        Begin Image
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            BackStyle =0
+            FontName ="Arial"
+        End
+        Begin ListBox
+            OldBorderStyle =0
+            FontName ="Arial"
+        End
+        Begin ComboBox
+            OldBorderStyle =0
+            BackStyle =0
+            FontName ="Arial"
+        End
+        Begin Subform
+            OldBorderStyle =0
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            GroupFooter = NotDefault
+            ControlSource ="Date"
+        End
+        Begin BreakLevel
+            ControlSource ="DrawOrder"
+        End
+        Begin PageHeader
+            Visible = NotDefault
+            Height =0
+            Name ="PageHeaderSection"
+            GUID = Begin
+                0x8a8cdae216e37a439e66fe257ffe061e
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            CanShrink = NotDefault
+            RepeatSection = NotDefault
+            ForceNewPage =2
+            Height =660
+            Name ="GroupHeader0"
+            GUID = Begin
+                0xd989bfd4654ab24f92e11eadd824ac37
+            End
+            Begin
+                Begin Label
+                    TextAlign =3
+                    Left =180
+                    Top =360
+                    Width =780
+                    Height =300
+                    FontSize =9
+                    Name ="DrawOrder_Label"
+                    Caption ="DrawOrder"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x4a62104328ae7a42bb56a904820dc3eb
+                    End
+                End
+                Begin Label
+                    Left =1080
+                    Top =360
+                    Width =720
+                    Height =300
+                    Name ="EnvelopeNumber_Label"
+                    Caption ="Env "
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x359e3a8d49e9cb428f9178446a8026b0
+                    End
+                End
+                Begin Label
+                    Left =1860
+                    Top =360
+                    Width =1320
+                    Height =300
+                    Name ="CallName_Label"
+                    Caption ="CallName"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x7a2110182810b646b5f2c22577474674
+                    End
+                End
+                Begin Label
+                    Left =3240
+                    Top =360
+                    Width =1320
+                    Height =300
+                    Name ="OwnerLastName_Label"
+                    Caption ="OwnerLastName"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x241ef092c7e0cd409f854f576d632d65
+                    End
+                End
+                Begin Label
+                    Left =4620
+                    Top =360
+                    Width =1320
+                    Height =300
+                    Name ="OwnerFirstName_Label"
+                    Caption ="OwnerFirstName"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x9c8c75e1fca2ed4a82e35089f0556eb5
+                    End
+                End
+                Begin Label
+                    TextAlign =3
+                    Left =6180
+                    Top =360
+                    Width =480
+                    Height =300
+                    Name ="Sue_Label"
+                    Caption ="Sue"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xf858dac721d2f24581c8c3fb082cc85d
+                    End
+                End
+                Begin Label
+                    TextAlign =3
+                    Left =6720
+                    Top =360
+                    Width =480
+                    Height =300
+                    Name ="Bonnie_Label"
+                    Caption ="Bonnie"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x4620aeceaf22ef40a0060093f243cb73
+                    End
+                End
+                Begin Label
+                    TextAlign =3
+                    Left =7380
+                    Top =360
+                    Width =660
+                    Height =300
+                    Name ="SueSum_Label"
+                    Caption ="SueSum"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x7da4757edeb63040bfcc076c501dfc7c
+                    End
+                End
+                Begin Label
+                    TextAlign =3
+                    Left =8160
+                    Top =360
+                    Width =840
+                    Height =300
+                    Name ="BonnieSum_Label"
+                    Caption ="BonnieSum"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xfbf1305eba56cc42b2afd9444546e8b5
+                    End
+                End
+                Begin Line
+                    BorderWidth =2
+                    Top =660
+                    Width =9060
+                    Name ="Line23"
+                    GUID = Begin
+                        0x4299f3ecf274ba4aa4d0621937e1c451
+                    End
+                End
+                Begin TextBox
+                    FontItalic = NotDefault
+                    TextAlign =1
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =120
+                    Width =4680
+                    Height =360
+                    FontSize =14
+                    FontWeight =700
+                    ForeColor =8388608
+                    Name ="Text25"
+                    ControlSource ="=\"Draw results for \" & [Date]"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x34bec2b20bc6a0409a5102208dc32d40
+                    End
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =300
+            Name ="Detail"
+            GUID = Begin
+                0xda638a083f123f48b3500a38253c2c18
+            End
+            Begin
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =240
+                    Width =660
+                    Height =270
+                    FontSize =9
+                    Name ="DrawOrder"
+                    ControlSource ="DrawOrder"
+                    GUID = Begin
+                        0xb6a6aee11a03ed4ab8cfb49bfa9c5aa3
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1140
+                    Width =480
+                    Height =270
+                    FontSize =9
+                    TabIndex =1
+                    Name ="EnvelopeNumber"
+                    ControlSource ="EnvelopeNumber"
+                    GUID = Begin
+                        0xe909c74ca0a3d74cb86ad143c68a4e09
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1800
+                    Width =1320
+                    Height =270
+                    FontSize =9
+                    TabIndex =2
+                    Name ="CallName"
+                    ControlSource ="CallName"
+                    GUID = Begin
+                        0xe4f41ab0aaef8a4782eaa9aff0d1c733
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =3180
+                    Width =1320
+                    Height =270
+                    FontSize =9
+                    TabIndex =3
+                    Name ="OwnerLastName"
+                    ControlSource ="OwnerLastName"
+                    GUID = Begin
+                        0x4f2fea6e327f0541a0ad9e10f00d3f87
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =4560
+                    Width =1320
+                    Height =270
+                    ColumnWidth =2760
+                    FontSize =9
+                    TabIndex =4
+                    Name ="OwnerFirstName"
+                    ControlSource ="OwnerFirstName"
+                    GUID = Begin
+                        0x749279ab967d16489c073b754114e5f7
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6120
+                    Width =480
+                    Height =270
+                    FontSize =9
+                    TabIndex =5
+                    Name ="Sue"
+                    ControlSource ="Sue"
+                    GUID = Begin
+                        0xb113a12518ff6842b959f2deb1e941b0
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6660
+                    Width =480
+                    Height =270
+                    FontSize =9
+                    TabIndex =6
+                    Name ="Bonnie"
+                    ControlSource ="Bonnie"
+                    GUID = Begin
+                        0xf91409f17527b64c9c5b719390a1b9b0
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =7320
+                    Width =660
+                    Height =270
+                    FontSize =9
+                    TabIndex =7
+                    Name ="SueSum"
+                    ControlSource ="SueSum"
+                    GUID = Begin
+                        0x91948148ff03bb42b95141a7da7c402f
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =8100
+                    Width =840
+                    Height =270
+                    FontSize =9
+                    TabIndex =8
+                    Name ="BonnieSum"
+                    ControlSource ="BonnieSum"
+                    GUID = Begin
+                        0x69c2edacffa5b3449afdcbe8bf00d0d3
+                    End
+                End
+                Begin CheckBox
+                    Left =5940
+                    Top =60
+                    TabIndex =9
+                    Name ="Check27"
+                    ControlSource ="Worker"
+                    GUID = Begin
+                        0xa3c6df51bd7149499716a3e7c06bad41
+                    End
+                End
+            End
+        End
+        Begin BreakFooter
+            KeepTogether = NotDefault
+            Visible = NotDefault
+            Height =0
+            Name ="GroupFooter1"
+            GUID = Begin
+                0x44ce583a66d0814d8e6dc25feeb9e7e7
+            End
+        End
+        Begin PageFooter
+            Height =420
+            Name ="PageFooterSection"
+            GUID = Begin
+                0x98d2342904b1384881cd012910ca7bf6
+            End
+            Begin
+                Begin TextBox
+                    FontItalic = NotDefault
+                    TextAlign =1
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =120
+                    Top =120
+                    Width =3840
+                    Height =300
+                    FontSize =9
+                    FontWeight =700
+                    ForeColor =8388608
+                    Name ="Text21"
+                    ControlSource ="=Now()"
+                    Format ="Long Date"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0xc49ef4d31e703c44a9e38cbddf5e002c
+                    End
+                End
+                Begin TextBox
+                    FontItalic = NotDefault
+                    TextAlign =3
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =2160
+                    Top =120
+                    Width =5040
+                    Height =300
+                    FontSize =9
+                    FontWeight =700
+                    TabIndex =1
+                    ForeColor =8388608
+                    Name ="Text22"
+                    ControlSource ="=\"Page \" & [Page] & \" of \" & [Pages]"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x36eef7247d4d79409f9f6d789b4d47f6
+                    End
+                End
+                Begin Line
+                    BorderWidth =3
+                    Left =60
+                    Top =60
+                    Width =9240
+                    BorderColor =12632256
+                    Name ="Line24"
+                    GUID = Begin
+                        0xc15db9f69d16434baeeea21516972415
+                    End
+                End
+            End
+        End
+    End
+End

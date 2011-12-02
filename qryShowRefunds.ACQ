@@ -1,0 +1,156 @@
+Operation =1
+Option =0
+Where ="((([SumOfFeePaid]-[qryOwnerPaymentSummary.CheckAmount]) Is Not Null And ([SumOfF"
+    "eePaid]-[qryOwnerPaymentSummary.CheckAmount])<>0))"
+Begin InputTables
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="qryOwnerPaymentSummary"
+    Name ="trelDogEvent"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.EnvelopeNumber"
+    Expression ="tblOwner.OwnerID"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblDog.RegisteredName"
+    Expression ="qryOwnerPaymentSummary.CheckAmount"
+    Expression ="trelDogEvent.FeePaid"
+    Expression ="qryOwnerPaymentSummary.SumOfFeePaid"
+    Alias ="Expr1"
+    Expression ="[SumOfFeePaid]-[qryOwnerPaymentSummary.CheckAmount]"
+End
+Begin Joins
+    LeftTable ="tblOwner"
+    RightTable ="qryOwnerPaymentSummary"
+    Expression ="tblOwner.OwnerID = qryOwnerPaymentSummary.OwnerID"
+    Flag =1
+    LeftTable ="qryOwnerPaymentSummary"
+    RightTable ="trelDogEvent"
+    Expression ="qryOwnerPaymentSummary.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="CInt(trelDogEvent.EnvelopeNumber)"
+    Flag =0
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+    Expression ="[SumOfFeePaid]-[qryOwnerPaymentSummary.CheckAmount]"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerLastName"
+        dbInteger "ColumnWidth" ="1275"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="1200"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryOwnerPaymentSummary.CheckAmount"
+        dbInteger "ColumnWidth" ="720"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryOwnerPaymentSummary.SumOfFeePaid"
+        dbInteger "ColumnWidth" ="1020"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Expr1"
+        dbInteger "ColumnWidth" ="660"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerID"
+        dbInteger "ColumnWidth" ="660"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblDog.RegisteredName"
+        dbInteger "ColumnWidth" ="3030"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelDogEvent.FeePaid"
+        dbInteger "ColumnWidth" ="870"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelDogEvent.EnvelopeNumber"
+        dbInteger "ColumnWidth" ="1155"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Overpay"
+        dbInteger "ColumnWidth" ="660"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =6
+    Top =2
+    Right =1006
+    Bottom =634
+    Left =-1
+    Top =-1
+    Right =989
+    Bottom =234
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =545
+        Top =29
+        Right =664
+        Bottom =182
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =173
+        Bottom =174
+        Top =1
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =288
+        Top =18
+        Right =507
+        Bottom =126
+        Top =0
+        Name ="qryOwnerPaymentSummary"
+        Name =""
+    End
+    Begin
+        Left =685
+        Top =6
+        Right =870
+        Bottom =204
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+End

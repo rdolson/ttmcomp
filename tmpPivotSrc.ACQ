@@ -1,0 +1,101 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="tblEventDate"
+    Name ="tlkpClass"
+    Name ="tblTitle"
+End
+Begin OutputColumns
+    Expression ="trelDogEntry.DogID"
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tlkpClass.ClassName"
+    Expression ="tlkpClass.ClassAbbreviation"
+End
+Begin Joins
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =18
+    Top =40
+    Right =1112
+    Bottom =496
+    Left =-1
+    Top =-1
+    Right =1083
+    Bottom =293
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =104
+        Top =6
+        Right =268
+        Bottom =249
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =486
+        Bottom =174
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =621
+        Top =76
+        Right =747
+        Bottom =184
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =878
+        Top =118
+        Right =1038
+        Bottom =271
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =752
+        Top =3
+        Right =848
+        Bottom =111
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+End

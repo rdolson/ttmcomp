@@ -1,0 +1,58 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblSelectedClasses"
+    Name ="l_tblEntryCount"
+End
+Begin OutputColumns
+    Expression ="l_tblEntryCount.TitleEventDateID"
+    Expression ="l_tblEntryCount.JumpHeightCD"
+    Expression ="l_tblEntryCount.EntryCount"
+    Expression ="l_tblSelectedClasses.Selected"
+End
+Begin Joins
+    LeftTable ="l_tblSelectedClasses"
+    RightTable ="l_tblEntryCount"
+    Expression ="l_tblSelectedClasses.EntryHeightID = l_tblEntryCount.EntryHeightID"
+    Flag =3
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =21
+    Top =160
+    Right =1270
+    Bottom =572
+    Left =-1
+    Top =-1
+    Right =1238
+    Bottom =228
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =84
+        Top =0
+        Name ="l_tblSelectedClasses"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =114
+        Top =0
+        Name ="l_tblEntryCount"
+        Name =""
+    End
+End

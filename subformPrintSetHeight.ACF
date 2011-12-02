@@ -1,0 +1,60 @@
+Version =19
+VersionRequired =19
+Checksum =-122868170
+Begin Form
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =1440
+    DatasheetFontHeight =10
+    ItemSuffix =4
+    Left =960
+    Top =900
+    Right =9945
+    Bottom =5835
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x15e8ec12d564e340
+    End
+    RecordSource ="ltblPrintSetHeight"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =240
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0x420d7eb4a873064fa077562d4d449f3e
+            End
+            Begin
+                Begin ComboBox
+                    RowSourceTypeInt =1
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    ListWidth =1440
+                    GUID = Begin
+                        0xd683de3f190e534e9058af2c8589ae7e
+                    End
+                    Name ="Combo2"
+                    ControlSource ="JumpHeightCD"
+                    RowSourceType ="Value List"
+                    RowSource ="4;8;12;16;20;24;26"
+                    ColumnWidths ="1440"
+                End
+            End
+        End
+    End
+End

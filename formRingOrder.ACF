@@ -1,0 +1,128 @@
+Version =17
+VersionRequired =17
+Checksum =122868165
+Begin Form
+    OrderByOn = NotDefault
+    DefaultView =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    DatasheetFontHeight =10
+    ItemSuffix =17
+    Left =1860
+    Top =330
+    Right =9345
+    Bottom =3195
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xc3e08768ef88e240
+    End
+    RecordSource ="l_trelRingOrder2"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+        End
+        Begin TextBox
+            SpecialEffect =2
+            OldBorderStyle =0
+        End
+        Begin ComboBox
+            SpecialEffect =2
+        End
+        Begin Section
+            Height =2880
+            BackColor =-2147483633
+            Name ="Detail"
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    Left =1620
+                    Top =120
+                    Name ="RingNumber"
+                    ControlSource ="RingNumber"
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =180
+                            Top =120
+                            Width =1005
+                            Height =240
+                            Name ="Label0"
+                            Caption ="RingNumber:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    Left =1620
+                    Top =480
+                    TabIndex =1
+                    Name ="RingOrder"
+                    ControlSource ="RingOrder"
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            Left =780
+                            Top =480
+                            Width =840
+                            Height =240
+                            Name ="Label1"
+                            Caption ="RingOrder:"
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    Left =1740
+                    Top =1380
+                    TabIndex =2
+                    Name ="JumpHeightCD"
+                    ControlSource ="JumpHeightCD"
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =300
+                            Top =1380
+                            Width =1185
+                            Height =240
+                            Name ="Label2"
+                            Caption ="JumpHeightCD:"
+                        End
+                    End
+                End
+                Begin ComboBox
+                    OverlapFlags =85
+                    ColumnCount =4
+                    ListWidth =4320
+                    Left =1680
+                    Top =960
+                    Width =4920
+                    TabIndex =3
+                    BoundColumn =1
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"\";\"\";\"\";\"\";\"10\";\"0\""
+                    Name ="Combo15"
+                    ControlSource ="TitleID"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT DISTINCTROW [ClassName] & \" \" & [LevelName] & \" \" & [DivisionName] AS"
+                        " Expr1, qryExpandedTitle.TitleID, qryExpandedTitle.LevelName, qryExpandedTitle.D"
+                        "ivisionName FROM qryExpandedTitle;"
+                    ColumnWidths ="4320;0;0;0"
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =240
+                            Top =960
+                            Width =795
+                            Height =240
+                            Name ="Combo15_Label"
+                            Caption ="Combo15"
+                        End
+                    End
+                End
+            End
+        End
+    End
+End

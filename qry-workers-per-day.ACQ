@@ -1,0 +1,172 @@
+Operation =1
+Option =2
+Where ="(((tblEvent.LockedIn)=True) AND ((trelOwnerEvent.Worker)=True))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="trelOwnerEvent"
+    Name ="tblOwner"
+    Name ="tblDog"
+    Name ="tblEventDate"
+    Name ="trelDogEvent"
+    Name ="ltblEventDays"
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+End
+Begin OutputColumns
+    Expression ="ltblEventDays.DayNum"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="trelDogEvent.EnvelopeNumber"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblDog.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="ltblEventDays"
+    Expression ="tblEventDate.EventDateID = ltblEventDays.EventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="ltblEventDays.DayNum"
+    Flag =0
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+dbMemo "Filter" ="(([qry-workers-per-day].DayNum=2))"
+Begin
+End
+Begin
+    State =0
+    Left =19
+    Top =0
+    Right =757
+    Bottom =805
+    Left =-1
+    Top =-1
+    Right =727
+    Bottom =296
+    Left =40
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =-20
+        Top =6
+        Right =131
+        Bottom =143
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =376
+        Top =40
+        Right =509
+        Bottom =177
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =596
+        Top =159
+        Right =692
+        Bottom =266
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =774
+        Top =5
+        Right =1002
+        Bottom =232
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =156
+        Top =135
+        Right =252
+        Bottom =242
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =587
+        Top =0
+        Right =706
+        Bottom =137
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =264
+        Top =7
+        Right =360
+        Bottom =99
+        Top =0
+        Name ="ltblEventDays"
+        Name =""
+    End
+    Begin
+        Left =441
+        Top =163
+        Right =537
+        Bottom =270
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =252
+        Top =166
+        Right =348
+        Bottom =273
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+End

@@ -1,0 +1,132 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="qryExpandedTitle"
+    Name ="tblTitle"
+    Name ="l_tblTitleGroupEntry"
+End
+Begin OutputColumns
+    Expression ="tblEvent.EventID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblEventDate.EventDateID"
+    Expression ="tblTitleEvent.TitleEventDateID"
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="qryExpandedTitle.ClassName"
+    Expression ="qryExpandedTitle.DivisionName"
+    Expression ="qryExpandedTitle.LevelName"
+    Expression ="qryExpandedTitle.ExpandedName"
+    Expression ="qryExpandedTitle.ClassAbbreviation"
+    Expression ="qryExpandedTitle.LevelAbbreviation"
+    Expression ="qryExpandedTitle.DivisionAbbreviation"
+    Expression ="qryExpandedTitle.ExpandedAbbr"
+    Expression ="tblTitle.CatalogSortOrder"
+    Expression ="l_tblTitleGroupEntry.TitleGroupID"
+End
+Begin Joins
+    LeftTable ="tblTitleEvent"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitleEvent.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="tblTitle.TitleID = l_tblTitleGroupEntry.TitleID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="tblTitle.CatalogSortOrder"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =23
+    Top =106
+    Right =938
+    Bottom =424
+    Left =-1
+    Top =-1
+    Right =902
+    Bottom =144
+    Left =43
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =-5
+        Top =6
+        Right =91
+        Bottom =118
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =263
+        Top =7
+        Right =359
+        Bottom =104
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =397
+        Top =6
+        Right =493
+        Bottom =118
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =531
+        Top =-12
+        Right =627
+        Bottom =100
+        Top =0
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =667
+        Top =9
+        Right =763
+        Bottom =121
+        Top =8
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =129
+        Top =6
+        Right =225
+        Bottom =118
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+End

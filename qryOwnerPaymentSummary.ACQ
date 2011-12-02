@@ -1,0 +1,86 @@
+Operation =1
+Option =0
+Having ="(((trelOwnerEvent.EventID)=87))"
+Begin InputTables
+    Name ="trelOwnerEvent"
+    Name ="trelDogEvent"
+    Name ="tblDog"
+End
+Begin OutputColumns
+    Expression ="trelOwnerEvent.EventID"
+    Expression ="trelOwnerEvent.OwnerID"
+    Expression ="trelOwnerEvent.CheckAmount"
+    Alias ="SumOfFeePaid"
+    Expression ="Sum(trelDogEvent.FeePaid)"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblDog.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="trelOwnerEvent"
+    RightTable ="trelDogEvent"
+    Expression ="trelOwnerEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+Begin Groups
+    Expression ="trelOwnerEvent.EventID"
+    GroupLevel =0
+    Expression ="trelOwnerEvent.OwnerID"
+    GroupLevel =0
+    Expression ="trelOwnerEvent.CheckAmount"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =64
+    Top =86
+    Right =972
+    Bottom =559
+    Left =-1
+    Top =-1
+    Right =897
+    Bottom =257
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =38
+        Top =6
+        Right =201
+        Bottom =174
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =451
+        Top =3
+        Right =607
+        Bottom =201
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =286
+        Top =-10
+        Right =416
+        Bottom =173
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+End

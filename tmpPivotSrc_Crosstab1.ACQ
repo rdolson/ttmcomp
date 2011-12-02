@@ -1,0 +1,58 @@
+Operation =6
+Option =0
+Begin InputTables
+    Name ="tmpPivotSrc"
+End
+Begin OutputColumns
+    Expression ="tmpPivotSrc.DogID"
+    GroupLevel =2
+    Expression ="tmpPivotSrc.ClassAbbreviation"
+    GroupLevel =1
+    Alias ="CountOfDogID"
+    Expression ="Count(tmpPivotSrc.DogID)"
+    Expression ="tmpPivotSrc.EventDate"
+    GroupLevel =2
+End
+Begin Groups
+    Expression ="tmpPivotSrc.DogID"
+    GroupLevel =2
+    Expression ="tmpPivotSrc.ClassAbbreviation"
+    GroupLevel =1
+    Expression ="tmpPivotSrc.EventDate"
+    GroupLevel =2
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="Jumpers With Weaves"
+        dbInteger "ColumnWidth" ="2415"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =18
+    Top =40
+    Right =861
+    Bottom =752
+    Left =-1
+    Top =-1
+    Right =832
+    Bottom =223
+    Left =0
+    Top =0
+    ColumnsShown =559
+    Begin
+        Left =38
+        Top =6
+        Right =166
+        Bottom =173
+        Top =0
+        Name ="tmpPivotSrc"
+        Name =""
+    End
+End

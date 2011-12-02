@@ -1,0 +1,86 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="tblOwner"
+    Name ="l_tblOwnerListScratch"
+End
+Begin OutputColumns
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerStreet"
+    Expression ="tblOwner.OwnerCity"
+    Alias ="ZipCode"
+    Expression ="FixZipCode([OwnerPostalCD])"
+    Expression ="tblOwner.OwnerStateProvinceCD"
+    Expression ="tblOwner.OwnerCountryID"
+    Expression ="tblOwner.EmailAddress"
+End
+Begin Joins
+    LeftTable ="tblOwner"
+    RightTable ="l_tblOwnerListScratch"
+    Expression ="tblOwner.OwnerID = l_tblOwnerListScratch.OwnerID"
+    Flag =3
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerStreet"
+        dbInteger "ColumnWidth" ="2910"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerCity"
+        dbInteger "ColumnWidth" ="2475"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerStateProvinceCD"
+        dbInteger "ColumnWidth" ="855"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerCountryID"
+        dbInteger "ColumnWidth" ="705"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =52
+    Top =170
+    Right =1056
+    Bottom =825
+    Left =-1
+    Top =-1
+    Right =993
+    Bottom =194
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =213
+        Top =16
+        Right =372
+        Bottom =169
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =84
+        Top =0
+        Name ="l_tblOwnerListScratch"
+        Name =""
+    End
+End

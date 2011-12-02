@@ -1,0 +1,136 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="trelOwnerEvent"
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="qryGroupedByJudgeCounts"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.EnvelopeNumber"
+    Expression ="qryGroupedByJudgeCounts.order"
+    Expression ="tblDog.CallName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Alias ="count"
+    Expression ="qryGroupedByJudgeCounts.Expr1"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblDog.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="trelOwnerEvent"
+    RightTable ="trelDogEvent"
+    Expression ="trelOwnerEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="qryGroupedByJudgeCounts"
+    Expression ="trelDogEvent.EnvelopeNumber = qryGroupedByJudgeCounts.env"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="qryGroupedByJudgeCounts.order"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="2760"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryGroupedByJudgeCounts.order"
+        dbInteger "ColumnWidth" ="660"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =-12
+    Top =139
+    Right =1204
+    Bottom =770
+    Left =-1
+    Top =-1
+    Right =1205
+    Bottom =274
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =443
+        Top =26
+        Right =664
+        Bottom =164
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =207
+        Top =2
+        Right =401
+        Bottom =200
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =889
+        Top =12
+        Right =1072
+        Bottom =240
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =762
+        Top =124
+        Right =858
+        Bottom =232
+        Top =3
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =2
+        Top =2
+        Right =165
+        Bottom =110
+        Top =0
+        Name ="qryGroupedByJudgeCounts"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =114
+        Right =134
+        Bottom =222
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+End

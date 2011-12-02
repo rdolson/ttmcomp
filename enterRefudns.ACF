@@ -1,0 +1,312 @@
+Version =19
+VersionRequired =19
+Checksum =122868164
+Begin Form
+    AutoCenter = NotDefault
+    AllowDesignChanges = NotDefault
+    TabularFamily =124
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =11580
+    DatasheetFontHeight =10
+    ItemSuffix =14
+    Left =2685
+    Top =1275
+    Right =16200
+    Bottom =5460
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x7d7b9c3f4e31e340
+    End
+    RecordSource ="l_tblRefundList"
+    Caption ="l_tblRefundList"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            BackColor =-2147483633
+            ForeColor =-2147483630
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+        End
+        Begin Line
+            SpecialEffect =3
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            SpecialEffect =3
+        End
+        Begin BoundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =0
+            BackStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ListBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin Subform
+            SpecialEffect =2
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+        End
+        Begin ToggleButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin Tab
+            BackStyle =0
+        End
+        Begin FormHeader
+            Height =360
+            BackColor =-2147483633
+            Name ="FormHeader"
+            GUID = Begin
+                0x53ac1f4c2abbcd4aa004f863999ecb05
+            End
+            Begin
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =60
+                    Top =60
+                    Width =1260
+                    Height =240
+                    Name ="OwnerID_Label"
+                    Caption ="HandlerLastName"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x05e8c204330a314bb314d6e30e7ca02e
+                    End
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =3
+                    Left =2640
+                    Top =60
+                    Width =540
+                    Height =240
+                    Name ="DogID_Label"
+                    Caption ="DogID"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x1364a98df0af464db02f1c325a1a8a67
+                    End
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =3
+                    Left =5700
+                    Top =60
+                    Width =1260
+                    Height =240
+                    Name ="Amount_Label"
+                    Caption ="Amount"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x22042448ba40fc4e905bd7adede29e4d
+                    End
+                End
+                Begin Label
+                    OverlapFlags =93
+                    TextAlign =1
+                    Left =7020
+                    Top =60
+                    Width =1260
+                    Height =240
+                    Name ="OriginalCheck_Label"
+                    Caption ="OriginalCheck"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xd1bec9879688d741b08138098b0394ae
+                    End
+                End
+                Begin Label
+                    OverlapFlags =85
+                    TextAlign =1
+                    Left =9000
+                    Top =60
+                    Width =2520
+                    Height =240
+                    Name ="Reason_Label"
+                    Caption ="Reason"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0x8ca2648ed726064e8bb5960f5e0b909c
+                    End
+                End
+                Begin Label
+                    OverlapFlags =215
+                    TextAlign =3
+                    Left =7500
+                    Top =60
+                    Width =1365
+                    Height =240
+                    Name ="EnvelopeNum_Label"
+                    Caption ="Env"
+                    Tag ="DetachedLabel"
+                    GUID = Begin
+                        0xea2f1872ba128445bebbc216a18f54fd
+                    End
+                End
+            End
+        End
+        Begin Section
+            Height =480
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0xc924b858e8d1524e80a7df32a053c1da
+            End
+            Begin
+                Begin ComboBox
+                    LimitToList = NotDefault
+                    OverlapFlags =85
+                    ColumnCount =3
+                    ListWidth =2880
+                    Left =60
+                    Width =2520
+                    Height =255
+                    ColumnWidth =2310
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"\";\"\";\"10\";\"0\""
+                    GUID = Begin
+                        0x59dbbe670b59e349ad83edc774c4fb21
+                    End
+                    Name ="OwnerID"
+                    ControlSource ="OwnerID"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT tblOwner.OwnerID, [tblOwner]![OwnerLastName] & \", \" & [tblOwner]![Owner"
+                        "FirstName] AS Expr1 FROM tblOwner ORDER BY [tblOwner]![OwnerLastName] & \", \" &"
+                        " [tblOwner]![OwnerFirstName];"
+                    ColumnWidths ="0;1440;1440"
+                    BaseInfo ="\"SELECT tblOwner.OwnerID, [tblOwner]![OwnerLastName] & \"\", \"\" & [tblOwner]!"
+                        "[OwnerFirstName] AS Expr1 FROM tblOwner ORDER BY [tblOwner]![OwnerLastName] & \""
+                        "\", \"\" & [tblOwner]![OwnerFirstName];\";\"tblOwner\";\"\";\"OwnerID\";\"tblOwn"
+                        "er!OwnerLastName] & \"\", \"\" & [tblOwner!OwnerFirstName\";\"PrimaryKey\""
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    Left =5700
+                    Width =1260
+                    Height =255
+                    ColumnWidth =2310
+                    TabIndex =2
+                    Name ="Amount"
+                    ControlSource ="Amount"
+                    Format ="$#,##0.00;($#,##0.00)"
+                    GUID = Begin
+                        0xedae416bf4f8dd4393a3f38ded81297b
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    Left =7020
+                    Width =1260
+                    Height =255
+                    ColumnWidth =2310
+                    TabIndex =3
+                    Name ="OriginalCheck"
+                    ControlSource ="OriginalCheck"
+                    GUID = Begin
+                        0xbb8bd7f822d66e4ea4694e8362e5292c
+                    End
+                End
+                Begin TextBox
+                    EnterKeyBehavior = NotDefault
+                    ScrollBars =2
+                    OverlapFlags =93
+                    Left =9000
+                    Width =2520
+                    Height =450
+                    ColumnWidth =3000
+                    TabIndex =5
+                    Name ="Reason"
+                    ControlSource ="Reason"
+                    GUID = Begin
+                        0x63de8bc62836134e8fd01b9fd0bbc38e
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    Left =8340
+                    Width =660
+                    Height =255
+                    ColumnWidth =900
+                    TabIndex =4
+                    Name ="EnvelopeNum"
+                    ControlSource ="EnvelopeNum"
+                    GUID = Begin
+                        0x9a902adfdac4af4e9e0ce2a088b44c78
+                    End
+                End
+                Begin ComboBox
+                    OverlapFlags =85
+                    ColumnCount =2
+                    ListWidth =1440
+                    Left =2700
+                    Width =2880
+                    TabIndex =1
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"200\""
+                    GUID = Begin
+                        0x3a1724f42e6fa342bfafdc259a7e860c
+                    End
+                    Name ="Combo12"
+                    ControlSource ="DogID"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT tblDog.DogID, tblDog.RegisteredName FROM tblDog ORDER BY tblDog.Registere"
+                        "dName;"
+                    ColumnWidths ="0;1440"
+                    BaseInfo ="\"SELECT tblDog.DogID, tblDog.RegisteredName FROM tblDog ORDER BY tblDog.Registe"
+                        "redName;\";\"tblDog\";\"\";\"DogID\";\"RegisteredName\";\"PrimaryKey\""
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            BackColor =-2147483633
+            Name ="FormFooter"
+            GUID = Begin
+                0x570f1144e223e145ad70f9b753f95380
+            End
+        End
+    End
+End

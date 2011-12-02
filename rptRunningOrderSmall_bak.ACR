@@ -1,0 +1,315 @@
+Version =19
+VersionRequired =19
+Checksum =58816578
+Begin Report
+    LayoutForPrint = NotDefault
+    FilterOn = NotDefault
+    DefaultView =0
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =5700
+    DatasheetFontHeight =10
+    ItemSuffix =33
+    Left =270
+    Top =525
+    Right =8295
+    Bottom =10920
+    DatasheetGridlinesColor =12632256
+    Filter ="(EventDateID = 107 and RunningOrderID = 18)"
+    RecSrcDt = Begin
+        0xc6fb36ea0989e240
+    End
+    RecordSource ="ring-order-with-dogs"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xb0010000b0010000b0010000b00100000000000044160000f000000001000000 ,
+        0x020000006801000000000000a20700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x42726f7468657220484c2d35313730444e207365726965732028555342290000 ,
+        0x010403029c00100a03c7000001000100ea0a6f08640001000700580200000100 ,
+        0x5802000000004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000000000000000000000e4060000 ,
+        0x5052495600200000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000001800000000001027 ,
+        0x10271027000010270000000000000000e08a0d00ff0000000000020001000000 ,
+        0x0200000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000050001000100000000000000 ,
+        0x0001000001000000249a0200c600110009840000000000000000000000000000 ,
+        0x0000000000010000000064000100bb0288040000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000006000000f5ffffff00000000 ,
+        0x000000000000000000000000000000010000000041007200690061006c000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000000000000ffffff0000020000 ,
+        0x0000000100000000000000000100000001000000000000000000ffff00000000 ,
+        0x0000000000000000000000000000000000000000000000000000000007000700 ,
+        0x000000002000000001000000050000000001ffff000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000004c004f005200410058000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000000000000000000000ffffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffefffffffefffffffeffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffefffffffefffffffeffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffffffffffeffffff16070100 ,
+        0x010000000000000005000000000000000000000007000000010000000000454e ,
+        0x474c495348000000000000000000420052005300500032003000340041002e00 ,
+        0x4500580045000000000000000000420052004c0048004c003000340041002e00 ,
+        0x44004c004c000000000000000000420052004200480034003000340041002e00 ,
+        0x44004c004c00000000000000000042004f00350031003700300044004e002e00 ,
+        0x49004e00490000000000000000000000020000000700000000000000ec180000 ,
+        0x160d00000000000029090000bb1700000000000082050000a403000000000000 ,
+        0xd007000092090000000000005a14000034080000000000008e120000ec130000 ,
+        0x00000000370c0000da0c000000000000d4300000d4300000d430000049020000 ,
+        0x7800000000000000000000000000000010270000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000052005300500032003000340041002e0045005800450000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000070008040002000001000000000000000100ffff000000000e010000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000000000000c600880000006400 ,
+        0x0000000001410000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000006000000f5ffffff00000000000000000000000000000000 ,
+        0x000000010000000041007200690061006c000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000ffffff0001000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000ffffffff6400000000000000080000806f006c00 ,
+        0x73006f006e000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000002010000 ,
+        0x0000000000000000000000000100000042524c484c3034412e444c4c00000000 ,
+        0x0000000000000000454f5343
+    End
+    PrtDevNames = Begin
+        0x080021004000010042726f7468657220484c2d35313730444e20736572696573 ,
+        0x0042726f7468657220484c2d35313730444e2073657269657320285553422900 ,
+        0x55534230303200
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin TextBox
+            AutoLabel = NotDefault
+            OldBorderStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin BreakLevel
+            ControlSource ="EventDate"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            KeepTogether =2
+            ControlSource ="Order"
+        End
+        Begin BreakLevel
+            KeepTogether =1
+            ControlSource ="GroupOrder"
+        End
+        Begin BreakLevel
+            SortOrder = NotDefault
+            ControlSource ="ClassName"
+        End
+        Begin BreakLevel
+            SortOrder = NotDefault
+            ControlSource ="MovedUp"
+        End
+        Begin BreakLevel
+            ControlSource ="ArmBandNumber"
+        End
+        Begin PageHeader
+            Visible = NotDefault
+            Height =0
+            Name ="PageHeaderSection"
+            GUID = Begin
+                0x3d7583746a16db4486ce7518a5a3722c
+            End
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            RepeatSection = NotDefault
+            Height =345
+            BreakLevel =1
+            OnPrint ="[Event Procedure]"
+            Name ="GroupHeader0"
+            GUID = Begin
+                0x7e50374f3e242c44bb59e392dce817c4
+            End
+            Begin
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Top =60
+                    Width =4020
+                    Height =285
+                    FontSize =10
+                    FontWeight =700
+                    Name ="txtHeader"
+                    ControlSource ="=[EventDate] & \" \" & [GroupName] & \" \" & [JumpHeightinInches] & \"\"\" (\" &"
+                        " Count([DogID]) & \" dogs)\""
+                    GUID = Begin
+                        0x1cce327633c29b438f287b0f9573ffde
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Top =60
+                    Width =4020
+                    Height =285
+                    FontSize =10
+                    FontWeight =700
+                    TabIndex =1
+                    Name ="txtContinued"
+                    ControlSource ="=[EventDate] & \" \" & [GroupName] & \" \" & [JumpHeightinInches] & \"\"\" (cont"
+                        ")\""
+                    GUID = Begin
+                        0x6aa75d05853ec148b21d5b85e963ecb6
+                    End
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            CanGrow = NotDefault
+            Height =240
+            Name ="Detail"
+            Begin
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Left =1140
+                    Width =4560
+                    Height =225
+                    Name ="Text21"
+                    ControlSource ="=[CallName] & \", \" & [BreedName] & \", \" & [HandlerFirstName] & \" \" & [Hand"
+                        "lerLastName]"
+                    GUID = Begin
+                        0xc7fe95079de2004a9acd65aef9f72ba1
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Width =780
+                    FontWeight =700
+                    TabIndex =1
+                    Name ="Text23"
+                    ControlSource ="=[ArmBandNumber] & \" \" & IIf(Right([LevelName],2)=\" B\",\"B\",IIf(Right([Leve"
+                        "lName],2)=\" A\",\"A\",\"\")) & IIf([DivisionName]=\"Preferred\",\"P\",\"\")"
+                    GUID = Begin
+                        0x3740f6e595f7dd408cccbb4abb0e444c
+                    End
+                End
+                Begin TextBox
+                    RunningSum =1
+                    TextFontFamily =34
+                    IMESentenceMode =3
+                    Left =840
+                    Top =60
+                    Width =180
+                    Height =180
+                    FontSize =5
+                    TabIndex =2
+                    Name ="txtRunningSum"
+                    ControlSource ="=1"
+                    GUID = Begin
+                        0xfb7c921590d9324997da0017ccef791f
+                    End
+                End
+            End
+        End
+        Begin PageFooter
+            Height =240
+            Name ="PageFooterSection"
+            GUID = Begin
+                0xb8c95f093f094d48a70d0d5526e53709
+            End
+            Begin
+                Begin TextBox
+                    BackStyle =0
+                    IMESentenceMode =3
+                    Name ="Text26"
+                    ControlSource ="=\"Page \" & [Page] & \" of \" & [Pages]"
+                    GUID = Begin
+                        0x7524223d2b5d1f48a5e3661c7a4aa4c3
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =1800
+                    Width =3900
+                    TabIndex =1
+                    Name ="Text32"
+                    ControlSource ="=DLookUp(\"EventName\",\"tblEvent\",\"lockedIn = TRUE\") & \" Running Order\""
+                    GUID = Begin
+                        0x7c168fc8702c324b932e20df22d033e9
+                    End
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+Dim lastGroup As Integer
+
+Private Sub GroupHeader0_Print(Cancel As Integer, PrintCount As Integer)
+If Me![txtRunningSum].Value = 1 Then
+Me![txtContinued].Visible = False
+Me![txtHeader].Visible = True
+Else
+Me![txtContinued].Visible = True
+Me![txtHeader].Visible = False
+End If
+End Sub

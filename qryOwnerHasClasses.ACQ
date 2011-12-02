@@ -1,0 +1,122 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=Yes))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="tblDog"
+    Name ="qryExpandedTitle"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblDog.OwnerID"
+    Expression ="qryExpandedTitle.ExpandedAbbr"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Alias ="ClassAndHeight"
+    Expression ="[ExpandedAbbr] & \" \" & [JumpHeightCD]"
+End
+Begin Joins
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="qryExpandedTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="qryExpandedTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="ClassAndHeight"
+        dbInteger "ColumnWidth" ="3420"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =61
+    Top =116
+    Right =1327
+    Bottom =421
+    Left =-1
+    Top =-1
+    Right =1255
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =113
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =494
+        Top =0
+        Right =590
+        Bottom =107
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =354
+        Top =9
+        Right =450
+        Bottom =116
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =628
+        Top =6
+        Right =724
+        Bottom =113
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =762
+        Top =6
+        Right =858
+        Bottom =113
+        Top =5
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+End

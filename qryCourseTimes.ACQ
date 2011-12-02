@@ -1,0 +1,138 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True) AND ((tblEventDate.EventDateID)=[Forms]![MainForm]!["
+    "EventDate]))"
+Begin InputTables
+    Name ="ltblTitlesForTimeReport"
+    Name ="qryExpandedTitle"
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="trelCourseDefaults"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="ltblTitlesForTimeReport.Name"
+    Expression ="qryExpandedTitle.TitleID"
+    Expression ="qryExpandedTitle.ExpandedAbbr"
+    Alias ="jh"
+    Expression ="CInt([JumpHeightCD])"
+    Expression ="trelCourseDefaults.StandardCourseTime"
+    Expression ="trelCourseDefaults.CourseDistance"
+    Expression ="ltblTitlesForTimeReport.Order"
+    Expression ="tblEventDate.EventDateID"
+End
+Begin Joins
+    LeftTable ="qryExpandedTitle"
+    RightTable ="ltblTitlesForTimeReport"
+    Expression ="qryExpandedTitle.LevelAbbreviation = ltblTitlesForTimeReport.Level"
+    Flag =1
+    LeftTable ="qryExpandedTitle"
+    RightTable ="ltblTitlesForTimeReport"
+    Expression ="qryExpandedTitle.ClassAbbreviation = ltblTitlesForTimeReport.Class"
+    Flag =1
+    LeftTable ="qryExpandedTitle"
+    RightTable ="ltblTitlesForTimeReport"
+    Expression ="qryExpandedTitle.DivisionAbbreviation = ltblTitlesForTimeReport.Division"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitleEvent.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelCourseDefaults"
+    Expression ="tblTitleEvent.TitleEventDateID = trelCourseDefaults.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="ltblTitlesForTimeReport.Order"
+    Flag =0
+    Expression ="CInt([JumpHeightCD])"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =32
+    Top =247
+    Right =1216
+    Bottom =565
+    Left =-1
+    Top =-1
+    Right =1171
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =118
+        Top =1
+        Name ="ltblTitlesForTimeReport"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =299
+        Bottom =118
+        Top =4
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =338
+        Top =2
+        Right =434
+        Bottom =114
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =471
+        Top =6
+        Right =567
+        Bottom =118
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =605
+        Top =6
+        Right =701
+        Bottom =118
+        Top =3
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =739
+        Top =6
+        Right =835
+        Bottom =118
+        Top =1
+        Name ="trelCourseDefaults"
+        Name =""
+    End
+End

@@ -1,0 +1,106 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblRefundList"
+    Name ="tblOwner"
+    Name ="tblDog"
+    Name ="qryCurrentEventDogEntry"
+End
+Begin OutputColumns
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.EmailAddress"
+    Expression ="tblOwner.OwnerStreet"
+    Expression ="tblOwner.OwnerCity"
+    Expression ="tblOwner.OwnerPostalCD"
+    Expression ="tblOwner.OwnerStateProvinceCD"
+    Expression ="l_tblRefundList.Amount"
+    Alias ="Name"
+    Expression ="[OwnerFirstName] & \" \" & [OwnerLastName]"
+    Expression ="l_tblRefundList.Reason"
+    Expression ="l_tblRefundList.OriginalCheck"
+    Expression ="l_tblRefundList.DogID"
+    Expression ="tblDog.RegisteredName"
+    Expression ="qryCurrentEventDogEntry.CheckNumber"
+    Expression ="qryCurrentEventDogEntry.FeePaid"
+    Expression ="qryCurrentEventDogEntry.EnvelopeNumber"
+    Expression ="qryCurrentEventDogEntry.EventID"
+End
+Begin Joins
+    LeftTable ="tblOwner"
+    RightTable ="l_tblRefundList"
+    Expression ="tblOwner.OwnerID = l_tblRefundList.OwnerID"
+    Flag =1
+    LeftTable ="l_tblRefundList"
+    RightTable ="tblDog"
+    Expression ="l_tblRefundList.DogID = tblDog.DogID"
+    Flag =2
+    LeftTable ="l_tblRefundList"
+    RightTable ="qryCurrentEventDogEntry"
+    Expression ="l_tblRefundList.DogID = qryCurrentEventDogEntry.DogID"
+    Flag =2
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+dbMemo "OrderBy" ="qryRefunds.OwnerLastName"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerStateProvinceCD"
+        dbInteger "ColumnWidth" ="705"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =142
+    Top =101
+    Right =856
+    Bottom =729
+    Left =-1
+    Top =-1
+    Right =703
+    Bottom =204
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =2
+        Name ="l_tblRefundList"
+        Name =""
+    End
+    Begin
+        Left =181
+        Top =7
+        Right =335
+        Bottom =174
+        Top =7
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =544
+        Top =53
+        Right =640
+        Bottom =160
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =399
+        Top =7
+        Right =553
+        Bottom =174
+        Top =0
+        Name ="qryCurrentEventDogEntry"
+        Name =""
+    End
+End

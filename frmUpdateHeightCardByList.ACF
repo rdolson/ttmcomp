@@ -1,0 +1,226 @@
+Version =19
+VersionRequired =19
+Checksum =-122868187
+Begin Form
+    AutoCenter = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =12000
+    DatasheetFontHeight =10
+    ItemSuffix =8
+    Left =3360
+    Top =4590
+    Right =11205
+    Bottom =9450
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xb983ffe77948e340
+    End
+    RecordSource ="qryUpdateHeightCardByList"
+    Caption ="qryUpdateHeightCardByList"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            BackColor =-2147483633
+            ForeColor =-2147483630
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            SpecialEffect =3
+        End
+        Begin BoundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =0
+            BackStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ListBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin Subform
+            SpecialEffect =2
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+        End
+        Begin ToggleButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin Tab
+            BackStyle =0
+        End
+        Begin FormHeader
+            Height =0
+            BackColor =-2147483633
+            Name ="FormHeader"
+            GUID = Begin
+                0x2ada53f018aabe489792c46848dad0a9
+            End
+        End
+        Begin Section
+            CanGrow = NotDefault
+            Height =4860
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0x4c33c6725a039049a7bb3d60b4dbe3fd
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =120
+                    Width =900
+                    Height =255
+                    ColumnWidth =900
+                    Name ="EnvelopeNumber"
+                    ControlSource ="EnvelopeNumber"
+                    GUID = Begin
+                        0xecb6afbc9e748a4e8c776f3fb6e6e830
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =120
+                            Width =1560
+                            Height =255
+                            Name ="EnvelopeNumber_Label"
+                            Caption ="EnvelopeNumber"
+                            GUID = Begin
+                                0x78f0370698b51b4e97900037ac9227f7
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =480
+                    Width =2310
+                    Height =255
+                    ColumnWidth =2310
+                    TabIndex =1
+                    Name ="CallName"
+                    ControlSource ="CallName"
+                    GUID = Begin
+                        0x8f6328271aa76f4aa5983d7e5ee0ed06
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =480
+                            Width =1560
+                            Height =255
+                            Name ="CallName_Label"
+                            Caption ="CallName"
+                            GUID = Begin
+                                0x125da0754977334ea2345c4571e44768
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =840
+                    Height =255
+                    ColumnWidth =1440
+                    TabIndex =2
+                    Name ="DogID"
+                    ControlSource ="DogID"
+                    GUID = Begin
+                        0x064557a6c2791f4eb6bf55539e51a83f
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =840
+                            Width =1560
+                            Height =255
+                            Name ="DogID_Label"
+                            Caption ="DogID"
+                            GUID = Begin
+                                0xcbdc7a98e5f7e947a87500e4f7a56deb
+                            End
+                        End
+                    End
+                End
+                Begin Subform
+                    OverlapFlags =85
+                    Left =4200
+                    Top =60
+                    Width =4605
+                    Height =1485
+                    TabIndex =3
+                    Name ="trelDogRegistration subform"
+                    SourceObject ="Form.trelDogRegistration subform"
+                    LinkChildFields ="DogID"
+                    LinkMasterFields ="DogID"
+                    EventProcPrefix ="trelDogRegistration_subform"
+                    GUID = Begin
+                        0x775d3bf958d96b48a5ae25549fce5b19
+                    End
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            BackColor =-2147483633
+            Name ="FormFooter"
+            GUID = Begin
+                0xc6036a47ca53b944a42c96e338df9939
+            End
+        End
+    End
+End
