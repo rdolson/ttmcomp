@@ -20,7 +20,6 @@ Begin Form
     End
     RecordSource ="l_tblTitleGroupDef"
     DatasheetFontName ="Arial"
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0

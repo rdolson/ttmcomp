@@ -63,7 +63,6 @@ Begin Report
         0x08001e0025000100504446393935205072696e74657220447269766572005044 ,
         0x4639393500504446393935504f525400
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             FontItalic = NotDefault

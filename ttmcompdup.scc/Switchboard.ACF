@@ -36,7 +36,6 @@ Begin Form
     OnCurrent ="[Event Procedure]"
     OnOpen ="[Event Procedure]"
     DatasheetFontName ="Arial"
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0

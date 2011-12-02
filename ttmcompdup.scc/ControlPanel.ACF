@@ -23,7 +23,6 @@ Begin Form
         0x110ebc1d7fe4e240
     End
     DatasheetFontName ="Arial"
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin CommandButton
             FontSize =8

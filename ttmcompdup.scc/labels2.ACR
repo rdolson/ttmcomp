@@ -94,7 +94,6 @@ Begin Report
         0x6a65742036353030205365726965730000555342303031000000000000000000 ,
         0x000000000000000000
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin PageHeader
             Height =360

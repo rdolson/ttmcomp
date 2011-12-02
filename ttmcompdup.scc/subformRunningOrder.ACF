@@ -117,7 +117,6 @@ Begin Form
         0x0042726f7468657220484c2d35313730444e207365726965730049505f313932 ,
         0x2e3136382e302e323800
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0

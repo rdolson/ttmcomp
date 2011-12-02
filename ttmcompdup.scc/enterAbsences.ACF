@@ -24,7 +24,6 @@ Begin Form
     RecordSource ="ltblKnownAbsences"
     Caption ="Enter absences"
     DatasheetFontName ="Arial"
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0

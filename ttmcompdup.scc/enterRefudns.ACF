@@ -23,7 +23,6 @@ Begin Form
     RecordSource ="l_tblRefundList"
     Caption ="l_tblRefundList"
     DatasheetFontName ="Arial"
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0

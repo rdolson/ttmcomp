@@ -32,7 +32,6 @@ Begin Form
         "relDogRegistration].[JumpCardCD] FROM [trelDogRegistration]"
     Caption ="trelDogRegistration subform"
     DatasheetFontName ="Arial"
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0

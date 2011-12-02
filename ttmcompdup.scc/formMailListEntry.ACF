@@ -23,7 +23,6 @@ Begin Form
     End
     RecordSource ="qryBACC"
     DatasheetFontName ="Arial"
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0

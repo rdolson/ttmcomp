@@ -128,7 +128,6 @@ Begin Report
         0x0042726f7468657220484c2d35313730444e2073657269657320285553422900 ,
         0x55534230303200
     End
-    NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0
