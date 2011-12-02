@@ -1,0 +1,432 @@
+Version =19
+VersionRequired =19
+Checksum =58816578
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =127
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =10635
+    DatasheetFontHeight =10
+    ItemSuffix =30
+    Left =540
+    Top =780
+    Right =13005
+    Bottom =8475
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xb0d4db4660e6e240
+    End
+    RecordSource ="qryNoHeightCard2"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xd0020000b00100006801000040020000000000008b2900006801000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x42726f7468657220484c2d35313730444e207365726965730000000000000000 ,
+        0x010403029c00100a1f53010001000100ea0a6f08640001000201580201000100 ,
+        0x5802010000004c65747465720020382e3578313120696e2e0000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000000000000000000000e4060000 ,
+        0x5052495600200000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000001800000000001027 ,
+        0x10271027000010270000000000000000e08a0d00ff0000000000020001000000 ,
+        0x0200000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000050001000100000000000000 ,
+        0x0001000001000000249a0200c600110009840000000000000000000000000000 ,
+        0x0000000000010000000064000100bb0288040000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000006000000f5ffffff00000000 ,
+        0x000000000000000000000000000000010000000041007200690061006c000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000000000000ffffff0000020000 ,
+        0x0000000100000000000000000100000001000000000000000000ffff00000000 ,
+        0x0000000000000000000000000000000000000000000000000000000007000700 ,
+        0x000000002000000001000000010000000001ffff000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000058005000580045004e000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000000000000000000000ffffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffefffffffefffffffeffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffefffffffefffffffeffffff ,
+        0xfefffffffefffffffefffffffefffffffefffffffffffffffeffffff16070100 ,
+        0x010000000000000005000000000000000000000007000000010000000000454e ,
+        0x474c495348000000000000000000420052005300500032003000340041002e00 ,
+        0x4500580045000000000000000000420052004c0048004c003000340041002e00 ,
+        0x44004c004c000000000000000000420052004200480034003000340041002e00 ,
+        0x44004c004c00000000000000000042004f00350031003700300044004e002e00 ,
+        0x49004e00490000000000000000000000020000000700000000000000ec180000 ,
+        0x160d00000000000029090000bb1700000000000082050000a403000000000000 ,
+        0xd007000092090000000000005a14000034080000000000008e120000ec130000 ,
+        0x00000000370c0000da0c000000000000d4300000d4300000d430000049020000 ,
+        0x7800000000000000000000000000000010270000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000052005300500032003000340041002e0045005800450000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000070008040002000001000000000000000100ffff000000000e010000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000000000000000000000000000c600880000006400 ,
+        0x0000000001410000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000006000000f5ffffff00000000000000000000000000000000 ,
+        0x000000010000000041007200690061006c000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000ffffff0001000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x000000000000000000000000ffffffff6400000000000000080000806f006c00 ,
+        0x73006f006e000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000002010000 ,
+        0x0000000000000000000000000100000042524c484c3034412e444c4c00000000 ,
+        0x0000000000000000454f5343
+    End
+    PrtDevNames = Begin
+        0x080012002c00010077696e73706f6f6c004c42726f7468657220484c2d353137 ,
+        0x30444e20736572696573002d49505f3139322e3136382e302e3238005f313932 ,
+        0x2e3136382e302e323800000000
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            BackStyle =1
+        End
+        Begin TextBox
+            AutoLabel = NotDefault
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            FontSize =10
+            FontName ="Arial"
+        End
+        Begin BreakLevel
+            ControlSource ="HandlerLastName"
+        End
+        Begin BreakLevel
+            ControlSource ="HandlerFirstName"
+        End
+        Begin PageHeader
+            Height =735
+            Name ="PageHeaderSection"
+            GUID = Begin
+                0xfb134d652485a84b9087b18a9abdb50c
+            End
+            Begin
+                Begin Label
+                    TextFontFamily =34
+                    Left =8100
+                    Top =60
+                    Width =675
+                    Height =270
+                    FontSize =10
+                    Name ="Label13"
+                    Caption ="Wicket"
+                    GUID = Begin
+                        0xfb9c565787c1c44b8667c5cc86655a79
+                    End
+                End
+                Begin Label
+                    TextFontFamily =34
+                    Left =9000
+                    Top =60
+                    Width =885
+                    Height =270
+                    FontSize =10
+                    Name ="Label14"
+                    Caption ="AKC Rep"
+                    GUID = Begin
+                        0x4fdd38e6f2aeff44a30ffcdf58c7da0f
+                    End
+                End
+                Begin Label
+                    TextFontFamily =34
+                    Left =9900
+                    Width =675
+                    Height =495
+                    FontSize =10
+                    Name ="Label15"
+                    Caption ="Card Shown"
+                    GUID = Begin
+                        0xbeb462125086064c9f4e6e859f74dc08
+                    End
+                End
+                Begin Label
+                    TextFontFamily =34
+                    Left =3960
+                    Top =60
+                    Width =480
+                    Height =270
+                    FontSize =10
+                    Name ="Label22"
+                    Caption ="Day"
+                    GUID = Begin
+                        0x7255ab732bb24a41bdc87a989f220fa7
+                    End
+                End
+                Begin Label
+                    TextFontFamily =34
+                    Left =600
+                    Top =60
+                    Width =2640
+                    Height =270
+                    FontSize =10
+                    Name ="Label23"
+                    Caption ="Handler and Dog"
+                    GUID = Begin
+                        0x077fcc313f09844ca4a804ee0a6b4a05
+                    End
+                End
+                Begin Label
+                    TextAlign =2
+                    TextFontFamily =34
+                    Left =3300
+                    Top =60
+                    Width =420
+                    Height =495
+                    FontSize =10
+                    Name ="Label24"
+                    Caption ="Dog\015\012Ht"
+                    GUID = Begin
+                        0x7ec9b33058b1474fac0aa5275420891c
+                    End
+                End
+                Begin Label
+                    TextFontFamily =34
+                    Left =4440
+                    Top =60
+                    Width =1980
+                    Height =270
+                    FontSize =10
+                    Name ="Label25"
+                    Caption ="Class Entered"
+                    GUID = Begin
+                        0x42b80912fdf2254684c0775694705efe
+                    End
+                End
+                Begin Label
+                    TextFontFamily =34
+                    Left =6540
+                    Top =60
+                    Width =1320
+                    Height =270
+                    FontSize =10
+                    Name ="Label27"
+                    Caption ="Registration #"
+                    GUID = Begin
+                        0x76c368d47e62304c85a59e54938d4e9d
+                    End
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =360
+            Name ="Detail"
+            GUID = Begin
+                0xea5afd04f0d98e4297505285ab0f7a99
+            End
+            Begin
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =600
+                    Width =2640
+                    Height =270
+                    Name ="Text2"
+                    ControlSource ="=[HandlerLastName] & \", \" & [HandlerFIrstName] & \" - \" & [CallName]"
+                    GUID = Begin
+                        0x65233d3e5bcca147958e3cb930261f0a
+                    End
+                End
+                Begin TextBox
+                    DecimalPlaces =2
+                    IMESentenceMode =3
+                    Left =3240
+                    Width =540
+                    TabIndex =1
+                    Name ="HeightatWithers"
+                    ControlSource ="HeightatWithers"
+                    GUID = Begin
+                        0x60b1498b8c88444fa6eba352118e3f8e
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =4500
+                    Width =1920
+                    TabIndex =2
+                    Name ="Text4"
+                    ControlSource ="=[JumpHeightCD] & \"\"\" \" & IIf([STDDiv]=\"Regular\",\"Reg\",\"Pref\") & \" \""
+                        " & [STDLevel] & \"/\" & [JWWLevel] & \" \""
+                    GUID = Begin
+                        0x594bae4dc022e140a1d4a7970b5bc4f8
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =6600
+                    TabIndex =3
+                    Name ="RegistrationNumber"
+                    ControlSource ="RegistrationNumber"
+                    GUID = Begin
+                        0x6e4ec6c9ebe66c4d935a123a5047e4b4
+                    End
+                End
+                Begin Line
+                    BorderWidth =1
+                    Left =8100
+                    Width =2520
+                    Name ="Line8"
+                    GUID = Begin
+                        0xcc931cf027a6f747b5cd2cf69be00249
+                    End
+                End
+                Begin Line
+                    BorderWidth =1
+                    Left =8100
+                    Width =0
+                    Height =360
+                    Name ="Line9"
+                    GUID = Begin
+                        0xb2dfe5c9ca325948aedfcce953ad4bb2
+                    End
+                End
+                Begin Line
+                    BorderWidth =1
+                    Left =9060
+                    Width =0
+                    Height =360
+                    Name ="Line10"
+                    GUID = Begin
+                        0x8eb0db0ac715a44b8621c8155569950e
+                    End
+                End
+                Begin Line
+                    BorderWidth =1
+                    Left =10620
+                    Width =0
+                    Height =360
+                    Name ="Line11"
+                    GUID = Begin
+                        0x2a2595fb74c41e4c8efdecec5fae0f8d
+                    End
+                End
+                Begin Line
+                    BorderWidth =1
+                    Left =9840
+                    Width =0
+                    Height =360
+                    Name ="Line12"
+                    GUID = Begin
+                        0xa55aa0ec69574640b7dafc222236f261
+                    End
+                End
+                Begin CheckBox
+                    Left =3900
+                    Top =60
+                    Width =185
+                    Height =180
+                    TabIndex =4
+                    Name ="Check18"
+                    ControlSource ="=DLookUp(\"DayNum\",\"qryDogEventDays\",\"DayNum=1 and DogID=\" & [DogID])"
+                    GUID = Begin
+                        0x5e440116603853488a59fabad9653b23
+                    End
+                End
+                Begin CheckBox
+                    Left =4080
+                    Top =60
+                    Width =185
+                    Height =180
+                    TabIndex =5
+                    Name ="Check20"
+                    ControlSource ="=DLookUp(\"DayNum\",\"qryDogEventDays\",\"DayNum=2 and DogID=\" & [DogID])"
+                    GUID = Begin
+                        0xd51ab58e2593a54b85bba86b5250971a
+                    End
+                End
+                Begin CheckBox
+                    Left =4260
+                    Top =60
+                    Width =185
+                    Height =180
+                    TabIndex =6
+                    Name ="Check21"
+                    ControlSource ="=DLookUp(\"DayNum\",\"qryDogEventDays\",\"DayNum=3 and DogID=\" & [DogID])"
+                    GUID = Begin
+                        0x1e8516a4c77595478e2c7d09e3970524
+                    End
+                End
+                Begin Line
+                    Left =8100
+                    Top =360
+                    Width =2520
+                    Name ="Line29"
+                    GUID = Begin
+                        0x64221b351f670243813bdefd97aec070
+                    End
+                End
+            End
+        End
+        Begin PageFooter
+            Height =0
+            Name ="PageFooterSection"
+            GUID = Begin
+                0x002967bb23a2ed4ea429868392294f5f
+            End
+            Begin
+                Begin Line
+                    Left =8100
+                    Width =2520
+                    Name ="Line28"
+                    GUID = Begin
+                        0x2e05fb934fe127448b5414b5e137eafc
+                    End
+                End
+            End
+        End
+    End
+End

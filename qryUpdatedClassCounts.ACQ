@@ -1,0 +1,43 @@
+Operation =3
+Name ="l_tblEntryCount"
+Option =0
+Begin InputTables
+    Name ="qryClassDogCounts"
+End
+Begin OutputColumns
+    Name ="TitleEventDateID"
+    Expression ="qryClassDogCounts.TitleEventDateID"
+    Name ="JumpHeightCD"
+    Expression ="qryClassDogCounts.JumpHeightCD"
+    Name ="EntryCount"
+    Expression ="qryClassDogCounts.CountOfDogID"
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbBoolean "UseTransaction" ="-1"
+dbByte "Orientation" ="0"
+Begin
+End
+Begin
+    State =0
+    Left =293
+    Top =243
+    Right =1570
+    Bottom =549
+    Left =-1
+    Top =-1
+    Right =1266
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =651
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =99
+        Top =0
+        Name ="qryClassDogCounts"
+        Name =""
+    End
+End

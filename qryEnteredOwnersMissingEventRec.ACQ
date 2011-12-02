@@ -1,0 +1,57 @@
+Operation =1
+Option =0
+Where ="(((trelOwnerEvent.OwnerID) Is Null))"
+Begin InputTables
+    Name ="qryOwnersFromDogEntries"
+    Name ="trelOwnerEvent"
+End
+Begin OutputColumns
+    Expression ="qryOwnersFromDogEntries.EventID"
+    Expression ="qryOwnersFromDogEntries.OwnerID"
+End
+Begin Joins
+    LeftTable ="qryOwnersFromDogEntries"
+    RightTable ="trelOwnerEvent"
+    Expression ="qryOwnersFromDogEntries.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =2
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =40
+    Top =62
+    Right =1254
+    Bottom =367
+    Left =-1
+    Top =-1
+    Right =1207
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =224
+        Top =15
+        Right =320
+        Bottom =92
+        Top =0
+        Name ="qryOwnersFromDogEntries"
+        Name =""
+    End
+    Begin
+        Left =393
+        Top =9
+        Right =489
+        Bottom =123
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+End

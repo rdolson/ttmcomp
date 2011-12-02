@@ -1,0 +1,85 @@
+Operation =1
+Option =0
+Where ="(((trelOwnerEvent.EventID)=75))"
+Begin InputTables
+    Name ="l_tblScannedWorkerForm"
+    Name ="trelOwnerEvent"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="trelOwnerEvent.OwnerID"
+    Expression ="trelOwnerEvent.EventID"
+    Expression ="trelOwnerEvent.Worker"
+    Expression ="l_tblScannedWorkerForm.WorkerForm"
+End
+Begin Joins
+    LeftTable ="l_tblScannedWorkerForm"
+    RightTable ="trelOwnerEvent"
+    Expression ="l_tblScannedWorkerForm.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =3
+    LeftTable ="l_tblScannedWorkerForm"
+    RightTable ="trelOwnerEvent"
+    Expression ="l_tblScannedWorkerForm.EventID = trelOwnerEvent.EventID"
+    Flag =3
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+    Expression ="tblOwner.OwnerFirstName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =64
+    Top =86
+    Right =1313
+    Bottom =526
+    Left =-1
+    Top =-1
+    Right =1238
+    Bottom =144
+    Left =0
+    Top =10
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =-4
+        Right =134
+        Bottom =104
+        Top =0
+        Name ="l_tblScannedWorkerForm"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =-4
+        Right =268
+        Bottom =104
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =381
+        Top =9
+        Right =477
+        Bottom =117
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+End

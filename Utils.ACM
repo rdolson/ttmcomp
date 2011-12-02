@@ -1,0 +1,173 @@
+Public Const INTERNET_OPEN_TYPE_DIRECT = 1
+Public Const INTERNET_OPEN_TYPE_PROXY = 3
+Public Const INTERNET_FLAG_RELOAD = &H80000000
+Public Declare Function InternetOpen Lib "wininet" Alias "InternetOpenA" (ByVal sAgent As String, ByVal lAccessType As Long, ByVal sProxyName As String, ByVal sProxyBypass As String, ByVal lFlags As Long) As Long
+Public Declare Function InternetCloseHandle Lib "wininet" (ByRef hInet As Long) As Long
+Public Declare Function InternetReadFile Lib "wininet" (ByVal hFile As Long, ByVal sbuffer As String, ByVal lNumBytesToRead As Long, lNumberOfBytesRead As Long) As Integer
+Public Declare Function InternetOpenUrl Lib "wininet" Alias "InternetOpenUrlA" (ByVal hInternetSession As Long, ByVal lpszUrl As String, ByVal lpszHeaders As String, ByVal dwHeadersLength As Long, ByVal dwFlags As Long, ByVal dwContext As Long) As Long
+
+Option Compare Database
+Option Explicit
+
+
+Public Function FormatName(fn, ln, fn2, ln2)
+
+Dim Name As String
+
+If (IsNull(ln2)) Then
+    If (IsNull(fn2)) Then
+        Name = fn & " " & ln
+    Else
+        Name = fn & " and " & fn2 & " " & ln
+    End If
+Else
+    Name = fn & " " & ln & " and " & fn2 & " " & ln2
+End If
+
+FormatName = Name
+         
+End Function
+
+Public Function FixZipCode(zipcode)
+If Len(zipcode) = 9 Then
+    FixZipCode = Left(zipcode, 5) & "-" & Right(zipcode, 4)
+ElseIf Len(zipcode) = 6 And Right(zipcode, 1) = "-" Then
+    FixZipCode = Left(zipcode, 5)
+    Else
+    FixZipCode = zipcode
+End If
+
+End Function
+
+
+ 
+Public Function GetFile(ByVal sURL As String) As Integer
+' Reads the data from a web page to a buffer and downloads it to a user's machine
+'
+'
+Dim hOpen As Long
+Dim hFile As Long
+Dim sbuffer As String
+Dim Ret As Long
+'Dim lFilenumber As Long
+Dim oFS As Object
+Dim oTxtStream As Object
+
+On Error GoTo GetFile_Error
+
+GetFile = 0
+
+ ' create a buffer for the file we're going to download
+' you'll have to decide ahead of time how large the file that is to be downloaded is and adjust accordingly
+ sbuffer = Space(2000)
+ 
+ ' create an internet connection
+ hOpen = InternetOpen("userAgent", INTERNET_OPEN_TYPE_DIRECT, vbNullString, vbNullString, 0)
+ 
+ ' open the url
+ hFile = InternetOpenUrl(hOpen, sURL, vbNullString, ByVal 0&, INTERNET_FLAG_RELOAD, ByVal 0&)
+
+ 
+ If hFile <> 0 Then
+     ' read the bytes of the file
+     InternetReadFile hFile, sbuffer, 2000, Ret
+ 
+
+     ' clean up
+     InternetCloseHandle hFile
+     InternetCloseHandle hOpen
+
+    Rem content = sbuffer
+    Debug.Print "get from " & sURL & " returns " & sbuffer
+    GetFile = 1
+ End If
+
+   On Error GoTo 0
+   Exit Function
+
+GetFile_Error:
+
+    MsgBox "Error " & Err.Number  ' put your own handling here
+End Function
+
+Function OwnersFromEnvelope(env As String)
+
+
+Dim rs As DAO.Recordset
+
+Set rs = CurrentDb.OpenRecordset("select distinct OwnerLastName from " & _
+    "qryGetOwnersAndEnvelopes Where EnvelopeNumber = '" & env & "'")
+
+Dim res As String
+
+res = ""
+
+With rs
+    If Not .EOF Then
+        .MoveFirst
+        Do While Not .EOF
+            res = res & !OwnerLastName & " "
+            .MoveNext
+        Loop
+    End If
+End With
+Set rs = Nothing
+
+OwnersFromEnvelope = res
+
+    
+End Function
+
+Function Concatenate(pstrSQL As String, _
+        Optional pstrDelim As String = ", ") _
+        As String
+'Created by Duane Hookom, 2003
+'this code may be included in any application/mdb providing
+'   this statement is left intact
+'example
+'tblFamily with FamID as numeric primary key
+'tblFamMem with FamID, FirstName, DOB,...
+'return a comma separated list of FirstNames
+'for a FamID
+' John, Mary, Susan
+'in a Query
+'SELECT FamID,
+'Concatenate("SELECT FirstName FROM tblFamMem
+' WHERE FamID =" & [FamID]) as FirstNames
+'FROM tblFamily
+'
+
+'======For DAO uncomment next 4 lines=======
+'====== comment out ADO below =======
+    Dim db As DAO.Database
+    Dim rs As DAO.Recordset
+    Set db = CurrentDb
+    Debug.Print pstrSQL
+    Set rs = db.OpenRecordset(pstrSQL)
+
+'======For ADO uncomment next two lines=====
+'====== comment out DAO above ======
+    'Dim rs As New ADODB.Recordset
+    'rs.Open pstrSQL, CurrentProject.Connection, _
+    'adOpenKeyset, adLockOptimistic
+    Dim strConcat As String 'build return string
+    With rs
+        If Not .EOF Then
+            .MoveFirst
+            Do While Not .EOF
+                strConcat = strConcat & _
+                .Fields(0) & pstrDelim
+                .MoveNext
+            Loop
+        End If
+        .Close
+    End With
+    Set rs = Nothing
+'====== uncomment next line for DAO ========
+    Set db = Nothing
+    If Len(strConcat) > 0 Then
+        strConcat = Left(strConcat, _
+        Len(strConcat) - Len(pstrDelim))
+    End If
+    Concatenate = strConcat
+End Function

@@ -1,0 +1,152 @@
+Operation =1
+Option =2
+Where ="(((e82.DogID) Is Null) AND ((e83.EventDateID)=83))"
+Begin InputTables
+    Name ="e82"
+    Name ="e83"
+    Name ="trelDogEntry"
+    Name ="trelDogEvent"
+    Name ="tblHandler"
+    Name ="tblDog"
+    Name ="tblTitleEvent"
+    Name ="tblEventDate"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.ArmBandNumber"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="tblDog.CallName"
+    Expression ="e83.EventDateID"
+End
+Begin Joins
+    LeftTable ="e83"
+    RightTable ="e82"
+    Expression ="e83.DogID = e82.DogID"
+    Flag =2
+    LeftTable ="trelDogEntry"
+    RightTable ="trelDogEvent"
+    Expression ="trelDogEntry.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="e83"
+    Expression ="trelDogEvent.DogID = e83.DogID"
+    Flag =1
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="e83"
+    Expression ="tblTitleEvent.EventDateID = e83.EventDateID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="trelDogEvent"
+    Expression ="tblEventDate.EventID = trelDogEvent.EventID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbMemo "OrderBy" ="Query1.HandlerLastName"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+Begin
+End
+Begin
+    State =0
+    Left =87
+    Top =69
+    Right =1144
+    Bottom =794
+    Left =-1
+    Top =-1
+    Right =1046
+    Bottom =276
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =99
+        Top =0
+        Name ="e82"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =154
+        Top =0
+        Name ="e83"
+        Name =""
+    End
+    Begin
+        Left =586
+        Top =8
+        Right =695
+        Bottom =181
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =410
+        Top =0
+        Right =506
+        Bottom =108
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =752
+        Top =-2
+        Right =848
+        Bottom =106
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =714
+        Top =138
+        Right =810
+        Bottom =246
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =317
+        Top =94
+        Right =461
+        Bottom =242
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =514
+        Top =125
+        Right =610
+        Bottom =233
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+End

@@ -1,0 +1,189 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="qry-draw-result"
+    Name ="trelDogEntry"
+    Name ="trelDogEvent"
+    Name ="tbllJudgeAssignment"
+    Name ="tblEventDate"
+    Name ="tblEvent"
+    Name ="tblTitleEvent"
+    Name ="tblJudge"
+    Name ="tblTitle"
+    Name ="tlkpLevel"
+End
+Begin OutputColumns
+    Expression ="trelDogEvent.EnvelopeNumber"
+    Expression ="[qry-draw-result].order"
+    Expression ="trelDogEntry.DogID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="tbllJudgeAssignment.JudgeID"
+    Expression ="tblJudge.JudgeLastName"
+    Expression ="tlkpLevel.LevelName"
+End
+Begin Joins
+    LeftTable ="trelDogEvent"
+    RightTable ="qry-draw-result"
+    Expression ="trelDogEvent.EnvelopeNumber = [qry-draw-result].env"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="trelDogEntry"
+    Expression ="trelDogEvent.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblEventDate"
+    Expression ="trelDogEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="trelDogEntry"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="trelDogEntry.TitleEventDateID = tbllJudgeAssignment.TitleEventDateID"
+    Flag =1
+    LeftTable ="qry-draw-result"
+    RightTable ="tblEventDate"
+    Expression ="[qry-draw-result].date = tblEventDate.EventDate"
+    Flag =1
+    LeftTable ="tblJudge"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="tblJudge.JudgeID = tbllJudgeAssignment.JudgeID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="[qry-draw-result].order"
+    Flag =0
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =20
+    Top =48
+    Right =1204
+    Bottom =762
+    Left =-1
+    Top =-1
+    Right =1173
+    Bottom =429
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =824
+        Top =11
+        Right =982
+        Bottom =164
+        Top =0
+        Name ="qry-draw-result"
+        Name =""
+    End
+    Begin
+        Left =375
+        Top =197
+        Right =518
+        Bottom =470
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =574
+        Top =5
+        Right =707
+        Bottom =203
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =725
+        Top =222
+        Right =885
+        Bottom =345
+        Top =0
+        Name ="tbllJudgeAssignment"
+        Name =""
+    End
+    Begin
+        Left =238
+        Top =30
+        Right =402
+        Bottom =198
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =2
+        Top =2
+        Right =169
+        Bottom =185
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =29
+        Top =213
+        Right =166
+        Bottom =381
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =1021
+        Top =153
+        Right =1117
+        Bottom =261
+        Top =0
+        Name ="tblJudge"
+        Name =""
+    End
+    Begin
+        Left =440
+        Top =6
+        Right =536
+        Bottom =114
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =1020
+        Top =6
+        Right =1116
+        Bottom =114
+        Top =0
+        Name ="tlkpLevel"
+        Name =""
+    End
+End

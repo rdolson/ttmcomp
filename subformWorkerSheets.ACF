@@ -1,0 +1,77 @@
+Version =19
+VersionRequired =19
+Checksum =-122868170
+Begin Form
+    AllowDesignChanges = NotDefault
+    DefaultView =2
+    TabularFamily =124
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =5400
+    DatasheetFontHeight =10
+    ItemSuffix =1
+    Left =1575
+    Top =2535
+    Right =7905
+    Bottom =5850
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xa5f928d977e7e240
+    End
+    RecordSource ="l_tblScannedWorkerForm"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =480
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0x7d905911d0524b479b73b60d8003954a
+            End
+            Begin
+                Begin TextBox
+                    FontUnderline = NotDefault
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1620
+                    Top =120
+                    Width =3660
+                    ColumnWidth =5685
+                    ForeColor =1279872587
+                    Name ="WorkerForm"
+                    ControlSource ="WorkerForm"
+                    GUID = Begin
+                        0xea596e51b6ef09429af7b0a12e149ee8
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =420
+                            Top =120
+                            Width =1020
+                            Height =240
+                            Name ="Label0"
+                            Caption ="WorkerForm:"
+                            GUID = Begin
+                                0xf72f818178cd784badf88cdf9ee7e656
+                            End
+                        End
+                    End
+                End
+            End
+        End
+    End
+End

@@ -1,0 +1,17 @@
+dbMemo "SQL" ="SELECT tblOwner.OwnerLastName, trelDogEvent.EnvelopeNumber\015\012FROM tblEvent "
+    "INNER JOIN (tblOwner INNER JOIN (tblDog INNER JOIN trelDogEvent ON tblDog.DogID "
+    "= trelDogEvent.DogID) ON tblOwner.OwnerID = tblDog.OwnerID) ON tblEvent.EventID "
+    "= trelDogEvent.EventID\015\012WHERE (((tblEvent.LockedIn)=True));\015\012"
+dbMemo "Connect" =""
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerLastName"
+        dbInteger "ColumnWidth" ="1755"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End

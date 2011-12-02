@@ -1,0 +1,169 @@
+Operation =1
+Option =2
+Where ="(((tblEvent.LockedIn)=True) AND (([order]-222)>0))"
+Begin InputTables
+    Name ="draw-results-sd"
+    Name ="tblEvent"
+    Name ="tblDog"
+    Name ="trelDogEvent"
+    Name ="trelDogEntry"
+    Name ="tblEventDate"
+    Name ="tblTitleEvent"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Alias ="pos"
+    Expression ="[order]-222"
+    Expression ="[draw-results-sd].envelope"
+    Expression ="tblDog.CallName"
+    Alias ="Expr1"
+    Expression ="Int([EventDate])"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.EmailAddress"
+    Expression ="[draw-results-sd].tot_std"
+    Expression ="[draw-results-sd].tot_jww"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="draw-results-sd"
+    Expression ="trelDogEvent.EnvelopeNumber = [draw-results-sd].envelope"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="draw-results-sd"
+    RightTable ="tblEventDate"
+    Expression ="[draw-results-sd].date = tblEventDate.EventDate"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="[order]-222"
+    Flag =0
+    Expression ="tblDog.CallName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.EmailAddress"
+        dbInteger "ColumnWidth" ="2895"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =6
+    Top =26
+    Right =1206
+    Bottom =826
+    Left =-1
+    Top =-1
+    Right =1193
+    Bottom =408
+    Left =0
+    Top =9
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =-3
+        Right =172
+        Bottom =185
+        Top =0
+        Name ="draw-results-sd"
+        Name =""
+    End
+    Begin
+        Left =589
+        Top =179
+        Right =735
+        Bottom =357
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =574
+        Top =-3
+        Right =719
+        Bottom =231
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =284
+        Top =1
+        Right =436
+        Bottom =210
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =42
+        Top =185
+        Right =196
+        Bottom =374
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =397
+        Top =225
+        Right =531
+        Bottom =369
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =229
+        Top =260
+        Right =351
+        Bottom =383
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =800
+        Top =27
+        Right =896
+        Bottom =135
+        Top =8
+        Name ="tblOwner"
+        Name =""
+    End
+End

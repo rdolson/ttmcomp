@@ -1,0 +1,295 @@
+Version =19
+VersionRequired =19
+Checksum =123706006
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =124
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =10800
+    DatasheetFontHeight =10
+    ItemSuffix =39
+    Left =465
+    Top =285
+    Right =12300
+    Bottom =9915
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x93a13d81efe5e240
+    End
+    RecordSource ="qryRefunds"
+    Caption ="tblOwner"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xd0020000d0020000d0020000d002000000000000302a00008007000001000000 ,
+        0x010000006801000000000000a20700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x5044463939350000000000000000000000000000000000000000000000000000 ,
+        0x010402059c00c4025def800101000100e90a6e08640001000700580202000100 ,
+        0x5802020000004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000000000000000000000000000000000000000000050524956 ,
+        0xe230000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000180000000000102710271027 ,
+        0x0000102700000000000000000000c40200000000000000000000000000000000 ,
+        0x00000000000000000300000000000000000010005c4b03006843040000000000 ,
+        0x0000000000000000000000000000000000000000000000003f2cb85b05000000 ,
+        0x03000000ff00ff00010000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000
+    End
+    PrtDevNames = Begin
+        0x08001e0025000100504446393935205072696e74657220447269766572005044 ,
+        0x4639393500504446393935504f525400
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            FontItalic = NotDefault
+            BackStyle =0
+            TextAlign =1
+            TextFontFamily =18
+            FontSize =11
+            FontWeight =700
+            ForeColor =8388608
+            FontName ="Times New Roman"
+        End
+        Begin Rectangle
+            BackStyle =0
+            BorderWidth =1
+            BorderColor =8388608
+        End
+        Begin Line
+            BorderColor =8388608
+        End
+        Begin Image
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            BackStyle =1
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            BackStyle =0
+            FontName ="Arial"
+        End
+        Begin ListBox
+            OldBorderStyle =0
+            FontName ="Arial"
+        End
+        Begin ComboBox
+            OldBorderStyle =0
+            BackStyle =0
+            FontName ="Arial"
+        End
+        Begin Subform
+            OldBorderStyle =0
+        End
+        Begin BreakLevel
+            ControlSource ="OwnerLastName"
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            CanGrow = NotDefault
+            Height =1920
+            Name ="Detail"
+            GUID = Begin
+                0x7da269fd91c45c4893ae060723885351
+            End
+            Begin
+                Begin TextBox
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Top =300
+                    Width =4140
+                    Height =300
+                    FontSize =11
+                    Name ="OwnerStreet"
+                    ControlSource ="OwnerStreet"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x0178e4e7c2531042991bd9609c11969e
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =3360
+                    Width =840
+                    Height =270
+                    FontSize =11
+                    TabIndex =1
+                    Name ="Amount"
+                    ControlSource ="Amount"
+                    Format ="$#,##0.00;($#,##0.00)"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x3991aaa97fe90946bc5fbacff68b1891
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Top =600
+                    Width =4200
+                    Height =300
+                    FontSize =11
+                    TabIndex =2
+                    Name ="Text23"
+                    ControlSource ="=[OwnerCity] & \", \" & [OwnerStateProvinceCD] & \" \" & FixZipCode([OwnerPostal"
+                        "CD])"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0xc6c7e02b89ecd244929ab7c8ce8441a7
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =6300
+                    Top =480
+                    Width =4500
+                    Height =540
+                    ColumnWidth =3960
+                    FontSize =11
+                    TabIndex =3
+                    Name ="Reason"
+                    ControlSource ="Reason"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x7f41311182d20b409a3a4f8be48bf0a3
+                    End
+                End
+                Begin Label
+                    Left =4380
+                    Top =60
+                    Width =1560
+                    Height =300
+                    ForeColor =0
+                    Name ="Label28"
+                    Caption ="Original check:"
+                    GUID = Begin
+                        0x28e3e53e25385a4f9c16c4cc031254ae
+                    End
+                End
+                Begin Label
+                    Left =4380
+                    Top =480
+                    Width =1860
+                    Height =360
+                    ForeColor =0
+                    Name ="Label29"
+                    Caption ="Reason for refund:"
+                    GUID = Begin
+                        0x5f7f9f806e769d439a9ae424361ea1cc
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Width =3120
+                    Height =300
+                    FontSize =11
+                    TabIndex =4
+                    Name ="Name"
+                    ControlSource ="Name"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x0cfb31ccf6ac8549aeab57ff2cddc49e
+                    End
+                End
+                Begin TextBox
+                    Left =6240
+                    Top =60
+                    TabIndex =5
+                    Name ="CheckNumber"
+                    ControlSource ="OriginalCheck"
+                    GUID = Begin
+                        0x0c1ed43db8c0074196ebb89e827c59ad
+                    End
+                End
+                Begin Subform
+                    CanShrink = NotDefault
+                    Top =1500
+                    Width =7216
+                    Height =360
+                    TabIndex =6
+                    Name ="subformDogClass"
+                    SourceObject ="Report.subformDogClass"
+                    LinkChildFields ="DogID"
+                    LinkMasterFields ="DogID"
+                    GUID = Begin
+                        0x63ab4eda8c39dd49b383a8677de6c4b0
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =49
+                    IMESentenceMode =3
+                    Top =900
+                    Width =4260
+                    Height =300
+                    FontSize =11
+                    TabIndex =7
+                    Name ="EmailAddress"
+                    ControlSource ="EmailAddress"
+                    FontName ="Courier New"
+                    GUID = Begin
+                        0x66d03a90610c294b870c4b6bcedc9396
+                    End
+                End
+                Begin TextBox
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Top =1200
+                    Width =5640
+                    ColumnWidth =3345
+                    FontSize =11
+                    TabIndex =8
+                    Name ="RegisteredName"
+                    ControlSource ="RegisteredName"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x20bdd53c29b1fa429b488ecc76d27336
+                    End
+                End
+                Begin Line
+                    LineSlant = NotDefault
+                    Left =60
+                    Top =1920
+                    Width =10680
+                    Name ="Line38"
+                    GUID = Begin
+                        0xbfd5afdf98886e4c9c512df026aa6261
+                    End
+                End
+            End
+        End
+    End
+End

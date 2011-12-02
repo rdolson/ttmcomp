@@ -1,0 +1,103 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblRunningOrderEntry"
+    Name ="l_tblTitleGroupEntry"
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+End
+Begin OutputColumns
+    Expression ="l_tblRunningOrderEntry.RunningOrderEntryID"
+    Expression ="l_tblTitleGroupEntry.TitleGroupEntryID"
+    Expression ="l_tblTitleGroupEntry.TitleID"
+    Expression ="tblTitleEvent.TitleEventDateID"
+    Alias ="CountOfDogID"
+    Expression ="Count(trelDogEntry.DogID)"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD"
+End
+Begin Joins
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="l_tblRunningOrderEntry.TitleGroupID = l_tblTitleGroupEntry.TitleGroupID"
+    Flag =1
+    LeftTable ="l_tblTitleGroupEntry"
+    RightTable ="tblTitleEvent"
+    Expression ="l_tblTitleGroupEntry.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="trelDogEntry"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD = trelDogEntry.JumpHeightCD"
+    Flag =1
+End
+Begin Groups
+    Expression ="l_tblRunningOrderEntry.RunningOrderEntryID"
+    GroupLevel =0
+    Expression ="l_tblTitleGroupEntry.TitleGroupEntryID"
+    GroupLevel =0
+    Expression ="l_tblTitleGroupEntry.TitleID"
+    GroupLevel =0
+    Expression ="tblTitleEvent.TitleEventDateID"
+    GroupLevel =0
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+Begin
+End
+Begin
+    State =0
+    Left =23
+    Top =213
+    Right =1127
+    Bottom =897
+    Left =-1
+    Top =-1
+    Right =1093
+    Bottom =454
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =44
+        Top =13
+        Right =219
+        Bottom =136
+        Top =0
+        Name ="l_tblRunningOrderEntry"
+        Name =""
+    End
+    Begin
+        Left =289
+        Top =9
+        Right =424
+        Bottom =117
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+    Begin
+        Left =461
+        Top =6
+        Right =643
+        Bottom =174
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =682
+        Top =6
+        Right =929
+        Bottom =326
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+End

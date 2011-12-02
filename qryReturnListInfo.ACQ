@@ -1,0 +1,86 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="lReturnList"
+    Name ="tblOwner"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Alias ="Name"
+    Expression ="[OwnerFirstName] & \" \" & [OwnerLastName]"
+    Alias ="LastName"
+    Expression ="tblOwner.OwnerLastName"
+    Alias ="FirstName"
+    Expression ="tblOwner.OwnerFirstName"
+    Alias ="Street"
+    Expression ="tblOwner.OwnerStreet"
+    Alias ="City"
+    Expression ="tblOwner.OwnerCity"
+    Alias ="State"
+    Expression ="tblOwner.OwnerStateProvinceCD"
+    Alias ="Zip"
+    Expression ="FixZipCode([OwnerPostalCD])"
+End
+Begin Joins
+    LeftTable ="lReturnList"
+    RightTable ="tblOwner"
+    Expression ="lReturnList.OwnerID = tblOwner.OwnerID"
+    Flag =1
+    LeftTable ="lReturnList"
+    RightTable ="tblEvent"
+    Expression ="lReturnList.EventID = tblEvent.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =40
+    Top =62
+    Right =1344
+    Bottom =374
+    Left =-1
+    Top =-1
+    Right =1293
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =55
+        Top =4
+        Right =151
+        Bottom =96
+        Top =0
+        Name ="lReturnList"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =402
+        Bottom =113
+        Top =11
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =440
+        Top =6
+        Right =721
+        Bottom =113
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+End

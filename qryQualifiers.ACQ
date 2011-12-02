@@ -1,0 +1,243 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True) AND (([trelDogEntry].[DogTime]=\"00000\" And [trelDo"
+    "gEntry].[Qualified])=False))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblTitle"
+    Name ="tblTitleEvent"
+    Name ="trelCourseDefaults"
+    Name ="tblEventDate"
+    Name ="trelDogEntry"
+    Name ="tblArmBandNumber"
+End
+Begin OutputColumns
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="trelDogEntry.DogScore"
+    Expression ="trelDogEntry.DogTime"
+    Expression ="trelDogEntry.Qualified"
+    Expression ="tblArmBandNumber.ArmBandNumber"
+    Expression ="trelDogEntry.DogID"
+    Expression ="trelDogEntry.FinishingPlace"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="trelDogEntry.MovedUp"
+    Expression ="trelDogEntry.Absent"
+    Expression ="tblEvent.LockedIn"
+    Alias ="Q"
+    Expression ="Not [Absent] And [DogTime]<>\"00000\" And [DogScore]>=[MinimumQualifyingScore]"
+    Expression ="trelDogEntry.RecordAddDateTime"
+    Expression ="trelDogEntry.NoTimeEliminated"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblEventDate.EventDateID"
+    Expression ="tblTitleEvent.TitleEventDateID"
+    Alias ="PlaceQual"
+    Expression ="IIf([FinishingPlace]=0 Or [FinishingPlace]>5,\"Qual\",\"Finish \" & [FinishingPl"
+        "ace])"
+    Alias ="SecUnderTime"
+    Expression ="Int([StandardCourseTime]-[DogTime]/100)"
+    Expression ="trelCourseDefaults.StandardCourseTime"
+    Expression ="trelCourseDefaults.MaximumCourseTime"
+    Expression ="trelCourseDefaults.CourseDistance"
+    Expression ="trelDogEntry.Withdrawn"
+End
+Begin Joins
+    LeftTable ="trelDogEntry"
+    RightTable ="tblArmBandNumber"
+    Expression ="trelDogEntry.DogID = tblArmBandNumber.DogID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblArmBandNumber"
+    Expression ="tblEventDate.EventID = tblArmBandNumber.EventID"
+    Flag =1
+    LeftTable ="trelCourseDefaults"
+    RightTable ="trelDogEntry"
+    Expression ="trelCourseDefaults.JumpHeightCD = trelDogEntry.JumpHeightCD"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelCourseDefaults"
+    Expression ="tblTitleEvent.TitleEventDateID = trelCourseDefaults.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="trelDogEntry.DogID"
+        dbInteger "ColumnWidth" ="645"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="6"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.FinishingPlace"
+        dbInteger "ColumnWidth" ="660"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="7"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.MovedUp"
+        dbInteger "ColumnWidth" ="1260"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="9"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.Absent"
+        dbInteger "ColumnWidth" ="1005"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="10"
+    End
+    Begin
+        dbText "Name" ="tblEvent.LockedIn"
+        dbInteger "ColumnWidth" ="1035"
+        dbBoolean "ColumnHidden" ="0"
+        dbInteger "ColumnOrder" ="11"
+    End
+    Begin
+        dbText "Name" ="tblTitleEvent.TitleEventDateID"
+        dbInteger "ColumnOrder" ="17"
+    End
+    Begin
+        dbText "Name" ="tblTitleEvent.TitleID"
+        dbInteger "ColumnOrder" ="2"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.DogScore"
+        dbInteger "ColumnOrder" ="3"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.DogTime"
+        dbInteger "ColumnOrder" ="19"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.Qualified"
+        dbInteger "ColumnOrder" ="4"
+    End
+    Begin
+        dbText "Name" ="tblArmBandNumber.ArmBandNumber"
+        dbInteger "ColumnOrder" ="5"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.JumpHeightCD"
+        dbInteger "ColumnOrder" ="8"
+    End
+    Begin
+        dbText "Name" ="Q"
+        dbInteger "ColumnOrder" ="12"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.RecordAddDateTime"
+        dbInteger "ColumnOrder" ="13"
+    End
+    Begin
+        dbText "Name" ="trelDogEntry.NoTimeEliminated"
+        dbInteger "ColumnOrder" ="14"
+    End
+    Begin
+        dbText "Name" ="tblEventDate.EventDate"
+        dbInteger "ColumnOrder" ="15"
+    End
+    Begin
+        dbText "Name" ="tblEventDate.EventDateID"
+        dbInteger "ColumnOrder" ="16"
+    End
+    Begin
+        dbText "Name" ="PlaceQual"
+        dbInteger "ColumnOrder" ="18"
+    End
+End
+Begin
+    State =0
+    Left =-168
+    Top =-3
+    Right =867
+    Bottom =651
+    Left =-1
+    Top =-1
+    Right =1026
+    Bottom =480
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =650
+        Top =258
+        Right =841
+        Bottom =430
+        Top =3
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =179
+        Top =261
+        Right =363
+        Bottom =418
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =6
+        Top =12
+        Right =132
+        Bottom =154
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =398
+        Top =267
+        Right =559
+        Bottom =394
+        Top =0
+        Name ="trelCourseDefaults"
+        Name =""
+    End
+    Begin
+        Left =248
+        Top =62
+        Right =391
+        Bottom =204
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =457
+        Top =-10
+        Right =679
+        Bottom =222
+        Top =8
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =756
+        Top =6
+        Right =852
+        Bottom =118
+        Top =0
+        Name ="tblArmBandNumber"
+        Name =""
+    End
+End

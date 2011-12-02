@@ -1,0 +1,75 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="ltblKnownAbsences"
+    Name ="running-order-query"
+End
+Begin OutputColumns
+    Expression ="[running-order-query].TitleEventDateID"
+    Expression ="[running-order-query].EventDate"
+    Expression ="[running-order-query].TitleAbbreviation"
+    Expression ="[running-order-query].DogID"
+    Expression ="[running-order-query].JumpHeightCD"
+    Expression ="[running-order-query].CallName"
+    Expression ="[running-order-query].JumpHeightinInches"
+    Expression ="[running-order-query].MovedUp"
+    Expression ="[running-order-query].HandlerFirstName"
+    Expression ="[running-order-query].HandlerLastName"
+    Expression ="[running-order-query].BreedName"
+    Expression ="[running-order-query].ArmBandNumber"
+    Expression ="[running-order-query].EventID"
+    Expression ="ltblKnownAbsences.Reason"
+    Expression ="[running-order-query].TitleID"
+    Expression ="[running-order-query].HandlerID"
+End
+Begin Joins
+    LeftTable ="ltblKnownAbsences"
+    RightTable ="running-order-query"
+    Expression ="ltblKnownAbsences.EventID = [running-order-query].EventID"
+    Flag =3
+    LeftTable ="ltblKnownAbsences"
+    RightTable ="running-order-query"
+    Expression ="ltblKnownAbsences.DogID = [running-order-query].DogID"
+    Flag =3
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbMemo "OrderBy" ="Reason DESC"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =62
+    Top =84
+    Right =1418
+    Bottom =389
+    Left =-1
+    Top =-1
+    Right =1349
+    Bottom =223
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =98
+        Top =0
+        Name ="ltblKnownAbsences"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =323
+        Bottom =188
+        Top =6
+        Name ="running-order-query"
+        Name =""
+    End
+End

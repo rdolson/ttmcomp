@@ -1,0 +1,49 @@
+Operation =6
+Option =0
+Begin InputTables
+    Name ="qryLookupClassesPerJudge"
+End
+Begin OutputColumns
+    Expression ="qryLookupClassesPerJudge.DogID"
+    GroupLevel =2
+    Expression ="qryLookupClassesPerJudge.JudgeFirstName"
+    GroupLevel =1
+    Alias ="CountOfEventDateID"
+    Expression ="Count(qryLookupClassesPerJudge.EventDateID)"
+End
+Begin Groups
+    Expression ="qryLookupClassesPerJudge.DogID"
+    GroupLevel =2
+    Expression ="qryLookupClassesPerJudge.JudgeFirstName"
+    GroupLevel =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =65
+    Top =415
+    Right =1119
+    Bottom =720
+    Left =-1
+    Top =-1
+    Right =1043
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =559
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =0
+        Name ="qryLookupClassesPerJudge"
+        Name =""
+    End
+End

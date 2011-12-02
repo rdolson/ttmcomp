@@ -1,0 +1,128 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="qryAllTitles"
+    Name ="qryExpandedTitle"
+    Name ="ltbl_ChecklistLevelOrder"
+    Name ="ltbl_ChecklistHeights"
+    Name ="qryCurrentTrialDates"
+End
+Begin OutputColumns
+    Expression ="qryAllTitles.TitleID"
+    Alias ="count"
+    Expression ="countForTitle([EventDate],[qryAllTitles.TitleID],[JumpHeightCD])"
+    Expression ="qryExpandedTitle.ClassAbbreviation"
+    Expression ="qryExpandedTitle.LevelAbbreviation"
+    Expression ="qryExpandedTitle.DivisionAbbreviation"
+    Expression ="ltbl_ChecklistLevelOrder.Order"
+    Expression ="ltbl_ChecklistLevelOrder.PagebreakAfter"
+    Expression ="ltbl_ChecklistHeights.JumpHeightCD"
+    Expression ="ltbl_ChecklistHeights.JumpHeightInches"
+    Expression ="qryExpandedTitle.ClassName"
+    Expression ="qryExpandedTitle.DivisionName"
+    Expression ="qryExpandedTitle.LevelName"
+    Expression ="qryExpandedTitle.ExpandedName"
+    Expression ="qryCurrentTrialDates.EventName"
+    Expression ="qryCurrentTrialDates.EventDate"
+    Expression ="qryCurrentTrialDates.EventDateID"
+End
+Begin Joins
+    LeftTable ="qryAllTitles"
+    RightTable ="qryExpandedTitle"
+    Expression ="qryAllTitles.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="qryExpandedTitle"
+    RightTable ="ltbl_ChecklistLevelOrder"
+    Expression ="qryExpandedTitle.LevelAbbreviation = ltbl_ChecklistLevelOrder.LevelAbbreviation"
+    Flag =1
+    LeftTable ="qryExpandedTitle"
+    RightTable ="ltbl_ChecklistLevelOrder"
+    Expression ="qryExpandedTitle.DivisionAbbreviation = ltbl_ChecklistLevelOrder.DivisionAbbrevi"
+        "ation"
+    Flag =1
+    LeftTable ="qryExpandedTitle"
+    RightTable ="ltbl_ChecklistHeights"
+    Expression ="qryExpandedTitle.DivisionAbbreviation = ltbl_ChecklistHeights.DivisionAbbreviati"
+        "on"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="qryExpandedTitle.ClassAbbreviation"
+    Flag =0
+    Expression ="ltbl_ChecklistLevelOrder.Order"
+    Flag =0
+    Expression ="ltbl_ChecklistHeights.JumpHeightInches"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="qryExpandedTitle.ExpandedName"
+        dbInteger "ColumnWidth" ="3825"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =47
+    Top =20
+    Right =1131
+    Bottom =781
+    Left =-1
+    Top =-1
+    Right =1077
+    Bottom =211
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =114
+        Top =0
+        Name ="qryAllTitles"
+        Name =""
+    End
+    Begin
+        Left =306
+        Top =6
+        Right =524
+        Bottom =174
+        Top =0
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =562
+        Top =6
+        Right =658
+        Bottom =114
+        Top =0
+        Name ="ltbl_ChecklistLevelOrder"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =6
+        Right =159
+        Bottom =99
+        Top =0
+        Name ="ltbl_ChecklistHeights"
+        Name =""
+    End
+    Begin
+        Left =696
+        Top =6
+        Right =868
+        Bottom =129
+        Top =0
+        Name ="qryCurrentTrialDates"
+        Name =""
+    End
+End

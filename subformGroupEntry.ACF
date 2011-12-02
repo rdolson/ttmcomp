@@ -1,0 +1,65 @@
+Version =17
+VersionRequired =17
+Checksum =122868176
+Begin Form
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =6600
+    DatasheetFontHeight =10
+    ItemSuffix =5
+    Left =1125
+    Top =735
+    Right =10110
+    Bottom =5655
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x442fcaae3b89e240
+    End
+    RecordSource ="l_tblTitleGroupEntry"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+        End
+        Begin TextBox
+            SpecialEffect =2
+            OldBorderStyle =0
+        End
+        Begin ComboBox
+            SpecialEffect =2
+        End
+        Begin Section
+            Height =360
+            BackColor =-2147483633
+            Name ="Detail"
+            Begin
+                Begin ComboBox
+                    OverlapFlags =85
+                    ColumnCount =2
+                    ListRows =20
+                    ListWidth =3795
+                    Left =1500
+                    Top =60
+                    Width =5040
+                    TabIndex =1
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"0\""
+                    Name ="Combo2"
+                    ControlSource ="TitleID"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT DISTINCTROW [qryExpandedTitle].[TitleID], [qryExpandedTitle].[ExpandedNam"
+                        "e] FROM [qryExpandedTitle];"
+                    ColumnWidths ="0;3795"
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    Top =60
+                    Name ="Order"
+                    ControlSource ="Order"
+                End
+            End
+        End
+    End
+End

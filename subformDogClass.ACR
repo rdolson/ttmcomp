@@ -1,0 +1,146 @@
+Version =19
+VersionRequired =19
+Checksum =-123705990
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =124
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    DatasheetFontHeight =10
+    ItemSuffix =4
+    Left =930
+    Top =270
+    Right =8250
+    Bottom =9765
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x3512c9774e31e340
+    End
+    RecordSource ="qryFullDogEntries"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xa0050000a0050000a0050000a005000000000000201c0000f000000001000000 ,
+        0x010000006801000000000000a10700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x5044463939350000000000000000000000000000000000000000000000000000 ,
+        0x010402059c00c4021f53010001000100ea0a6f08640001000700580201000100 ,
+        0x5802010001004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000000000000000000000000000000000000000000050524956 ,
+        0xe230000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000180000000000102710271027 ,
+        0x0000102700000000000000000000c40200000000000000000000000000000000 ,
+        0x00000000000000000300000000000000000010005c4b03006843040000000000 ,
+        0x0000000000000000000000000000000000000000000000003f2cb85b05000000 ,
+        0x03000000ff00ff00010000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000
+    End
+    PrtDevNames = Begin
+        0x08001e0025000100504446393935205072696e74657220447269766572005044 ,
+        0x4639393500504446393935504f525400
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin BreakLevel
+            ControlSource ="EventDate"
+        End
+        Begin BreakLevel
+            ControlSource ="CatalogSortOrder"
+        End
+        Begin PageHeader
+            Height =0
+            Name ="PageHeaderSection"
+            GUID = Begin
+                0xbc24bbb95aa26449984313953d844636
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =240
+            Name ="Detail"
+            GUID = Begin
+                0x421a8b9b3b967c4d8d1f477f17e1ac92
+            End
+            Begin
+                Begin TextBox
+                    Left =1620
+                    ColumnWidth =2880
+                    Name ="ClassName"
+                    ControlSource ="ClassName"
+                    GUID = Begin
+                        0x33ecdc33e7631948ac288bf8097276aa
+                    End
+                End
+                Begin TextBox
+                    Left =3120
+                    TabIndex =1
+                    Name ="DivisionName"
+                    ControlSource ="DivisionName"
+                    GUID = Begin
+                        0x70a7b3029ab76e468fa0fd6b97b736e0
+                    End
+                End
+                Begin TextBox
+                    Left =4620
+                    TabIndex =2
+                    Name ="LevelName"
+                    ControlSource ="LevelName"
+                    GUID = Begin
+                        0x37d479e1e8d80b469b4d5f0d67f9e3cb
+                    End
+                End
+                Begin TextBox
+                    Left =60
+                    ColumnWidth =1935
+                    TabIndex =3
+                    Name ="EventDate"
+                    ControlSource ="EventDate"
+                    Format ="ddd\", \"mmm d\", \"yyyy"
+                    GUID = Begin
+                        0x5c9768e4b3ff754b8d2fc9e42da0192d
+                    End
+                End
+            End
+        End
+        Begin PageFooter
+            Height =0
+            Name ="PageFooterSection"
+            GUID = Begin
+                0x4ef466c81a25214193340649c7b065fc
+            End
+        End
+    End
+End

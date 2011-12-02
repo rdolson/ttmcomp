@@ -1,0 +1,215 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="ltblDogEntrySummary"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="tblEvent"
+    Name ="trelOwnerEvent"
+    Name ="trelDogEvent"
+End
+Begin OutputColumns
+    Expression ="ltblDogEntrySummary.Envelope"
+    Expression ="tblDog.CallName"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="ltblDogEntrySummary.CheckNumber"
+    Alias ="Check Tot"
+    Expression ="IIf([trelOwnerEvent]![CheckAmount],[trelOwnerEvent]![CheckAmount],[trelDogEvent]"
+        "![FeePaid])"
+    Expression ="trelDogEvent.FeePaid"
+    Alias ="Sat"
+    Expression ="ltblDogEntrySummary.D1Count"
+    Alias ="Sun"
+    Expression ="ltblDogEntrySummary.D2Count"
+    Alias ="SatEnt"
+    Expression ="\"\""
+    Alias ="SunEnt"
+    Expression ="\"\""
+    Alias ="Check amt"
+    Expression ="\"\""
+    Alias ="Refund Amt"
+    Expression ="\"\""
+    Alias ="HtCard"
+    Expression ="\"\""
+End
+Begin Joins
+    LeftTable ="ltblDogEntrySummary"
+    RightTable ="tblDog"
+    Expression ="ltblDogEntrySummary.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="ltblDogEntrySummary"
+    RightTable ="tblEvent"
+    Expression ="ltblDogEntrySummary.EventID = tblEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="ltblDogEntrySummary.Envelope"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="ltblDogEntrySummary.Envelope"
+        dbInteger "ColumnWidth" ="495"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerLastName"
+        dbInteger "ColumnWidth" ="1395"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="ltblDogEntrySummary.CheckNumber"
+        dbInteger "ColumnWidth" ="1260"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Fri"
+        dbInteger "ColumnWidth" ="480"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Sat"
+        dbInteger "ColumnWidth" ="525"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Sun"
+        dbInteger "ColumnWidth" ="555"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="FriEnt"
+        dbInteger "ColumnWidth" ="675"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="SatEnt"
+        dbInteger "ColumnWidth" ="615"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="SunEnt"
+        dbInteger "ColumnWidth" ="690"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Check amt"
+        dbInteger "ColumnWidth" ="1080"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Refund Amt"
+        dbInteger "ColumnWidth" ="1215"
+        dbBoolean "ColumnHidden" ="-1"
+    End
+    Begin
+        dbText "Name" ="HtCard"
+        dbInteger "ColumnWidth" ="735"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Check Tot"
+        dbInteger "ColumnWidth" ="975"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="trelDogEvent.FeePaid"
+        dbInteger "ColumnWidth" ="810"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =98
+    Top =210
+    Right =1342
+    Bottom =773
+    Left =-1
+    Top =-1
+    Right =1233
+    Bottom =300
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =215
+        Bottom =263
+        Top =7
+        Name ="ltblDogEntrySummary"
+        Name =""
+    End
+    Begin
+        Left =253
+        Top =62
+        Right =366
+        Bottom =229
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =405
+        Top =12
+        Right =501
+        Bottom =104
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =521
+        Top =6
+        Right =617
+        Bottom =98
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =734
+        Top =100
+        Right =830
+        Bottom =207
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =486
+        Top =163
+        Right =582
+        Bottom =270
+        Top =4
+        Name ="trelDogEvent"
+        Name =""
+    End
+End

@@ -1,0 +1,161 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="ltblKnownAbsences"
+    Name ="tblDog"
+    Name ="qryExpandedTitle"
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+    Name ="tblHandler"
+    Name ="tblEventDate"
+    Name ="tblTitle"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="qryExpandedTitle.ExpandedName"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="tblDog.CallName"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+End
+Begin Joins
+    LeftTable ="ltblKnownAbsences"
+    RightTable ="tblDog"
+    Expression ="ltblKnownAbsences.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="qryExpandedTitle"
+    Expression ="tblTitleEvent.TitleID = qryExpandedTitle.TitleID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="ltblKnownAbsences"
+    Expression ="tblEventDate.EventID = ltblKnownAbsences.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="tblTitle.CatalogSortOrder"
+    Flag =0
+    Expression ="trelDogEntry.JumpHeightCD"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="qryExpandedTitle.ExpandedName"
+        dbInteger "ColumnWidth" ="3570"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =58
+    Top =66
+    Right =1282
+    Bottom =384
+    Left =-1
+    Top =-1
+    Right =1211
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =103
+        Top =0
+        Name ="ltblKnownAbsences"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =118
+        Top =3
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =753
+        Top =12
+        Right =849
+        Bottom =124
+        Top =5
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+    Begin
+        Left =625
+        Top =6
+        Right =721
+        Bottom =118
+        Top =2
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =312
+        Top =-8
+        Right =408
+        Bottom =104
+        Top =1
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =489
+        Top =10
+        Right =585
+        Bottom =122
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =887
+        Top =6
+        Right =983
+        Bottom =118
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =1021
+        Top =6
+        Right =1117
+        Bottom =118
+        Top =8
+        Name ="tblTitle"
+        Name =""
+    End
+End

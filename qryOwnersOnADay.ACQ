@@ -1,0 +1,93 @@
+Operation =1
+Option =2
+Where ="(((qryDogDayEntry.DayNum)=2))"
+Begin InputTables
+    Name ="qryDogDayEntry"
+    Name ="tblDog"
+    Name ="tblOwner"
+End
+Begin OutputColumns
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.EmailAddress"
+End
+Begin Joins
+    LeftTable ="qryDogDayEntry"
+    RightTable ="tblDog"
+    Expression ="qryDogDayEntry.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+    Expression ="tblOwner.OwnerFirstName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblOwner.OwnerLastName"
+        dbInteger "ColumnWidth" ="2490"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="2460"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.EmailAddress"
+        dbInteger "ColumnWidth" ="5685"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =40
+    Top =62
+    Right =1153
+    Bottom =770
+    Left =-1
+    Top =-1
+    Right =1102
+    Bottom =144
+    Left =0
+    Top =7
+    ColumnsShown =539
+    Begin
+        Left =92
+        Top =0
+        Right =197
+        Bottom =117
+        Top =0
+        Name ="qryDogDayEntry"
+        Name =""
+    End
+    Begin
+        Left =242
+        Top =0
+        Right =338
+        Bottom =107
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =412
+        Top =-5
+        Right =612
+        Bottom =112
+        Top =5
+        Name ="tblOwner"
+        Name =""
+    End
+End

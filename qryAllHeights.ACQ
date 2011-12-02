@@ -1,0 +1,49 @@
+Operation =1
+Option =0
+Where ="(((tlkpJumpHeight.JumpHeightCD)=\"4\")) OR (((tlkpJumpHeight.JumpHeightCD)=\"8\""
+    ")) OR (((tlkpJumpHeight.JumpHeightCD)=\"12\")) OR (((tlkpJumpHeight.JumpHeightCD"
+    ")=\"16\")) OR (((tlkpJumpHeight.JumpHeightCD)=\"20\")) OR (((tlkpJumpHeight.Jump"
+    "HeightCD)=\"24\")) OR (((tlkpJumpHeight.JumpHeightCD)=\"26\")) OR (((tlkpJumpHei"
+    "ght.JumpHeightCD)=\"4\"))"
+Begin InputTables
+    Name ="tlkpJumpHeight"
+End
+Begin OutputColumns
+    Expression ="tlkpJumpHeight.JumpHeightCD"
+    Expression ="tlkpJumpHeight.JumpHeightinInches"
+End
+Begin OrderBy
+    Expression ="tlkpJumpHeight.JumpHeightinInches"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =54
+    Top =58
+    Right =1138
+    Bottom =819
+    Left =-1
+    Top =-1
+    Right =1077
+    Bottom =211
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =294
+        Top =-10
+        Right =425
+        Bottom =128
+        Top =0
+        Name ="tlkpJumpHeight"
+        Name =""
+    End
+End

@@ -1,0 +1,236 @@
+Version =19
+VersionRequired =19
+Checksum =-123706012
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =0
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =5520
+    DatasheetFontHeight =10
+    ItemSuffix =6
+    Left =600
+    Top =210
+    Right =15330
+    Bottom =9015
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xf6f929ab9f73e340
+    End
+    RecordSource ="qryDrawResultsWithJudges"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xb0010000d0020000b0010000d002000000000000901500002c01000001000000 ,
+        0x020000006801000000000000a20700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x5044463939350000000000000000000000000000000000000000000000000000 ,
+        0x010402059c00c40253ef800101000100ea0a6f08640001000f00580202000100 ,
+        0x5802030001004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000000000000000000000000000000000000000000050524956 ,
+        0xe230000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000180000000000102710271027 ,
+        0x0000102700000000000000000000c40200000000000000000000000000000000 ,
+        0x00000000000000000300000000000000000010005c4b03006843040000000000 ,
+        0x0000000000000000000000000000000000000000000000003f2cb85b05000000 ,
+        0x03000000ff00ff00010000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000
+    End
+    PrtDevNames = Begin
+        0x08001e0025000100504446393935205072696e74657220447269766572005044 ,
+        0x4639393500504446393935504f525400
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            TextFontFamily =2
+            FontName ="Arial"
+        End
+        Begin TextBox
+            AutoLabel = NotDefault
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            FontSize =10
+            FontName ="Arial"
+        End
+        Begin BreakLevel
+            ControlSource ="EventDate"
+        End
+        Begin BreakLevel
+            GroupHeader = NotDefault
+            ControlSource ="JudgeID"
+        End
+        Begin BreakLevel
+            ControlSource ="order"
+        End
+        Begin BreakHeader
+            KeepTogether = NotDefault
+            RepeatSection = NotDefault
+            ForceNewPage =1
+            Height =375
+            BreakLevel =1
+            Name ="GroupHeader0"
+            GUID = Begin
+                0xb2262758a0e9b94eacdf5806b0b6e9c3
+            End
+            Begin
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =60
+                    Top =60
+                    Width =2100
+                    Height =315
+                    ColumnWidth =1935
+                    FontSize =12
+                    Name ="EventDate"
+                    ControlSource ="EventDate"
+                    Format ="ddd\", \"mmm d\", \"yyyy"
+                    GUID = Begin
+                        0xed9bcc2c4f4f46408636b8c5af772f2b
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =2220
+                    Top =60
+                    Width =3060
+                    Height =315
+                    FontSize =12
+                    TabIndex =1
+                    Name ="Text2"
+                    ControlSource ="=[JudgeFirstName] & \" \" & [JudgeLastName]"
+                    GUID = Begin
+                        0x902b0d874303da40b9012a2415b480c4
+                    End
+                End
+            End
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =300
+            Name ="Detail"
+            GUID = Begin
+                0x6ed12a26a4074746a3648a80c8e4795b
+            End
+            Begin
+                Begin TextBox
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Top =60
+                    Width =360
+                    ColumnWidth =705
+                    FontSize =9
+                    FontWeight =700
+                    Name ="order"
+                    ControlSource ="order"
+                    GUID = Begin
+                        0x386425b7ab64c64c9a663129d735a377
+                    End
+                End
+                Begin TextBox
+                    TextAlign =1
+                    IMESentenceMode =3
+                    Left =420
+                    Top =60
+                    Width =360
+                    ColumnWidth =885
+                    FontSize =9
+                    FontWeight =700
+                    TabIndex =1
+                    Name ="envelope"
+                    ControlSource ="envelope"
+                    GUID = Begin
+                        0x59c84c00804ea54d9ccd103b73871009
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =900
+                    Top =60
+                    Width =2040
+                    ColumnWidth =2805
+                    FontSize =9
+                    TabIndex =2
+                    Name ="RegisteredName"
+                    ControlSource ="RegisteredName"
+                    FontName ="Arial Narrow"
+                    GUID = Begin
+                        0x81e34acee7c73a4ab32c1457d9c02ece
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =2940
+                    Top =60
+                    Width =1260
+                    FontSize =9
+                    TabIndex =3
+                    Name ="Text3"
+                    ControlSource ="=[OwnerLastName] & \", \" & [OwnerFirstName]"
+                    GUID = Begin
+                        0xbf45b8d23327294f9988f0f54c206ff5
+                    End
+                End
+                Begin TextBox
+                    IMESentenceMode =3
+                    Left =4200
+                    Top =60
+                    Width =900
+                    FontSize =9
+                    TabIndex =4
+                    Name ="CName"
+                    ControlSource ="CName"
+                    GUID = Begin
+                        0xbfc72d1c957875459ef5b25b75def70f
+                    End
+                End
+                Begin TextBox
+                    RunningSum =1
+                    IMESentenceMode =3
+                    Left =5100
+                    Top =60
+                    Width =360
+                    FontSize =9
+                    TabIndex =5
+                    Name ="Text4"
+                    ControlSource ="=1"
+                    GUID = Begin
+                        0xd8e9a32355788a48a3a70a8c62ac7a0c
+                    End
+                End
+                Begin Line
+                    Left =5520
+                    Width =0
+                    Height =300
+                    Name ="Line5"
+                    GUID = Begin
+                        0x7e3e0324f4328d41b6e9b92b9769e0d5
+                    End
+                End
+            End
+        End
+    End
+End

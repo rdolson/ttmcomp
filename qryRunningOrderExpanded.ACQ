@@ -1,0 +1,59 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="l_tblRunningOrderEntry"
+    Name ="qryExpandedTitle"
+End
+Begin OutputColumns
+    Expression ="l_tblRunningOrderEntry.RunningOrderID"
+    Expression ="l_tblRunningOrderEntry.Order"
+    Expression ="l_tblRunningOrderEntry.JumpHeightCD"
+    Expression ="qryExpandedTitle.ClassName"
+    Expression ="qryExpandedTitle.DivisionName"
+    Expression ="qryExpandedTitle.LevelName"
+    Expression ="qryExpandedTitle.TitleID"
+End
+Begin Joins
+    LeftTable ="qryExpandedTitle"
+    RightTable ="l_tblRunningOrderEntry"
+    Expression ="qryExpandedTitle.TitleID = l_tblRunningOrderEntry.TitleID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+Begin
+End
+Begin
+    State =0
+    Left =189
+    Top =213
+    Right =1222
+    Bottom =519
+    Left =-1
+    Top =-1
+    Right =1026
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =3
+        Right =203
+        Bottom =114
+        Top =0
+        Name ="l_tblRunningOrderEntry"
+        Name =""
+    End
+    Begin
+        Left =263
+        Top =4
+        Right =359
+        Bottom =112
+        Top =0
+        Name ="qryExpandedTitle"
+        Name =""
+    End
+End

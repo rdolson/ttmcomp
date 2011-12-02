@@ -1,0 +1,104 @@
+Version =19
+VersionRequired =19
+Checksum =-122868187
+Begin Form
+    OrderByOn = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =2
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =7440
+    DatasheetFontHeight =10
+    ItemSuffix =4
+    Left =615
+    Top =555
+    Right =11415
+    Bottom =11280
+    DatasheetGridlinesColor =12632256
+    OrderBy ="qryEnvelopeNumberUpdate.OwnerLastName"
+    RecSrcDt = Begin
+        0x2a04d578c3e5e240
+    End
+    RecordSource ="qryEnvelopeNumberUpdate"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontName ="Tahoma"
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            OldBorderStyle =0
+            FontName ="Tahoma"
+        End
+        Begin Section
+            Height =360
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0xe365752fb626dd4b8687e8c05d36aa27
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =3660
+                    Top =60
+                    ColumnOrder =2
+                    Name ="EnvelopeNumber"
+                    ControlSource ="EnvelopeNumber"
+                    GUID = Begin
+                        0x9bb06bf7e81fc348864e1d726edaf621
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =60
+                    Top =60
+                    Width =1980
+                    ColumnOrder =0
+                    TabIndex =1
+                    Name ="OwnerLastName"
+                    ControlSource ="OwnerLastName"
+                    GUID = Begin
+                        0xb57c5630093a7647813b8bb81c281374
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =2100
+                    Top =60
+                    ColumnWidth =3075
+                    ColumnOrder =1
+                    TabIndex =2
+                    Name ="OwnerFirstName"
+                    ControlSource ="OwnerFirstName"
+                    GUID = Begin
+                        0xe763e84ab0c0c4408348fe5139b50b70
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =5160
+                    Top =60
+                    Width =2280
+                    ColumnWidth =2985
+                    TabIndex =3
+                    Name ="OwnerCity"
+                    ControlSource ="OwnerCity"
+                    GUID = Begin
+                        0xd047af2c07ecfe4c85c402ae69b8dbb8
+                    End
+                End
+            End
+        End
+    End
+End

@@ -1,0 +1,90 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="qryLookupDogClasses"
+    Name ="tblEventDate"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="qryLookupDogClasses.ClassAbbreviation"
+    Expression ="qryLookupDogClasses.DivisionName"
+    Expression ="qryLookupDogClasses.LevelName"
+    Alias ="CountOfDogID"
+    Expression ="Count(qryLookupDogClasses.DogID)"
+    Alias ="color"
+    Expression ="\" \""
+    Alias ="done"
+    Expression ="\" \""
+End
+Begin Joins
+    LeftTable ="qryLookupDogClasses"
+    RightTable ="tblEventDate"
+    Expression ="qryLookupDogClasses.EventDateID = tblEventDate.EventDateID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="qryLookupDogClasses.ClassAbbreviation"
+    Flag =0
+    Expression ="qryLookupDogClasses.CatalogSortOrder"
+    Flag =0
+End
+Begin Groups
+    Expression ="tblEventDate.EventDate"
+    GroupLevel =0
+    Expression ="qryLookupDogClasses.ClassAbbreviation"
+    GroupLevel =0
+    Expression ="qryLookupDogClasses.DivisionName"
+    GroupLevel =0
+    Expression ="qryLookupDogClasses.LevelName"
+    GroupLevel =0
+    Expression ="\" \""
+    GroupLevel =0
+    Expression ="\" \""
+    GroupLevel =0
+    Expression ="qryLookupDogClasses.EventDateID"
+    GroupLevel =0
+    Expression ="qryLookupDogClasses.CatalogSortOrder"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =0
+    Top =182
+    Right =1142
+    Bottom =832
+    Left =-1
+    Top =-1
+    Right =1131
+    Bottom =249
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =38
+        Top =6
+        Right =235
+        Bottom =188
+        Top =0
+        Name ="qryLookupDogClasses"
+        Name =""
+    End
+    Begin
+        Left =273
+        Top =6
+        Right =369
+        Bottom =113
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+End

@@ -1,0 +1,83 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+    Name ="qryCurrentTrialDates"
+End
+Begin OutputColumns
+    Alias ="CountOfDogID"
+    Expression ="Count(trelDogEntry.DogID)"
+    Expression ="tblTitleEvent.TitleEventDateID"
+    Expression ="trelDogEntry.JumpHeightCD"
+End
+Begin Joins
+    LeftTable ="qryCurrentTrialDates"
+    RightTable ="tblTitleEvent"
+    Expression ="qryCurrentTrialDates.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+End
+Begin Groups
+    Expression ="tblTitleEvent.TitleEventDateID"
+    GroupLevel =0
+    Expression ="trelDogEntry.JumpHeightCD"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="tblTitleEvent.TitleEventDateID"
+        dbInteger "ColumnWidth" ="1725"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =496
+    Top =67
+    Right =1369
+    Bottom =701
+    Left =-1
+    Top =-1
+    Right =862
+    Bottom =399
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =322
+        Top =13
+        Right =494
+        Bottom =181
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =617
+        Top =23
+        Right =843
+        Bottom =281
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =6
+        Right =287
+        Bottom =150
+        Top =0
+        Name ="qryCurrentTrialDates"
+        Name =""
+    End
+End

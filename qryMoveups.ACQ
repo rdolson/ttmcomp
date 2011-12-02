@@ -1,0 +1,259 @@
+Operation =1
+Option =0
+Where ="(((trelDogEntry.MovedUp)=True) AND ((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tblEventDate"
+    Name ="tblEvent"
+    Name ="tblDog"
+    Name ="tblHandler"
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="tblTitle"
+    Name ="tlkpClass"
+    Name ="tlkpLevel"
+    Name ="tlkpDivision"
+    Name ="trelDogEvent"
+    Name ="trelDogRegistration"
+    Name ="tlkpBreed"
+    Name ="tblArmBandNumber"
+End
+Begin OutputColumns
+    Expression ="trelDogEntry.MovedUp"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tlkpDivision.DivisionName"
+    Expression ="tlkpLevel.LevelName"
+    Expression ="tlkpClass.ClassName"
+    Alias ="JumpHeightInInches"
+    Expression ="Int([JumpHeightCD])"
+    Expression ="tblDog.CallName"
+    Expression ="tblDog.RegisteredName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="trelDogRegistration.PrefixTitle"
+    Expression ="trelDogRegistration.SuffixTitle"
+    Expression ="tlkpBreed.BreedName"
+    Alias ="Handler"
+    Expression ="[HandlerFirstName] & \" \" & [HandlerLastName]"
+    Expression ="tblTitle.CatalogSortOrder"
+    Expression ="tblArmBandNumber.ArmBandNumber"
+    Expression ="tblEventDate.EventDateID"
+End
+Begin Joins
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogRegistration"
+    Expression ="tblDog.DogID = trelDogRegistration.DogID"
+    Flag =1
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tlkpBreed"
+    RightTable ="tblDog"
+    Expression ="tlkpBreed.BreedID = tblDog.BreedID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblArmBandNumber"
+    Expression ="trelDogEvent.DogID = tblArmBandNumber.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tblArmBandNumber"
+    Expression ="trelDogEvent.EventID = tblArmBandNumber.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblEventDate.EventDate"
+    Flag =0
+    Expression ="tblTitle.CatalogSortOrder"
+    Flag =0
+    Expression ="Int([JumpHeightCD])"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =-19
+    Top =107
+    Right =1141
+    Bottom =866
+    Left =-1
+    Top =-1
+    Right =1153
+    Bottom =363
+    Left =0
+    Top =15
+    ColumnsShown =539
+    Begin
+        Left =192
+        Top =82
+        Right =288
+        Bottom =190
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =29
+        Top =-5
+        Right =125
+        Bottom =103
+        Top =1
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =810
+        Top =62
+        Right =906
+        Bottom =170
+        Top =10
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =963
+        Top =190
+        Right =1059
+        Bottom =298
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =574
+        Top =-9
+        Right =733
+        Bottom =234
+        Top =2
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =389
+        Top =58
+        Right =485
+        Bottom =166
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =463
+        Top =187
+        Right =559
+        Bottom =295
+        Top =8
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =742
+        Top =177
+        Right =838
+        Bottom =285
+        Top =3
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =203
+        Top =206
+        Right =299
+        Bottom =314
+        Top =1
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =326
+        Top =189
+        Right =422
+        Bottom =297
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+    Begin
+        Left =986
+        Top =-20
+        Right =1082
+        Bottom =88
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =105
+        Right =134
+        Bottom =213
+        Top =0
+        Name ="trelDogRegistration"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =213
+        Right =134
+        Bottom =321
+        Top =0
+        Name ="tlkpBreed"
+        Name =""
+    End
+    Begin
+        Left =615
+        Top =195
+        Right =742
+        Bottom =333
+        Top =0
+        Name ="tblArmBandNumber"
+        Name =""
+    End
+End

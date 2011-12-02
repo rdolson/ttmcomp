@@ -1,0 +1,148 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tblTitle"
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+    Name ="tlkpClass"
+    Name ="tlkpDivision"
+    Name ="tlkpLevel"
+    Name ="tblEvent"
+    Name ="tblEventDate"
+End
+Begin OutputColumns
+    Expression ="trelDogEntry.DogID"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="tlkpClass.ClassAbbreviation"
+    Expression ="tlkpLevel.LevelName"
+    Expression ="tlkpDivision.DivisionName"
+    Expression ="tlkpLevel.LevelAbbreviation"
+    Expression ="tblTitleEvent.EventDateID"
+    Expression ="tblTitleEvent.TitleID"
+    Expression ="tblTitle.CatalogSortOrder"
+End
+Begin Joins
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tlkpDivision"
+    RightTable ="tblTitle"
+    Expression ="tlkpDivision.DivisionID = tblTitle.DivisionID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =133
+    Top =155
+    Right =1064
+    Bottom =766
+    Left =-1
+    Top =-1
+    Right =924
+    Bottom =348
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =6
+        Top =20
+        Right =154
+        Bottom =128
+        Top =11
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =515
+        Top =74
+        Right =677
+        Bottom =227
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =717
+        Top =27
+        Right =894
+        Bottom =240
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =338
+        Top =-9
+        Right =487
+        Bottom =144
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =162
+        Top =154
+        Right =258
+        Bottom =262
+        Top =0
+        Name ="tlkpDivision"
+        Name =""
+    End
+    Begin
+        Left =258
+        Top =117
+        Right =394
+        Bottom =255
+        Top =0
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =132
+        Right =134
+        Bottom =240
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =407
+        Top =200
+        Right =503
+        Bottom =308
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+End

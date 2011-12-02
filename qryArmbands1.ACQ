@@ -1,0 +1,142 @@
+Operation =1
+Option =2
+Begin InputTables
+    Name ="tblDog"
+    Name ="tblHandler"
+    Name ="trelDogEvent"
+    Name ="tblTitleEvent"
+    Name ="tblEventDate"
+    Name ="trelDogRegistration"
+    Name ="trelDogEntry"
+End
+Begin OutputColumns
+    Expression ="tblHandler.HandlerLastName"
+    Expression ="tblHandler.HandlerFirstName"
+    Expression ="tblDog.CallName"
+    Expression ="trelDogEvent.ArmBandNumber"
+    Expression ="tblTitleEvent.EventDateID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="trelDogRegistration.JumpCardCD"
+End
+Begin Joins
+    LeftTable ="tblHandler"
+    RightTable ="tblDog"
+    Expression ="tblHandler.HandlerID = tblDog.HandlerID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="trelDogEvent"
+    Expression ="tblEventDate.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="trelDogEntry"
+    Expression ="trelDogEvent.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogRegistration"
+    Expression ="tblDog.DogID = trelDogRegistration.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblHandler.HandlerLastName"
+    Flag =0
+    Expression ="tblHandler.HandlerFirstName"
+    Flag =0
+    Expression ="tblDog.CallName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+Begin
+End
+Begin
+    State =0
+    Left =18
+    Top =155
+    Right =1124
+    Bottom =832
+    Left =-1
+    Top =-1
+    Right =1099
+    Bottom =442
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =155
+        Bottom =264
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =220
+        Top =290
+        Right =316
+        Bottom =398
+        Top =0
+        Name ="tblHandler"
+        Name =""
+    End
+    Begin
+        Left =643
+        Top =95
+        Right =799
+        Bottom =278
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =224
+        Top =91
+        Right =342
+        Bottom =259
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =417
+        Top =156
+        Right =572
+        Bottom =309
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =904
+        Top =14
+        Right =1056
+        Bottom =212
+        Top =0
+        Name ="trelDogRegistration"
+        Name =""
+    End
+    Begin
+        Left =850
+        Top =214
+        Right =1024
+        Bottom =427
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+End

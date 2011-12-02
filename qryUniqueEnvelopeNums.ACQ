@@ -1,0 +1,62 @@
+Operation =1
+Option =2
+Begin InputTables
+    Name ="qryEnvelopeNumberUpdate"
+End
+Begin OutputColumns
+    Expression ="qryEnvelopeNumberUpdate.EnvelopeNumber"
+    Expression ="qryEnvelopeNumberUpdate.OwnerFirstName"
+    Expression ="qryEnvelopeNumberUpdate.OwnerLastName"
+    Expression ="qryEnvelopeNumberUpdate.OwnerStreet"
+    Expression ="qryEnvelopeNumberUpdate.OwnerCity"
+    Alias ="Expr1"
+    Expression ="IIf(Len([OwnerPostalCD])>5,Left([OwnerPostalCD],5) & \"-\" & Right([OwnerPostalC"
+        "D],4),[OwnerPostalCD])"
+    Expression ="qryEnvelopeNumberUpdate.OwnerStateProvinceCD"
+    Expression ="qryEnvelopeNumberUpdate.CheckNumber"
+End
+Begin OrderBy
+    Expression ="qryEnvelopeNumberUpdate.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="qryEnvelopeNumberUpdate.OwnerStreet"
+        dbInteger "ColumnWidth" ="3000"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="Expr1"
+        dbInteger "ColumnWidth" ="1200"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =64
+    Top =86
+    Right =1074
+    Bottom =866
+    Left =-1
+    Top =-1
+    Right =999
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =99
+        Top =7
+        Name ="qryEnvelopeNumberUpdate"
+        Name =""
+    End
+End

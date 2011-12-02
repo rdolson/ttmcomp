@@ -1,0 +1,63 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="qryPerJudgeEnvelopeOrder"
+End
+Begin OutputColumns
+    Alias ="env"
+    Expression ="qryPerJudgeEnvelopeOrder.EnvelopeNumber"
+    Alias ="CountOfDogID"
+    Expression ="Count(qryPerJudgeEnvelopeOrder.DogID)"
+    Expression ="qryPerJudgeEnvelopeOrder.order"
+End
+Begin OrderBy
+    Expression ="qryPerJudgeEnvelopeOrder.order"
+    Flag =0
+End
+Begin Groups
+    Expression ="qryPerJudgeEnvelopeOrder.EnvelopeNumber"
+    GroupLevel =0
+    Expression ="qryPerJudgeEnvelopeOrder.order"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="CountOfDogID"
+        dbInteger "ColumnWidth" ="2610"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="env"
+        dbInteger "ColumnWidth" ="2760"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =22
+    Top =215
+    Right =1224
+    Bottom =780
+    Left =-1
+    Top =-1
+    Right =1195
+    Bottom =299
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =38
+        Top =6
+        Right =337
+        Bottom =278
+        Top =0
+        Name ="qryPerJudgeEnvelopeOrder"
+        Name =""
+    End
+End

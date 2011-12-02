@@ -1,0 +1,129 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="qryDogEntryClasses_Crosstab"
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="tblEvent"
+End
+Begin OutputColumns
+    Alias ="Envelope"
+    Expression ="CInt(IIf(IsNull([EnvelopeNumber]),\"0\",[EnvelopeNumber]))"
+    Alias ="SumOfSTD"
+    Expression ="Sum(qryDogEntryClasses_Crosstab.STD)"
+    Alias ="SumOfJWW"
+    Expression ="Sum(qryDogEntryClasses_Crosstab.JWW)"
+    Alias ="SumOfFAST"
+    Expression ="Sum(qryDogEntryClasses_Crosstab.FAST)"
+End
+Begin Joins
+    LeftTable ="qryDogEntryClasses_Crosstab"
+    RightTable ="trelDogEvent"
+    Expression ="qryDogEntryClasses_Crosstab.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="qryDogEntryClasses_Crosstab"
+    RightTable ="tblDog"
+    Expression ="qryDogEntryClasses_Crosstab.DogID = tblDog.DogID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="CInt(IIf(IsNull([EnvelopeNumber]),\"0\",[EnvelopeNumber]))"
+    Flag =0
+End
+Begin Groups
+    Expression ="CInt(IIf(IsNull([EnvelopeNumber]),\"0\",[EnvelopeNumber]))"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="Envelope"
+        dbInteger "ColumnOrder" ="1"
+    End
+    Begin
+        dbText "Name" ="SumOfJWW"
+        dbInteger "ColumnOrder" ="3"
+    End
+    Begin
+        dbText "Name" ="SumOfSTD"
+        dbInteger "ColumnOrder" ="2"
+    End
+End
+Begin
+    State =0
+    Left =290
+    Top =36
+    Right =1129
+    Bottom =683
+    Left =-1
+    Top =-1
+    Right =832
+    Bottom =317
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =-6
+        Top =45
+        Right =141
+        Bottom =167
+        Top =0
+        Name ="qryDogEntryClasses_Crosstab"
+        Name =""
+    End
+    Begin
+        Left =177
+        Top =84
+        Right =395
+        Bottom =281
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =428
+        Top =6
+        Right =554
+        Bottom =188
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =640
+        Top =-7
+        Right =736
+        Bottom =100
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =652
+        Top =160
+        Right =748
+        Bottom =268
+        Top =1
+        Name ="tblEvent"
+        Name =""
+    End
+End

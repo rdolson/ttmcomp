@@ -1,0 +1,64 @@
+Version =17
+VersionRequired =17
+Checksum =122868165
+Begin Form
+    DefaultView =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =7395
+    DatasheetFontHeight =10
+    ItemSuffix =3
+    Left =960
+    Top =690
+    Right =9945
+    Bottom =5610
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0xb17b40bd3b89e240
+    End
+    RecordSource ="l_tblTitleGroupDef"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+        End
+        Begin TextBox
+            SpecialEffect =2
+            OldBorderStyle =0
+        End
+        Begin Subform
+            SpecialEffect =2
+        End
+        Begin Section
+            CanGrow = NotDefault
+            Height =4350
+            BackColor =-2147483633
+            Name ="Detail"
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    Left =120
+                    Top =60
+                    Width =4380
+                    Name ="Name"
+                    ControlSource ="Name"
+                End
+                Begin Subform
+                    OverlapFlags =85
+                    Left =240
+                    Top =480
+                    Width =7155
+                    Height =3870
+                    TabIndex =1
+                    Name ="subformGroupEntry"
+                    SourceObject ="Form.subformGroupEntry"
+                    LinkChildFields ="TitleGroupID"
+                    LinkMasterFields ="TitleGroupID"
+                End
+            End
+        End
+    End
+End

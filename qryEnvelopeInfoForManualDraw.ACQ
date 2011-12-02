@@ -1,0 +1,135 @@
+Operation =1
+Option =2
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="trelDogEvent"
+    Name ="tblDog"
+    Name ="tblOwner"
+    Name ="trelOwnerEvent"
+    Name ="tmpEnvMarked"
+End
+Begin OutputColumns
+    Expression ="trelOwnerEvent.Worker"
+    Alias ="marked"
+    Expression ="IIf(IsNull([tmpEnvMarked].[env]),0,1)"
+    Alias ="Env"
+    Expression ="CInt([EnvelopeNumber])"
+    Alias ="Names"
+    Expression ="OwnersFromEnvelope([EnvelopeNumber])"
+End
+Begin Joins
+    LeftTable ="trelOwnerEvent"
+    RightTable ="tblDog"
+    Expression ="trelOwnerEvent.OwnerID = tblDog.OwnerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblOwner.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelOwnerEvent"
+    Expression ="tblEvent.EventID = trelOwnerEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="trelDogEvent"
+    RightTable ="tmpEnvMarked"
+    Expression ="trelDogEvent.EnvelopeNumber = tmpEnvMarked.env"
+    Flag =2
+End
+Begin OrderBy
+    Expression ="trelOwnerEvent.Worker"
+    Flag =0
+    Expression ="IIf(IsNull([tmpEnvMarked].[env]),0,1)"
+    Flag =1
+    Expression ="CInt([EnvelopeNumber])"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="Names"
+        dbInteger "ColumnWidth" ="5100"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =50
+    Top =0
+    Right =1167
+    Bottom =762
+    Left =-1
+    Top =-1
+    Right =1106
+    Bottom =241
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =163
+        Top =81
+        Right =353
+        Bottom =203
+        Top =7
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =626
+        Top =71
+        Right =722
+        Bottom =178
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =758
+        Top =0
+        Right =911
+        Bottom =212
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =366
+        Top =5
+        Right =548
+        Bottom =172
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+    Begin
+        Left =949
+        Top =6
+        Right =1045
+        Bottom =68
+        Top =0
+        Name ="tmpEnvMarked"
+        Name =""
+    End
+End

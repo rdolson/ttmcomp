@@ -1,0 +1,46 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="draw-results-sd"
+End
+Begin OutputColumns
+    Expression ="[draw-results-sd].order"
+    Alias ="env"
+    Expression ="[draw-results-sd].envelope"
+    Expression ="[draw-results-sd].std"
+    Expression ="[draw-results-sd].jww"
+    Expression ="[draw-results-sd].tot_std"
+    Expression ="[draw-results-sd].tot_jww"
+    Expression ="[draw-results-sd].date"
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =41
+    Top =63
+    Right =1055
+    Bottom =369
+    Left =-1
+    Top =-1
+    Right =1003
+    Bottom =144
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =172
+        Top =6
+        Right =268
+        Bottom =114
+        Top =3
+        Name ="draw-results-sd"
+        Name =""
+    End
+End

@@ -1,0 +1,165 @@
+Operation =1
+Option =0
+Where ="(((tblEvent.LockedIn)=True) AND ((trelDogEvent.WaitListed)=False))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblEventDate"
+    Name ="trelDogEntry"
+    Name ="tblTitleEvent"
+    Name ="tlkpLevel"
+    Name ="tlkpClass"
+    Name ="tblTitle"
+    Name ="tlkpJumpHeight"
+    Name ="trelDogEvent"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDate"
+    Expression ="tblEventDate.EventDateID"
+    Expression ="trelDogEntry.JumpHeightCD"
+    Expression ="trelDogEntry.DogID"
+    Expression ="tlkpClass.ClassName"
+    Expression ="tlkpLevel.LevelGroupCD"
+    Expression ="tlkpJumpHeight.JumpHeightinInches"
+    Expression ="tlkpJumpHeight.JumpHeightCD"
+End
+Begin Joins
+    LeftTable ="tlkpJumpHeight"
+    RightTable ="trelDogEntry"
+    Expression ="tlkpJumpHeight.JumpHeightCD = trelDogEntry.JumpHeightCD"
+    Flag =1
+    LeftTable ="trelDogEntry"
+    RightTable ="trelDogEvent"
+    Expression ="trelDogEntry.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tlkpClass"
+    RightTable ="tblTitle"
+    Expression ="tlkpClass.ClassID = tblTitle.ClassID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tlkpLevel"
+    RightTable ="tblTitle"
+    Expression ="tlkpLevel.LevelID = tblTitle.LevelID"
+    Flag =1
+    LeftTable ="tblTitle"
+    RightTable ="tblTitleEvent"
+    Expression ="tblTitle.TitleID = tblTitleEvent.TitleID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =47
+    Top =56
+    Right =1339
+    Bottom =806
+    Left =-1
+    Top =-1
+    Right =1281
+    Bottom =468
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =171
+        Top =74
+        Right =316
+        Bottom =241
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =727
+        Top =181
+        Right =944
+        Bottom =438
+        Top =1
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =388
+        Top =86
+        Right =484
+        Bottom =193
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =985
+        Top =141
+        Right =1136
+        Bottom =368
+        Top =0
+        Name ="tlkpLevel"
+        Name =""
+    End
+    Begin
+        Left =1084
+        Top =6
+        Right =1180
+        Bottom =113
+        Top =0
+        Name ="tlkpClass"
+        Name =""
+    End
+    Begin
+        Left =646
+        Top =87
+        Right =742
+        Bottom =194
+        Top =0
+        Name ="tblTitle"
+        Name =""
+    End
+    Begin
+        Left =541
+        Top =237
+        Right =700
+        Bottom =374
+        Top =0
+        Name ="tlkpJumpHeight"
+        Name =""
+    End
+    Begin
+        Left =522
+        Top =6
+        Right =673
+        Bottom =203
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+End

@@ -1,0 +1,79 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="qryExpandedEntryInfo"
+    Name ="trelOwnerEvent"
+End
+Begin OutputColumns
+    Expression ="qryExpandedEntryInfo.OwnerFirstName"
+    Expression ="qryExpandedEntryInfo.OwnerLastName"
+    Expression ="qryExpandedEntryInfo.EnvelopeNumber"
+    Expression ="qryExpandedEntryInfo.CallName"
+    Expression ="trelOwnerEvent.Worker"
+    Expression ="qryExpandedEntryInfo.OwnerCity"
+    Expression ="qryExpandedEntryInfo.OwnerStateProvinceCD"
+End
+Begin Joins
+    LeftTable ="qryExpandedEntryInfo"
+    RightTable ="trelOwnerEvent"
+    Expression ="qryExpandedEntryInfo.OwnerID = trelOwnerEvent.OwnerID"
+    Flag =1
+    LeftTable ="qryExpandedEntryInfo"
+    RightTable ="trelOwnerEvent"
+    Expression ="qryExpandedEntryInfo.EventID = trelOwnerEvent.EventID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="qryExpandedEntryInfo.OwnerLastName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="trelOwnerEvent.Worker"
+        dbInteger "ColumnWidth" ="915"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="qryExpandedEntryInfo.OwnerStateProvinceCD"
+        dbInteger "ColumnWidth" ="450"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =53
+    Top =11
+    Right =1005
+    Bottom =671
+    Left =-1
+    Top =-1
+    Right =941
+    Bottom =226
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =172
+        Top =6
+        Right =376
+        Bottom =188
+        Top =4
+        Name ="qryExpandedEntryInfo"
+        Name =""
+    End
+    Begin
+        Left =502
+        Top =7
+        Right =598
+        Bottom =114
+        Top =0
+        Name ="trelOwnerEvent"
+        Name =""
+    End
+End

@@ -1,0 +1,72 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="qryConfLetterGroupQuery"
+    Name ="l_tblGroupOrder"
+End
+Begin OutputColumns
+    Expression ="qryConfLetterGroupQuery.EventDate"
+    Expression ="qryConfLetterGroupQuery.ClassName"
+    Expression ="qryConfLetterGroupQuery.LevelGroupCD"
+    Expression ="qryConfLetterGroupQuery.CountOfDogID"
+    Expression ="l_tblGroupOrder.Order"
+    Expression ="qryConfLetterGroupQuery.JumpHeightinInches"
+End
+Begin Joins
+    LeftTable ="qryConfLetterGroupQuery"
+    RightTable ="l_tblGroupOrder"
+    Expression ="qryConfLetterGroupQuery.LevelGroupCD = l_tblGroupOrder.LevelGroupCD"
+    Flag =1
+    LeftTable ="qryConfLetterGroupQuery"
+    RightTable ="l_tblGroupOrder"
+    Expression ="qryConfLetterGroupQuery.ClassName = l_tblGroupOrder.ClassName"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="qryConfLetterGroupQuery.EventDate"
+    Flag =0
+    Expression ="l_tblGroupOrder.Order"
+    Flag =1
+    Expression ="qryConfLetterGroupQuery.JumpHeightinInches"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =35
+    Top =192
+    Right =937
+    Bottom =671
+    Left =-1
+    Top =-1
+    Right =895
+    Bottom =273
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =187
+        Bottom =143
+        Top =0
+        Name ="qryConfLetterGroupQuery"
+        Name =""
+    End
+    Begin
+        Left =225
+        Top =6
+        Right =321
+        Bottom =83
+        Top =0
+        Name ="l_tblGroupOrder"
+        Name =""
+    End
+End

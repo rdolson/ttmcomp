@@ -1,0 +1,294 @@
+Version =19
+VersionRequired =19
+Checksum =123706006
+Begin Report
+    LayoutForPrint = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    TabularFamily =124
+    DateGrouping =1
+    GrpKeepTogether =1
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =10800
+    DatasheetFontHeight =10
+    ItemSuffix =37
+    Left =270
+    Top =225
+    Right =12795
+    Bottom =9390
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x93a13d81efe5e240
+    End
+    RecordSource ="qryRefunds"
+    Caption ="tblOwner"
+    DatasheetFontName ="Arial"
+    PrtMip = Begin
+        0xd0020000d0020000d0020000d002000000000000302a00002805000001000000 ,
+        0x010000006801000000000000a20700000100000001000000
+    End
+    PrtDevMode = Begin
+        0x5044463939350000000000000000000000000000000000000000000000000000 ,
+        0x010402059c00c4025def800101000100ea0a6f08640001000f00580202000100 ,
+        0x5802030000004c65747465720000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000000000000000000000000000000000000000000050524956 ,
+        0xe230000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000180000000000102710271027 ,
+        0x0000102700000000000000000000c40200000000000000000000000000000000 ,
+        0x00000000000000000300000000000000000010005c4b03006843040000000000 ,
+        0x0000000000000000000000000000000000000000000000003f2cb85b05000000 ,
+        0x03000000ff00ff00010000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000
+    End
+    PrtDevNames = Begin
+        0x080012001a00000077696e73706f6f6c004c5044463939350020504446393935 ,
+        0x504f5254006572696573002d49505f3139322e313638
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            FontItalic = NotDefault
+            BackStyle =0
+            TextAlign =1
+            TextFontFamily =18
+            FontSize =11
+            FontWeight =700
+            ForeColor =8388608
+            FontName ="Times New Roman"
+        End
+        Begin Rectangle
+            BackStyle =0
+            BorderWidth =1
+            BorderColor =8388608
+        End
+        Begin Line
+            BorderColor =8388608
+        End
+        Begin Image
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CheckBox
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            BackStyle =1
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            OldBorderStyle =0
+            BackStyle =0
+            FontName ="Arial"
+        End
+        Begin ListBox
+            OldBorderStyle =0
+            FontName ="Arial"
+        End
+        Begin ComboBox
+            OldBorderStyle =0
+            BackStyle =0
+            FontName ="Arial"
+        End
+        Begin Subform
+            OldBorderStyle =0
+        End
+        Begin BreakLevel
+            ControlSource ="OwnerLastName"
+        End
+        Begin Section
+            KeepTogether = NotDefault
+            Height =1320
+            Name ="Detail"
+            GUID = Begin
+                0x7da269fd91c45c4893ae060723885351
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =81
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =180
+                    Top =300
+                    Width =3180
+                    Height =300
+                    FontSize =11
+                    Name ="OwnerStreet"
+                    ControlSource ="OwnerStreet"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x0178e4e7c2531042991bd9609c11969e
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =83
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =3360
+                    Top =60
+                    Width =840
+                    Height =270
+                    FontSize =11
+                    TabIndex =1
+                    Name ="Amount"
+                    ControlSource ="Amount"
+                    Format ="$#,##0.00;($#,##0.00)"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x3991aaa97fe90946bc5fbacff68b1891
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =83
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =180
+                    Top =600
+                    Width =3120
+                    Height =300
+                    FontSize =11
+                    TabIndex =2
+                    Name ="Text23"
+                    ControlSource ="=[OwnerCity] & \", \" & [OwnerStateProvinceCD] & \" \" & FixZipCode([OwnerPostal"
+                        "CD])"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0xc6c7e02b89ecd244929ab7c8ce8441a7
+                    End
+                End
+                Begin Line
+                    OverlapFlags =81
+                    Left =300
+                    Top =1260
+                    Width =8880
+                    Name ="Line25"
+                    GUID = Begin
+                        0x3ea170ffb401174e991f3817f8a8237d
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =6300
+                    Top =780
+                    Width =4500
+                    Height =420
+                    ColumnWidth =3960
+                    FontSize =11
+                    TabIndex =3
+                    Name ="Reason"
+                    ControlSource ="Reason"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x7f41311182d20b409a3a4f8be48bf0a3
+                    End
+                End
+                Begin Label
+                    OverlapFlags =81
+                    Left =4380
+                    Top =780
+                    Width =1860
+                    Height =360
+                    ForeColor =0
+                    Name ="Label29"
+                    Caption ="Reason for refund:"
+                    GUID = Begin
+                        0x5f7f9f806e769d439a9ae424361ea1cc
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =83
+                    TextFontFamily =18
+                    IMESentenceMode =3
+                    Left =180
+                    Width =3120
+                    Height =300
+                    FontSize =11
+                    TabIndex =4
+                    Name ="Name"
+                    ControlSource ="Name"
+                    FontName ="Times New Roman"
+                    GUID = Begin
+                        0x0cfb31ccf6ac8549aeab57ff2cddc49e
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    Left =5820
+                    Top =60
+                    Width =4920
+                    TabIndex =5
+                    Name ="Text33"
+                    ControlSource ="=IIf(IsNull([EventID]),\"\",\"Check# \" & [CheckNumber] & \" for entry fees of \""
+                        " & [FeePaid])"
+                    GUID = Begin
+                        0x6bd6b395356e6e40b3261b1e2d489d50
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =81
+                            TextAlign =0
+                            Left =4380
+                            Top =60
+                            Width =1320
+                            Height =300
+                            Name ="Label34"
+                            Caption ="Original pmt:"
+                            GUID = Begin
+                                0x49a7b254a0d0ed4e9e58d453c1ae9692
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =81
+                    Left =6240
+                    Top =420
+                    Width =4320
+                    ColumnWidth =3345
+                    TabIndex =6
+                    Name ="RegisteredName"
+                    ControlSource ="RegisteredName"
+                    GUID = Begin
+                        0x8f722b46b98c2a44803078ec68ec28e1
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =81
+                            TextAlign =0
+                            Left =4380
+                            Top =420
+                            Width =1650
+                            Height =300
+                            Name ="Label36"
+                            Caption ="RegisteredName:"
+                            GUID = Begin
+                                0x0fc97e8c552ea540b6dba10c427d724a
+                            End
+                        End
+                    End
+                End
+            End
+        End
+    End
+End

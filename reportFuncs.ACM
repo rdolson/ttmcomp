@@ -1,0 +1,89 @@
+Option Compare Database
+
+Public Function tcRepNov(div As String, cls As String)
+
+ent = DCount("*", "qryEntriesByClass", _
+        "ClassAbbreviation = '" & cls & _
+        "' and DivisionAbbreviation = '" & div & _
+        "' and LevelAbbreviation = '")
+        
+End Function
+
+Public Function critForLevel(today As String, cls As String, div As String, level As String) As String
+Dim c As String
+
+If (level = "novice" And div = "REG") Then
+    c = "LevelAbbreviation = 'NA' or LevelAbbreviation = 'NB'"
+ElseIf (level = "novice" And div = "PRE") Then
+    c = "LevelAbbreviation = 'N'"
+ElseIf (level = "open") Then
+    c = "LevelAbbreviation = 'OP'"
+ElseIf (level = "exa") Then
+    c = "LevelAbbreviation = 'EXA'"
+ElseIf (level = "exb") Then
+    c = "LevelAbbreviation = 'EXB'"
+End If
+
+c = "(" & c & ") and DivisionAbbreviation = '" & div & "'"
+c = "(" & c & ") and ClassAbbreviation = '" & cls & "'"
+c = "(" & c & ") and EventDate = #" & today & "#"
+critForLevel = c
+
+End Function
+
+Public Function critForTitle(today As String, TitleID As Integer, height As String) As String
+Dim c As String
+
+c = "TitleID = " & TitleID
+c = c & " AND EventDate = #" & today & "#"
+c = c & " AND JumpHeightCD = '" & height & "'"
+
+critForTitle = c
+
+End Function
+
+Public Function countForTitle(today As String, TitleID As Integer, height As String) As Integer
+Dim crit As String
+Dim count As Integer
+
+crit = critForTitle(today, TitleID, height)
+Debug.Print crit
+
+count = DCount("*", "qryEntriesByTitleHeight", crit)
+
+countForTitle = count
+
+End Function
+
+
+Public Function pctForLevel(today As String, cls As String, div As String, level As String) As Integer
+
+Dim count, q As Integer
+Dim crit As String
+crit = critForLevel(today, cls, div, level)
+' Debug.Print "got cirt " & crit
+count = DCount("*", "qryEntriesByClass", crit)
+q = DCount("*", "qryQualifiersByClass", crit)
+' Debug.Print q, count
+
+If (count = 0) Then
+    pctForLevel = 0
+Else
+    pctForLevel = CInt(100# * CDbl(q) / CDbl(count))
+End If
+End Function
+Public Function countForLevel(today As String, cls As String, div As String, level As String) As Integer
+
+
+Dim crit As String
+crit = critForLevel(today, cls, div, level)
+' Debug.Print "got cirt " & crit
+countForLevel = DCount("*", "qryEntriesByClass", crit)
+
+End Function
+
+Public Function entryCount(today As Date)
+Dim crit As String
+crit = "EventDate = #" & today & "#"
+entryCount = DCount("*", "qryEntriesByClass", crit)
+End Function

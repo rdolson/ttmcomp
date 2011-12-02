@@ -1,0 +1,151 @@
+Operation =1
+Option =0
+Where ="(((trelDogEvent.WaitListed)=False))"
+Having ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tblEvent"
+    Name ="tblTitleEvent"
+    Name ="tblEventDate"
+    Name ="trelDogEntry"
+    Name ="tbllJudgeAssignment"
+    Name ="trelDogEvent"
+    Name ="tblJudge"
+End
+Begin OutputColumns
+    Expression ="tblEventDate.EventDateID"
+    Expression ="tblEventDate.EventDate"
+    Expression ="tbllJudgeAssignment.JudgeID"
+    Alias ="CountOfDogID"
+    Expression ="Count(trelDogEntry.DogID)"
+    Expression ="tblJudge.JudgeLastName"
+    Expression ="tblJudge.JudgeFirstName"
+End
+Begin Joins
+    LeftTable ="tblEvent"
+    RightTable ="tblEventDate"
+    Expression ="tblEvent.EventID = tblEventDate.EventID"
+    Flag =1
+    LeftTable ="tblEventDate"
+    RightTable ="tblTitleEvent"
+    Expression ="tblEventDate.EventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="tblTitleEvent.TitleEventDateID = tbllJudgeAssignment.TitleEventDateID"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="trelDogEntry"
+    RightTable ="trelDogEvent"
+    Expression ="trelDogEntry.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblJudge"
+    RightTable ="tbllJudgeAssignment"
+    Expression ="tblJudge.JudgeID = tbllJudgeAssignment.JudgeID"
+    Flag =1
+End
+Begin Groups
+    Expression ="tblEvent.LockedIn"
+    GroupLevel =0
+    Expression ="tblEventDate.EventDateID"
+    GroupLevel =0
+    Expression ="tblEventDate.EventDate"
+    GroupLevel =0
+    Expression ="tbllJudgeAssignment.JudgeID"
+    GroupLevel =0
+    Expression ="tblJudge.JudgeLastName"
+    GroupLevel =0
+    Expression ="tblJudge.JudgeFirstName"
+    GroupLevel =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =38
+    Top =44
+    Right =1192
+    Bottom =644
+    Left =-1
+    Top =-1
+    Right =1147
+    Bottom =261
+    Left =0
+    Top =0
+    ColumnsShown =543
+    Begin
+        Left =38
+        Top =6
+        Right =134
+        Bottom =113
+        Top =4
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =361
+        Top =7
+        Right =536
+        Bottom =200
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =182
+        Top =53
+        Right =315
+        Bottom =207
+        Top =0
+        Name ="tblEventDate"
+        Name =""
+    End
+    Begin
+        Left =785
+        Top =-2
+        Right =953
+        Bottom =229
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =602
+        Top =65
+        Right =753
+        Bottom =232
+        Top =0
+        Name ="tbllJudgeAssignment"
+        Name =""
+    End
+    Begin
+        Left =991
+        Top =6
+        Right =1126
+        Bottom =224
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =38
+        Top =126
+        Right =134
+        Bottom =233
+        Top =0
+        Name ="tblJudge"
+        Name =""
+    End
+End

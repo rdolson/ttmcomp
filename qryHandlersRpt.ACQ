@@ -1,0 +1,125 @@
+Operation =1
+Option =2
+Begin InputTables
+    Name ="ltblSelectedDate"
+    Name ="l_tblRunningOrderEntry"
+    Name ="l_tblTitleGroupEntry"
+    Name ="tblTitleEvent"
+    Name ="trelDogEntry"
+    Name ="tblDog"
+    Name ="ltblSelectedRO"
+End
+Begin OutputColumns
+    Expression ="tblDog.HandlerID"
+End
+Begin Joins
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="l_tblRunningOrderEntry.TitleGroupID = l_tblTitleGroupEntry.TitleGroupID"
+    Flag =1
+    LeftTable ="ltblSelectedDate"
+    RightTable ="tblTitleEvent"
+    Expression ="ltblSelectedDate.SelectedEventDateID = tblTitleEvent.EventDateID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="l_tblTitleGroupEntry"
+    Expression ="tblTitleEvent.TitleID = l_tblTitleGroupEntry.TitleID"
+    Flag =1
+    LeftTable ="l_tblRunningOrderEntry"
+    RightTable ="ltblSelectedRO"
+    Expression ="l_tblRunningOrderEntry.RunningOrderID = ltblSelectedRO.SelectedROID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEntry"
+    Expression ="tblDog.DogID = trelDogEntry.DogID"
+    Flag =1
+    LeftTable ="tblTitleEvent"
+    RightTable ="trelDogEntry"
+    Expression ="tblTitleEvent.TitleEventDateID = trelDogEntry.TitleEventDateID"
+    Flag =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+End
+Begin
+    State =0
+    Left =18
+    Top =72
+    Right =1312
+    Bottom =562
+    Left =-1
+    Top =-1
+    Right =1287
+    Bottom =251
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =19
+        Top =1
+        Right =157
+        Bottom =63
+        Top =0
+        Name ="ltblSelectedDate"
+        Name =""
+    End
+    Begin
+        Left =678
+        Top =85
+        Right =816
+        Bottom =207
+        Top =0
+        Name ="l_tblRunningOrderEntry"
+        Name =""
+    End
+    Begin
+        Left =481
+        Top =89
+        Right =634
+        Bottom =196
+        Top =0
+        Name ="l_tblTitleGroupEntry"
+        Name =""
+    End
+    Begin
+        Left =252
+        Top =7
+        Right =348
+        Bottom =114
+        Top =0
+        Name ="tblTitleEvent"
+        Name =""
+    End
+    Begin
+        Left =886
+        Top =11
+        Right =982
+        Bottom =118
+        Top =0
+        Name ="trelDogEntry"
+        Name =""
+    End
+    Begin
+        Left =1098
+        Top =19
+        Right =1194
+        Bottom =126
+        Top =0
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =172
+        Top =114
+        Right =268
+        Bottom =176
+        Top =0
+        Name ="ltblSelectedRO"
+        Name =""
+    End
+End

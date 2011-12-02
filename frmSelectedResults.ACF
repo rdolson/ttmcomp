@@ -1,0 +1,347 @@
+Version =19
+VersionRequired =19
+Checksum =-122868187
+Begin Form
+    AutoCenter = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =2
+    TabularFamily =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =4050
+    DatasheetFontHeight =10
+    ItemSuffix =16
+    Left =270
+    Top =210
+    Right =19005
+    Bottom =10575
+    DatasheetGridlinesColor =12632256
+    RecSrcDt = Begin
+        0x664cfc0b6de3e240
+    End
+    RecordSource ="qrySelectedResults"
+    Caption ="qrySelectedResults"
+    DatasheetFontName ="Arial"
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            BackColor =-2147483633
+            ForeColor =-2147483630
+        End
+        Begin Rectangle
+            SpecialEffect =3
+            BackStyle =0
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            PictureAlignment =2
+        End
+        Begin CommandButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin OptionButton
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin CheckBox
+            SpecialEffect =2
+            LabelX =230
+            LabelY =-30
+        End
+        Begin OptionGroup
+            SpecialEffect =3
+        End
+        Begin BoundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =0
+            BackStyle =0
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ListBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin ComboBox
+            SpecialEffect =2
+            BackColor =-2147483643
+            ForeColor =-2147483640
+        End
+        Begin Subform
+            SpecialEffect =2
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+        End
+        Begin ToggleButton
+            FontSize =8
+            FontWeight =400
+            FontName ="MS Sans Serif"
+        End
+        Begin Tab
+            BackStyle =0
+        End
+        Begin FormHeader
+            Height =0
+            BackColor =-2147483633
+            Name ="FormHeader"
+            GUID = Begin
+                0x1d6081cbaaeee048b554ea0cb3d8e09f
+            End
+        End
+        Begin Section
+            Height =3015
+            BackColor =-2147483633
+            Name ="Detail"
+            GUID = Begin
+                0xe17d0f1438477541b2e531028e631972
+            End
+            Begin
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =120
+                    Width =2310
+                    Height =255
+                    ColumnWidth =2310
+                    Name ="JumpHeightCD"
+                    ControlSource ="JumpHeightCD"
+                    GUID = Begin
+                        0xf429300b946b3d4d82844a66337b8f78
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =120
+                            Width =1560
+                            Height =255
+                            Name ="JumpHeightCD_Label"
+                            Caption ="JumpHeightCD"
+                            GUID = Begin
+                                0xbcd75b7fa9f5354195bde1b8cbcc7df1
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =480
+                    Width =900
+                    Height =255
+                    ColumnWidth =900
+                    TabIndex =1
+                    Name ="EntryCount"
+                    ControlSource ="EntryCount"
+                    GUID = Begin
+                        0x572421950f76a34b8a0126da2383d3c4
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =480
+                            Width =1560
+                            Height =255
+                            Name ="EntryCount_Label"
+                            Caption ="EntryCount"
+                            GUID = Begin
+                                0x3d20e36621601340955a87ccc0ae820a
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =840
+                    Width =2310
+                    Height =255
+                    ColumnWidth =2310
+                    TabIndex =2
+                    Name ="CallName"
+                    ControlSource ="CallName"
+                    GUID = Begin
+                        0xf5f1bfac2e12944a864d799afee8cde3
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =840
+                            Width =1560
+                            Height =255
+                            Name ="CallName_Label"
+                            Caption ="CallName"
+                            GUID = Begin
+                                0x3b406d175d85964585785678b5025d64
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =1200
+                    Width =2310
+                    Height =255
+                    ColumnWidth =2310
+                    TabIndex =3
+                    Name ="DogScore"
+                    ControlSource ="DogScore"
+                    GUID = Begin
+                        0x17705e7a35f0f34fba65519988292667
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =1200
+                            Width =1560
+                            Height =255
+                            Name ="DogScore_Label"
+                            Caption ="DogScore"
+                            GUID = Begin
+                                0xdf6ca159b777db47baa338863c2d0abd
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =1560
+                    Width =900
+                    Height =255
+                    ColumnWidth =1635
+                    TabIndex =4
+                    Name ="DogTime"
+                    ControlSource ="=Left$(Str([DogTime]),1)"
+                    GUID = Begin
+                        0xfa9adb9979573943a6439dd9ba1054f1
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =1560
+                            Width =1560
+                            Height =255
+                            Name ="DogTime_Label"
+                            Caption ="DogTime"
+                            GUID = Begin
+                                0x9fad4d63c5cfc548b079e53375430fc1
+                            End
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =85
+                    IMESentenceMode =3
+                    Left =1680
+                    Top =1920
+                    Width =900
+                    Height =255
+                    ColumnWidth =900
+                    TabIndex =5
+                    Name ="FinishingPlace"
+                    ControlSource ="FinishingPlace"
+                    GUID = Begin
+                        0x18971ec60cbf0444a9682fe23015fdd9
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =1920
+                            Width =1560
+                            Height =255
+                            Name ="FinishingPlace_Label"
+                            Caption ="FinishingPlace"
+                            GUID = Begin
+                                0x61d1474b97a3204e81a8f73c898c730d
+                            End
+                        End
+                    End
+                End
+                Begin CheckBox
+                    OverlapFlags =85
+                    Left =1680
+                    Top =2280
+                    TabIndex =6
+                    Name ="Qualified"
+                    ControlSource ="Qualified"
+                    GUID = Begin
+                        0xebcf6c225c8d794fabdacb9ba49cd72e
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =2280
+                            Width =1560
+                            Height =255
+                            Name ="Qualified_Label"
+                            Caption ="Qualified"
+                            GUID = Begin
+                                0x8c844b63150a1446aebd565777d822c6
+                            End
+                        End
+                    End
+                End
+                Begin CheckBox
+                    OverlapFlags =85
+                    Left =1680
+                    Top =2640
+                    TabIndex =7
+                    Name ="Absent"
+                    ControlSource ="Absent"
+                    GUID = Begin
+                        0x6ecf812ab9bc9d4fac3319f10a458b1e
+                    End
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =60
+                            Top =2640
+                            Width =1560
+                            Height =255
+                            Name ="Absent_Label"
+                            Caption ="Absent"
+                            GUID = Begin
+                                0x32101a8f67985f45b5224c26718c5d55
+                            End
+                        End
+                    End
+                End
+            End
+        End
+        Begin FormFooter
+            Height =0
+            BackColor =-2147483633
+            Name ="FormFooter"
+            GUID = Begin
+                0x211515da1a89b046a2504608dcb7bf04
+            End
+        End
+    End
+End

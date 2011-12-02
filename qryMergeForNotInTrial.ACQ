@@ -1,0 +1,151 @@
+Operation =1
+Option =2
+Where ="(((tblEvent.LockedIn)=True))"
+Begin InputTables
+    Name ="tblOwner"
+    Name ="tblDog"
+    Name ="tblEvent"
+    Name ="trelDogEvent"
+    Name ="draw-results-sd"
+End
+Begin OutputColumns
+    Alias ="in/out"
+    Expression ="IIf(CInt([order])>250,\"NOT IN\",\"IN\")"
+    Expression ="[draw-results-sd].order"
+    Alias ="env"
+    Expression ="CInt([EnvelopeNumber])"
+    Expression ="tblOwner.OwnerLastName"
+    Expression ="tblOwner.OwnerFirstName"
+    Expression ="tblOwner.OwnerStreet"
+    Expression ="tblOwner.OwnerCity"
+    Alias ="ZIP"
+    Expression ="IIf(Len([OwnerPostalCD])=5,[OwnerPostalCD],Left$([ownerpostalcd],5) & \"-\" & Ri"
+        "ght$([ownerpostalcd],4))"
+    Expression ="tblOwner.OwnerStateProvinceCD"
+End
+Begin Joins
+    LeftTable ="draw-results-sd"
+    RightTable ="trelDogEvent"
+    Expression ="[draw-results-sd].envelope = trelDogEvent.EnvelopeNumber"
+    Flag =1
+    LeftTable ="tblEvent"
+    RightTable ="trelDogEvent"
+    Expression ="tblEvent.EventID = trelDogEvent.EventID"
+    Flag =1
+    LeftTable ="tblDog"
+    RightTable ="trelDogEvent"
+    Expression ="tblDog.DogID = trelDogEvent.DogID"
+    Flag =1
+    LeftTable ="tblOwner"
+    RightTable ="tblDog"
+    Expression ="tblOwner.OwnerID = tblDog.OwnerID"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="tblOwner.OwnerLastName"
+    Flag =0
+    Expression ="tblOwner.OwnerFirstName"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="-1"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="Expr1"
+        dbInteger "ColumnWidth" ="690"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerFirstName"
+        dbInteger "ColumnWidth" ="1800"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="[draw-results-sd].order"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="ZIP"
+        dbInteger "ColumnWidth" ="960"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="tblOwner.OwnerStateProvinceCD"
+        dbInteger "ColumnWidth" ="615"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="env"
+        dbInteger "ColumnWidth" ="690"
+        dbBoolean "ColumnHidden" ="0"
+    End
+    Begin
+        dbText "Name" ="in/out"
+        dbInteger "ColumnWidth" ="1110"
+        dbBoolean "ColumnHidden" ="0"
+    End
+End
+Begin
+    State =0
+    Left =8
+    Top =182
+    Right =1213
+    Bottom =748
+    Left =-1
+    Top =-1
+    Right =1198
+    Bottom =292
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =572
+        Top =3
+        Right =814
+        Bottom =201
+        Top =0
+        Name ="tblOwner"
+        Name =""
+    End
+    Begin
+        Left =404
+        Top =4
+        Right =500
+        Bottom =112
+        Top =4
+        Name ="tblDog"
+        Name =""
+    End
+    Begin
+        Left =394
+        Top =114
+        Right =520
+        Bottom =252
+        Top =0
+        Name ="tblEvent"
+        Name =""
+    End
+    Begin
+        Left =192
+        Top =10
+        Right =353
+        Bottom =208
+        Top =0
+        Name ="trelDogEvent"
+        Name =""
+    End
+    Begin
+        Left =16
+        Top =6
+        Right =158
+        Bottom =144
+        Top =0
+        Name ="draw-results-sd"
+        Name =""
+    End
+End
